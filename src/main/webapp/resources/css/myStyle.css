@@ -50,14 +50,15 @@
     font-size:20;
     border-radius:5px;
     padding-left:10px;
+    padding-right:10px;
     line-height:50px;
     cursor:pointer;
 }
 .deleteButton{
     background-image:url("/resources/img/deleteIcon.png");
     position: absolute;
-    margin-left: 693px;
-    margin-top: -125px;
+    margin-left: 745px;
+    margin-top: -26px;
     width:50px;
     height:50px;
     display:none;
@@ -76,4 +77,16 @@
 
 .mouseOver{
     background:yellow;
+    width:95%;
+    font-size:24;
+}
+.default{
+    width:80%;
+    min-height:80px;
+    vertical-align:middle;
+    text-align:center;
+    margin:auto;
+}
+.redButton{
+    background:red;
 }

@@ -1,0 +1,92 @@
+.centerText{
+    text-align:center;
+    line-height:70px;
+}
+
+.logo{
+    width:50px;
+    height:50px;
+}
+.title{
+    background-image:url("/resources/img/retina_wood.png");
+}
+
+.body{
+    width:1000px;
+    background-image:url("/resources/img/retina_wood.png");
+    margin:auto;
+    margin-top:20px;
+    border-radius:10px;
+}
+.basicBody{
+    background-color:grey;
+}
+.editContent{
+    width:50%;
+    margin:auto;
+    text-align:center;
+    overflow:hidden;
+}
+.weibo{
+    width:400px;
+    min-height:100px;
+}
+
+.weiboContent{
+    width:80%;
+    overflow:hidden;
+    margin:auto;
+    background-color:yellowgreen;
+    border-radius:10px;
+}
+.oneContent{
+    width:90%;
+    margin:auto;
+    min-height:50px;
+    margin-top:10px;
+    margin-bottom:10px;
+    box-shadow:3px 3px 3px #888888;
+    background-color:white;
+    font-size:20;
+    border-radius:5px;
+    padding-left:10px;
+    padding-right:10px;
+    line-height:50px;
+    cursor:pointer;
+}
+.deleteButton{
+    background-image:url("/resources/img/deleteIcon.png");
+    position: absolute;
+    margin-left: 745px;
+    margin-top: -26px;
+    width:50px;
+    height:50px;
+    display:none;
+    cursor:pointer;
+}
+.leftArea{
+    width:85%;
+    float:left;
+    text-align:right;
+}
+.rightArea{
+    text-align:left;
+    width:15%;
+    float:left;
+}
+
+.mouseOver{
+    background:yellow;
+    width:95%;
+    font-size:24;
+}
+.default{
+    width:80%;
+    min-height:80px;
+    vertical-align:middle;
+    text-align:center;
+    margin:auto;
+}
+.redButton{
+    background:red;
+}
