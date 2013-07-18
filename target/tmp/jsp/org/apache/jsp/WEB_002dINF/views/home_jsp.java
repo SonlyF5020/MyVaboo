@@ -63,7 +63,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                var year = new Date().getYear().toString();\n");
       out.write("                var month = (new Date().getMonth()+1).toString();\n");
       out.write("                var date = new Date().getDate().toString();\n");
-      out.write("                var dateString = \"<br><hr>\"+\"---\"+year+\"year \"+month+\"month \"+date+\"day\";\n");
+      out.write("                var dateString = \"<br><hr>\"+\"---\"+year+\"年 \"+month+\"月 \"+date+\"日\";\n");
       out.write("                var deleteButton = $(document.createElement('div')).addClass('deleteButton');\n");
       out.write("                var chart = $(document.createElement('div')).attr('id', i++).attr('class', 'oneContent').html($('#weibo').val()+dateString).append(deleteButton);\n");
       out.write("                $('#weiboContent').prepend(chart);\n");
@@ -98,9 +98,10 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<body class=\"basicBody\">\n");
       out.write("<div class=\"body\">\n");
-      out.write("<h1 class=\"centerText\"><img src=\"/resources/img/weibo-icon.png\" class=\"logo\">&nbspVaboo</h1>\n");
+      out.write("<h1 class=\"centerText\"><img src=\"/resources/img/zergIcon.png\" class=\"logo\">&nbspVaboo</h1>\n");
       out.write("<hr>\n");
-      out.write("    <div class=\"default\"><h1>Write your message , Click confirm</h1></div>\n");
+      out.write("    <div class=\"default\"><h1>欢迎使用Vaboo,留下你的足迹</h1>\n");
+      out.write("    <a class=\"btn\" href=\"/\">退出</a></div>\n");
       out.write("    <div id=\"weiboContent\" class=\"weiboContent\"></div>\n");
       out.write("<hr>\n");
       out.write("\n");

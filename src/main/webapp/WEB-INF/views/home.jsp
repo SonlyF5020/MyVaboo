@@ -18,7 +18,7 @@
                 var year = new Date().getYear().toString();
                 var month = (new Date().getMonth()+1).toString();
                 var date = new Date().getDate().toString();
-                var dateString = "<br><hr>"+"---"+year+"year "+month+"month "+date+"day";
+                var dateString = "<br><hr>"+"---"+year+"年 "+month+"月 "+date+"日";
                 var deleteButton = $(document.createElement('div')).addClass('deleteButton');
                 var chart = $(document.createElement('div')).attr('id', i++).attr('class', 'oneContent').html($('#weibo').val()+dateString).append(deleteButton);
                 $('#weiboContent').prepend(chart);
@@ -53,9 +53,10 @@
 
 <body class="basicBody">
 <div class="body">
-<h1 class="centerText"><img src="/resources/img/weibo-icon.png" class="logo">&nbspVaboo</h1>
+<h1 class="centerText"><img src="/resources/img/zergIcon.png" class="logo">&nbspVaboo</h1>
 <hr>
-    <div class="default"><h1>Write your message , Click confirm</h1></div>
+    <div class="default"><h1>欢迎使用Vaboo,留下你的足迹</h1>
+    <a class="btn" href="/">退出</a></div>
     <div id="weiboContent" class="weiboContent"></div>
 <hr>
 
