@@ -1,4 +1,4 @@
-package org.apache.jsp.WEB_002dINF.views;
+package org.apache.jsp.WEB_002dINF.views.checkPassword;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -53,10 +53,10 @@ public final class invalidUser_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <title>invalidUser</title>\n");
       out.write("</head>\n");
       out.write("<body class=\"darkBackground\">\n");
-      out.write("    <div class=\"redBorder\">\n");
-      out.write("        <h1>你输入的账号或密码有误！</h1>\n");
-      out.write("        <a href=\"/\" class=\"btn\">返回</a>\n");
-      out.write("    </div>\n");
+      out.write("<div class=\"redBorder\">\n");
+      out.write("    <h1>你输入的账号或密码有误！</h1>\n");
+      out.write("    <a href=\"/\" class=\"btn\">返回</a>\n");
+      out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {

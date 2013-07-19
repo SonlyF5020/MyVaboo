@@ -1,11 +1,17 @@
-.centerText{
+.centerText h1{
     text-align:center;
-    line-height:80px;
+    line-height:50px;
+    height: 50px;
+    float:left;
+    font-size: 60px;
 }
 
-.logo{
+.miniLogo img{
     width:50px;
     height:50px;
+    border-radius: 7px;
+    border: 3 solid #000000;
+    float:left;
 }
 .title{
     background-image:url("/resources/img/retina_wood.png");
@@ -14,8 +20,7 @@
 .body{
     width:1000px;
     background-image:url("/resources/img/retina_wood.png");
-    margin:auto;
-    margin-top:20px;
+    margin: 20px auto auto;
     border-radius:10px;
 }
 .basicBody{
@@ -41,13 +46,12 @@
 }
 .oneContent{
     width:90%;
-    margin:auto;
     min-height:50px;
-    margin-top:10px;
-    margin-bottom:10px;
+    margin: 10px auto;
     box-shadow:3px 3px 3px #888888;
     background-color:white;
-    font-size:20;
+    text-align: left;
+    font-size: 18px;
     border-radius:5px;
     padding-left:10px;
     padding-right:10px;
@@ -81,7 +85,7 @@
     font-size:24;
 }
 .default{
-    width:80%;
+    width:100%;
     min-height:80px;
     vertical-align:middle;
     text-align:center;
@@ -89,4 +93,64 @@
 }
 .redButton{
     background:red;
+}
+.darkBackground{
+    background: #888888;
+}
+.login{
+    width: 40%;
+    background: #ffffff;
+    margin: 200px auto auto;
+    padding-top: 50px;
+    padding-left: 50px;
+    border-radius: 6px;
+    border: solid yellowgreen;
+    overflow: hidden;
+}
+.redBorder{
+    border:solid red;
+    width: 40%;
+    background: #ffffff;
+    margin: 200px auto auto;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    border-radius: 6px;
+}
+.clientForm{
+    width: 60%;
+    float:left;
+}
+.bigLogo img{
+    position: absolute;
+    margin-top: -35px;
+    width:120px;
+    height:120px;
+    border-radius: 20px;
+    border: 5 solid #000000;
+}
+.head {
+    padding-top: 50px;
+    width:26%;
+    overflow: hidden;
+    padding-left: 380px;
+}
+.clientInfo{
+    width: 100px;
+    float:right;
+    margin-top: -50px;
+    padding-right: 20px;
+}
+.header{
+    overflow: hidden;
+ }
+.greenBorder{
+    border:solid yellowgreen;
+    width: 40%;
+    background: #ffffff;
+    margin: 200px auto auto;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    border-radius: 6px;
 }

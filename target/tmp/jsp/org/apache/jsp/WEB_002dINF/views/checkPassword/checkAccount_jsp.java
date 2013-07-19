@@ -1,10 +1,10 @@
-package org.apache.jsp.WEB_002dINF.views;
+package org.apache.jsp.WEB_002dINF.views.checkPassword;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class invalidUser_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class checkAccount_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -48,15 +48,25 @@ public final class invalidUser_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.print(request.getContextPath());
       out.write("/resources/css/myStyle.css\" rel=\"stylesheet\">\n");
       out.write("\n");
+      out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
-      out.write("    <title>invalidUser</title>\n");
+      out.write("    <title>welcome</title>\n");
       out.write("</head>\n");
+      out.write("\n");
       out.write("<body class=\"darkBackground\">\n");
-      out.write("    <div class=\"redBorder\">\n");
-      out.write("        <h1>你输入的账号或密码有误！</h1>\n");
-      out.write("        <a href=\"/\" class=\"btn\">返回</a>\n");
+      out.write("<div class=\"login\">\n");
+      out.write("    <div class=\"clientForm\">\n");
+      out.write("        <form action=\"/checkPassword\" method=\"get\">\n");
+      out.write("            姓名：<input type=\"text\" name=\"name\"><br>\n");
+      out.write("            密码：<input type=\"password\" name=\"password\"><br>\n");
+      out.write("            <input type=\"submit\" class=\"btn\" value=\"登陆\"><a href=\"/register\" class=\"btn\">注册</a>\n");
+      out.write("        </form>\n");
       out.write("    </div>\n");
+      out.write("    <div class=\"bigLogo\">\n");
+      out.write("        <img src=\"/resources/img/zergIcon.png\">\n");
+      out.write("    </div>\n");
+      out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {

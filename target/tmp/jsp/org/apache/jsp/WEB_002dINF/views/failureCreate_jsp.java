@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class invalidUser_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class failureCreate_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -53,10 +53,10 @@ public final class invalidUser_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <title>invalidUser</title>\n");
       out.write("</head>\n");
       out.write("<body class=\"darkBackground\">\n");
-      out.write("    <div class=\"redBorder\">\n");
-      out.write("        <h1>你输入的账号或密码有误！</h1>\n");
-      out.write("        <a href=\"/\" class=\"btn\">返回</a>\n");
-      out.write("    </div>\n");
+      out.write("<div class=\"redBorder\">\n");
+      out.write("    <h1>你输入的账号已经被占用！</h1>\n");
+      out.write("    <a href=\"/register\" class=\"btn\">返回</a>\n");
+      out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {

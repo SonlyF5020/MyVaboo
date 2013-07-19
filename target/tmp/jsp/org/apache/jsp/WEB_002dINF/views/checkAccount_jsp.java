@@ -44,6 +44,9 @@ public final class checkAccount_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("<link href=\"");
       out.print(request.getContextPath());
       out.write("/resources/css/bootstrap.css\" rel=\"stylesheet\">\n");
+      out.write("<link href=\"");
+      out.print(request.getContextPath());
+      out.write("/resources/css/myStyle.css\" rel=\"stylesheet\">\n");
       out.write("\n");
       out.write("\n");
       out.write("<html>\n");
@@ -51,14 +54,19 @@ public final class checkAccount_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("    <title>welcome</title>\n");
       out.write("</head>\n");
       out.write("\n");
-      out.write("<body>\n");
-      out.write("    <div class=\"body\">\n");
+      out.write("<body class=\"darkBackground\">\n");
+      out.write("<div class=\"login\">\n");
+      out.write("    <div class=\"clientForm\">\n");
       out.write("        <form action=\"/home\" method=\"get\">\n");
-      out.write("           姓名：<input type=\"text\" name=\"name\"><br>\n");
-      out.write("           密码：<input type=\"password\" name=\"password\">\n");
-      out.write("            <input type=\"submit\" value=\"登陆\">\n");
+      out.write("            姓名：<input type=\"text\" name=\"name\"><br>\n");
+      out.write("            密码：<input type=\"password\" name=\"password\"><br>\n");
+      out.write("            <input type=\"submit\" class=\"btn\" value=\"登陆\"><a href=\"/register\" class=\"btn\">注册</a>\n");
       out.write("        </form>\n");
       out.write("    </div>\n");
+      out.write("    <div class=\"bigLogo\">\n");
+      out.write("        <img src=\"/resources/img/zergIcon.png\">\n");
+      out.write("    </div>\n");
+      out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {
