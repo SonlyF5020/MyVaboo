@@ -54,7 +54,7 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <title>welcome</title>\n");
       out.write("</head>\n");
       out.write("\n");
-      out.write("<body class=\"darkBackground\">\n");
+      out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"login\">\n");
       out.write("    <div class=\"clientForm\">\n");
       out.write("        <form action=\"/clientCreate\" method=\"get\">\n");

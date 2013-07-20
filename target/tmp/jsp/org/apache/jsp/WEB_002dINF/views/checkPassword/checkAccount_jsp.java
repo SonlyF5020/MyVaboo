@@ -54,7 +54,7 @@ public final class checkAccount_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("    <title>welcome</title>\n");
       out.write("</head>\n");
       out.write("\n");
-      out.write("<body class=\"darkBackground\">\n");
+      out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"login\">\n");
       out.write("    <div class=\"clientForm\">\n");
       out.write("        <form action=\"/checkPassword\" method=\"get\">\n");

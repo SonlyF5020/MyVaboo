@@ -51,11 +51,13 @@ public final class passwordError_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("<html>\n");
       out.write("<head>\n");
       out.write("    <title>invalidUser</title>\n");
+      out.write("    <script>\n");
+      out.write("        setTimeout(\"document.location.href='/register'\",1000);\n");
+      out.write("    </script>\n");
       out.write("</head>\n");
-      out.write("<body class=\"darkBackground\">\n");
+      out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"redBorder\">\n");
       out.write("    <h1>您两次输入的密码不同！</h1>\n");
-      out.write("    <a href=\"/register\" class=\"btn\">返回</a>\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");

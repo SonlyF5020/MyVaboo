@@ -107,7 +107,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("</head>\n");
       out.write("\n");
-      out.write("<body class=\"basicBody\">\n");
+      out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"body\">\n");
       out.write("    <div class=\"header\">\n");
       out.write("        <div class=\"head\">\n");

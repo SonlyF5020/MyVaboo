@@ -6,11 +6,13 @@
 <html>
 <head>
     <title>invalidUser</title>
+    <script>
+        setTimeout("document.location.href='/register'",1000);
+    </script>
 </head>
-<body class="darkBackground">
+<body class="allBackground">
 <div class="redBorder">
     <h1>您两次输入的密码不同！</h1>
-    <a href="/register" class="btn">返回</a>
 </div>
 </body>
 </html>

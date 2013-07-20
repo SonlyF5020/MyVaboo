@@ -38,11 +38,6 @@ public class HomeController {
         return "checkPassword/checkAccount";
     }
 
-    @RequestMapping("/register")
-    public String newClient(Model model){
-        return "newClient/newClient";
-    }
-
     @RequestMapping("/clientCreate")
     public String clientCreate(@RequestParam("name")String name,
                                @RequestParam("password") String password,

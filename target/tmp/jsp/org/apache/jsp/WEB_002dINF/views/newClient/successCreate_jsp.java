@@ -51,11 +51,13 @@ public final class successCreate_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("<html>\n");
       out.write("<head>\n");
       out.write("    <title>invalidUser</title>\n");
+      out.write("    <script>\n");
+      out.write("        setTimeout(\"document.location.href='/home'\",1000);\n");
+      out.write("    </script>\n");
       out.write("</head>\n");
-      out.write("<body class=\"darkBackground\">\n");
+      out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"greenBorder\">\n");
       out.write("    <h1>账号申请成功！</h1>\n");
-      out.write("    <a href=\"/home\" class=\"btn\">进入Vaboo</a>\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");

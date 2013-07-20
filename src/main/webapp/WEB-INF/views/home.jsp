@@ -52,7 +52,7 @@
 
 </head>
 
-<body class="basicBody">
+<body class="allBackground">
 <div class="body">
     <div class="header">
         <div class="head">

@@ -50,12 +50,14 @@ public final class validUser_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
-      out.write("    <title>invalidUser</title>\n");
+      out.write("    <title>validUser</title>\n");
+      out.write("    <script>\n");
+      out.write("            setTimeout(\"document.location.href='/home'\",1000);\n");
+      out.write("    </script>\n");
       out.write("</head>\n");
-      out.write("<body class=\"darkBackground\">\n");
+      out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"greenBorder\">\n");
-      out.write("    <h1>欢迎回来！</h1>\n");
-      out.write("    <a href=\"/home\" class=\"btn\">进入Vaboo</a>\n");
+      out.write("    <h1>欢迎回来！. . .</h1>\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");

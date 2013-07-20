@@ -9,7 +9,7 @@
     <title>welcome</title>
 </head>
 
-<body class="darkBackground">
+<body class="allBackground">
 <div class="login">
     <div class="clientForm">
         <form action="/checkPassword" method="get">

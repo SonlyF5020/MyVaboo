@@ -6,11 +6,13 @@
 <html>
 <head>
     <title>invalidUser</title>
+    <script>
+        setTimeout("document.location.href='/'",1000);
+    </script>
 </head>
-<body class="darkBackground">
+<body class="allBackground">
 <div class="redBorder">
     <h1>你输入的账号或密码有误！</h1>
-    <a href="/" class="btn">返回</a>
 </div>
 </body>
 </html>
