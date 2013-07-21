@@ -1,10 +1,10 @@
-package org.apache.jsp.WEB_002dINF.views.newClient;
+package org.apache.jsp.WEB_002dINF.views.checkUser;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class validUser_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -48,46 +48,16 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.print(request.getContextPath());
       out.write("/resources/css/myStyle.css\" rel=\"stylesheet\">\n");
       out.write("\n");
-      out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
-      out.write("    <title>welcome</title>\n");
-      out.write("    <script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js\"></script>\n");
+      out.write("    <title>validUser</title>\n");
       out.write("    <script>\n");
-      out.write("        $(document).ready(function(){\n");
-      out.write("            $('#confirmShow').live(\"click\",function(){\n");
-      out.write("                if($('#password1').val() == $('#password2').val()){\n");
-      out.write("                    $(\".hiddenForm>[name='name']\").val($('#inputName').val());\n");
-      out.write("                    $(\".hiddenForm>[name='password']\").val($('#password1').val());\n");
-      out.write("                    $(\"#confirmHidden\").click();\n");
-      out.write("                }\n");
-      out.write("                else{\n");
-      out.write("                    $(\".warning\").show();\n");
-      out.write("                }\n");
-      out.write("            });\n");
-      out.write("        });\n");
+      out.write("            setTimeout(\"document.location.href='/home'\",1000);\n");
       out.write("    </script>\n");
       out.write("</head>\n");
-      out.write("\n");
       out.write("<body class=\"allBackground\">\n");
-      out.write("<div class=\"login\">\n");
-      out.write("    <div class=\"clientForm\">\n");
-      out.write("        <form>\n");
-      out.write("            姓名：<input type=\"text\" id=\"inputName\"><br>\n");
-      out.write("            密码：<input type=\"password\" id=\"password1\"><br>\n");
-      out.write("            密码：<input type=\"password\" id=\"password2\"><br>\n");
-      out.write("            <span class=\"warning\">您两次输入的密码不一致！</span><br>\n");
-      out.write("            <input type=\"button\" class=\"btn\" id=\"confirmShow\" value=\"确定\"><a href=\"/\" class=\"btn\">返回</a>\n");
-      out.write("        </form>\n");
-      out.write("\n");
-      out.write("        <form action=\"/clientCreate\" method=\"get\" class=\"hiddenForm\">\n");
-      out.write("            <input type=\"text\" name=\"name\"><input type=\"password\" name=\"password\"><input type=\"submit\" id=\"confirmHidden\">\n");
-      out.write("        </form>\n");
-      out.write("\n");
-      out.write("    </div>\n");
-      out.write("    <div class=\"bigLogo\">\n");
-      out.write("        <img src=\"/resources/img/zergIcon.png\">\n");
-      out.write("    </div>\n");
+      out.write("<div class=\"greenBorder\">\n");
+      out.write("    <h1>欢迎回来！. . .</h1>\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");

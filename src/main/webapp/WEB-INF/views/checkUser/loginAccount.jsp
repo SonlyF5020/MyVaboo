@@ -12,7 +12,7 @@
 <body class="allBackground">
 <div class="login">
     <div class="clientForm">
-        <form action="/checkPassword" method="get">
+        <form action="/checkUser" method="get">
             аеУћЃК<input type="text" name="name"><br>
             УмТыЃК<input type="password" name="password"><br>
             <input type="submit" class="btn" value="ЕЧТН"><a href="/register" class="btn">зЂВс</a>

@@ -154,3 +154,10 @@
     background: url("/resources/img/allBackground.jpg") no-repeat;
     background-size: cover;
 }
+.hiddenForm{
+    display: none;
+}
+.warning{
+    color: red;
+    display: none;
+}

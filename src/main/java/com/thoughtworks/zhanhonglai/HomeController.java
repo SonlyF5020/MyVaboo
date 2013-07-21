@@ -1,5 +1,7 @@
 package com.thoughtworks.zhanhonglai;
 
+import com.thoughtworks.zhanhonglai.service.ServerStore;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,43 +12,38 @@ import java.util.Map;
 
 @Controller
 public class HomeController {
-    Map<String,String> userMap = new HashMap<String,String>();
-    String currentUser;
+
+    ServerStore serverStore = new ServerStore();
 
     @RequestMapping("/home")
-    public String accessHome(Model model){
-        model.addAttribute("name",currentUser);
+    public String accessHome(Model model) {
+        model.addAttribute("name", serverStore.getCurrentUser());
         return "home";
     }
 
-    @RequestMapping("/checkPassword")
-    public String checkPassword(@RequestParam("name")String name,@RequestParam("password")String password, Model model){
-        String result = "";
-        if (password.equalsIgnoreCase("123456")){
-            result = "checkPassword/validUser";
+    @RequestMapping("/checkUser")
+    public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password) {
+        if (passwordIsCorrect(name, password)) {
+            serverStore.setCurrentUser(name);
+            return  "checkUser/validUser";
+        } else {
+            return  "checkUser/invalidUser";
         }
-        else{
-            result = "checkPassword/invalidUser";
-        }
-        currentUser=name;
-        return result;
+    }
+
+    private boolean passwordIsCorrect(String name, String password) {
+        return serverStore.userPasswordIsCorrect(name,password);
     }
 
 
     @RequestMapping("/")
-    public String checkAccount(Model model){
-        return "checkPassword/checkAccount";
+    public String loginAccount() {
+        return "checkUser/loginAccount";
     }
 
     @RequestMapping("/clientCreate")
-    public String clientCreate(@RequestParam("name")String name,
-                               @RequestParam("password") String password,
-                               @RequestParam("passwordConfirm")String passwordConfirm,
-                               Model model){
-        if(password.equals(passwordConfirm)){
-            currentUser = name;
-            return "newClient/successCreate";
-        }
-        return "newClient/passwordError";
+    public String clientCreate(@RequestParam("name") String name,@RequestParam("password") String password) {
+        serverStore.createUser(name,password);
+        return "newClient/successCreate";
     }
 }
