@@ -6,11 +6,13 @@
 <html>
 <head>
     <title>invalidUser</title>
+    <script>
+        setTimeout("document.location.href='/home'",1000);
+    </script>
 </head>
-<body class="darkBackground">
+<body class="allBackground">
 <div class="greenBorder">
     <h1>账号申请成功！</h1>
-    <a href="/home" class="btn">进入Vaboo</a>
 </div>
 </body>
 </html>

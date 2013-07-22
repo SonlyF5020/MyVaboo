@@ -20,8 +20,8 @@
                 var date = new Date().getDate().toString();
                 var name=$('#client').html();
                 var dateString = "<hr>" + "---20" + year + "Äê" + month + "ÔÂ" + date + "ÈÕ"+"("+name+")";
-                var deleteButton = $(document.createElement('div')).addClass('deleteButton');
-                var chart = $(document.createElement('div')).attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);
+                var deleteButton = $('<div></div>').addClass('deleteButton');
+                var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);
                 $('#weiboContent').prepend(chart);
                 $('#weibo').val("");
             });

@@ -75,8 +75,8 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                var date = new Date().getDate().toString();\n");
       out.write("                var name=$('#client').html();\n");
       out.write("                var dateString = \"<hr>\" + \"---20\" + year + \"年\" + month + \"月\" + date + \"日\"+\"(\"+name+\")\";\n");
-      out.write("                var deleteButton = $(document.createElement('div')).addClass('deleteButton');\n");
-      out.write("                var chart = $(document.createElement('div')).attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);\n");
+      out.write("                var deleteButton = $('<div></div>').addClass('deleteButton');\n");
+      out.write("                var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);\n");
       out.write("                $('#weiboContent').prepend(chart);\n");
       out.write("                $('#weibo').val(\"\");\n");
       out.write("            });\n");

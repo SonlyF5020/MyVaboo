@@ -20,7 +20,7 @@
                 var date = new Date().getDate().toString();
                 var name=$('#client').html();
                 var dateString = "<hr>" + "---20" + year + "Äê" + month + "ÔÂ" + date + "ÈÕ"+"("+name+")";
-                var deleteButton = $(document.createElement('div')).addClass('deleteButton');
+                var deleteButton = $('<div></div>').addClass('deleteButton');
                 var chart = $(document.createElement('div')).attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);
                 $('#weiboContent').prepend(chart);
                 $('#weibo').val("");
@@ -52,7 +52,7 @@
 
 </head>
 
-<body class="basicBody">
+<body class="allBackground">
 <div class="body">
     <div class="header">
         <div class="head">

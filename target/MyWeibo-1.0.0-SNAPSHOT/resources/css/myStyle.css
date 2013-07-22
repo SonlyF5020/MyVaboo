@@ -23,9 +23,7 @@
     margin: 20px auto auto;
     border-radius:10px;
 }
-.basicBody{
-    background-color:grey;
-}
+
 .editContent{
     width:50%;
     margin:auto;
@@ -94,9 +92,7 @@
 .redButton{
     background:red;
 }
-.darkBackground{
-    background: #888888;
-}
+
 .login{
     width: 40%;
     background: #ffffff;
@@ -153,4 +149,15 @@
     padding-left: 50px;
     padding-bottom: 30px;
     border-radius: 6px;
+}
+.allBackground{
+    background: url("/resources/img/allBackground.jpg") no-repeat;
+    background-size: cover;
+}
+.hiddenForm{
+    display: none;
+}
+.warning{
+    color: red;
+    display: none;
 }
