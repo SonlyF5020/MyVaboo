@@ -68,7 +68,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        var i = 0;\n");
       out.write("        var j = 0;\n");
       out.write("        var deleteContent = \"\";\n");
-      out.write("        $(document).ready(function () {\n");
+      out.write("        $(function () {\n");
       out.write("            $('#confirm').bind(\"click\", function () {\n");
       out.write("                var year = new Date().getYear().toString().substring(1, 3);\n");
       out.write("                var month = (new Date().getMonth() + 1).toString();\n");
@@ -101,7 +101,6 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                $('#' + deleteContent).hide();\n");
       out.write("                $('#myModal').modal('hide');\n");
       out.write("            });\n");
-      out.write("\n");
       out.write("        });\n");
       out.write("    </script>\n");
       out.write("\n");
@@ -124,7 +123,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </div>\n");
       out.write("    <br>\n");
       out.write("    <hr>\n");
-      out.write("    <div class=\"default\"><h1>欢迎使用Vaboo,留下你的足迹</h1>\n");
+      out.write("    <div class=\"default\"><h1>留下你的足迹</h1>\n");
       out.write("\n");
       out.write("        <div id=\"weiboContent\" class=\"weiboContent\"></div>\n");
       out.write("        <hr>\n");
@@ -141,16 +140,16 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                     aria-hidden=\"true\">\n");
       out.write("\n");
       out.write("                    <div class=\"modal-header\">\n");
-      out.write("                        <h3 id=\"myModalLabel\">Are you sure you want to delete this tip?</h3>\n");
+      out.write("                        <h3 id=\"myModalLabel\">你确定要删除这一条记录么?</h3>\n");
       out.write("                    </div>\n");
       out.write("\n");
       out.write("                    <div class=\"modal-footer\">\n");
-      out.write("                        <button class=\"redButton btn\" data-dismiss=\"modal\" aria-hidden=\"true\">NO!</button>\n");
-      out.write("                        <button id=\"sureButton\" class=\"btn btn-primary\">Sure</button>\n");
+      out.write("                        <button class=\"redButton btn\" data-dismiss=\"modal\" aria-hidden=\"true\">点错了</button>\n");
+      out.write("                        <button id=\"sureButton\" class=\"btn btn-primary\">是的</button>\n");
       out.write("                    </div>\n");
       out.write("                </div>\n");
       out.write("\n");
-      out.write("                <button id=\"confirm\" class=\"btn\">confirm</button>\n");
+      out.write("                <button id=\"confirm\" class=\"btn\">提交</button>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");

@@ -13,7 +13,7 @@
         var i = 0;
         var j = 0;
         var deleteContent = "";
-        $(document).ready(function () {
+        $(function () {
             $('#confirm').bind("click", function () {
                 var year = new Date().getYear().toString().substring(1, 3);
                 var month = (new Date().getMonth() + 1).toString();
@@ -46,7 +46,6 @@
                 $('#' + deleteContent).hide();
                 $('#myModal').modal('hide');
             });
-
         });
     </script>
 
@@ -66,7 +65,7 @@
     </div>
     <br>
     <hr>
-    <div class="default"><h1>欢迎使用Vaboo,留下你的足迹</h1>
+    <div class="default"><h1>留下你的足迹</h1>
 
         <div id="weiboContent" class="weiboContent"></div>
         <hr>
@@ -83,16 +82,16 @@
                      aria-hidden="true">
 
                     <div class="modal-header">
-                        <h3 id="myModalLabel">Are you sure you want to delete this tip?</h3>
+                        <h3 id="myModalLabel">你确定要删除这一条记录么?</h3>
                     </div>
 
                     <div class="modal-footer">
-                        <button class="redButton btn" data-dismiss="modal" aria-hidden="true">NO!</button>
-                        <button id="sureButton" class="btn btn-primary">Sure</button>
+                        <button class="redButton btn" data-dismiss="modal" aria-hidden="true">点错了</button>
+                        <button id="sureButton" class="btn btn-primary">是的</button>
                     </div>
                 </div>
 
-                <button id="confirm" class="btn">confirm</button>
+                <button id="confirm" class="btn">提交</button>
             </div>
         </div>
     </div>
