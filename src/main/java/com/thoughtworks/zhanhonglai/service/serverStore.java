@@ -7,6 +7,7 @@ public class ServerStore {
     Map<String,String> userMap = new HashMap<String,String>();
     String currentUser;
 
+
     public String getCurrentUser() {
         return currentUser;
     }
