@@ -25,14 +25,14 @@ public class HomeController {
     public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password) {
         if (passwordIsCorrect(name, password)) {
             serverStore.setCurrentUser(name);
-            return  "checkUser/validUser";
+            return "checkUser/validUser";
         } else {
-            return  "checkUser/invalidUser";
+            return "checkUser/invalidUser";
         }
     }
 
     private boolean passwordIsCorrect(String name, String password) {
-        return serverStore.userPasswordIsCorrect(name,password);
+        return serverStore.userPasswordIsCorrect(name, password);
     }
 
 
@@ -42,8 +42,12 @@ public class HomeController {
     }
 
     @RequestMapping("/clientCreate")
-    public String clientCreate(@RequestParam("name") String name,@RequestParam("password") String password) {
-        serverStore.createUser(name,password);
-        return "newClient/successCreate";
+    public String clientCreate(@RequestParam("name") String name, @RequestParam("password") String password) {
+        if (serverStore.alreadyExistUser(name)) {
+            return "newClient/invalidUserName";
+        } else {
+            serverStore.createUser(name, password);
+            return "newClient/successCreate";
+        }
     }
 }

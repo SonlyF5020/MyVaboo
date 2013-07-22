@@ -27,4 +27,8 @@ public class ServerStore {
     public ServerStore() {
         userMap.put("test","123");
     }
+
+    public boolean alreadyExistUser(String name) {
+        return userMap.containsKey(name);
+    }
 }
