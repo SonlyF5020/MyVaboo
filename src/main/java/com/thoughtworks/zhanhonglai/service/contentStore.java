@@ -20,7 +20,7 @@ public class ContentStore {
         try {
             contentFile = new File("/data/"+userName+".txt");
             FileWriter fileWriter = new FileWriter(contentFile);
-            fileWriter.write(content);
+            fileWriter.write("fuck you");
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();

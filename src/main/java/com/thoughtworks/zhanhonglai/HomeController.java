@@ -50,8 +50,10 @@ public class HomeController {
     }
 
     @RequestMapping("/submitContent")
-    public String submitContent(@RequestParam("newContent") String newContent){
-        contentStore.buildUserFile(serverStore.getCurrentUser(), newContent);
-        return "newClient/successCreate";
+    public String submitContent(@RequestParam("newContent") String newContent, Model model){
+        System.out.println(newContent);
+        contentStore.buildUserFile("hehe", newContent);
+        model.addAttribute("content","fuck you");
+        return "testResult";
     }
 }

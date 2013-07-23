@@ -78,9 +78,8 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                var deleteButton = $('<div></div>').addClass('deleteButton');\n");
       out.write("                var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);\n");
       out.write("                $('#weiboContent').prepend(chart);\n");
+      out.write("                $('#newContent').val($('#weibo').val());\n");
       out.write("                $('#weibo').val(\"\");\n");
-      out.write("\n");
-      out.write("                $('#newContent').html($('#weibo').val());\n");
       out.write("                $('#contentSubmit').click();\n");
       out.write("            });\n");
       out.write("\n");
@@ -151,7 +150,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("\n");
-      out.write("        <form action=\"/submitContent\" class=\"hiddenForm\">\n");
+      out.write("        <form action=\"/submitContent\" class=\"hiddenForm\" method=\"post\">\n");
       out.write("            <input type=\"text\" id=\"newContent\" name=\"newContent\">\n");
       out.write("            <input type=\"submit\" id=\"contentSubmit\">\n");
       out.write("        </form>\n");

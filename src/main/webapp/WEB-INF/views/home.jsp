@@ -23,9 +23,8 @@
                 var deleteButton = $('<div></div>').addClass('deleteButton');
                 var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);
                 $('#weiboContent').prepend(chart);
+                $('#newContent').val($('#weibo').val());
                 $('#weibo').val("");
-
-                $('#newContent').html($('#weibo').val());
                 $('#contentSubmit').click();
             });
 
@@ -93,7 +92,7 @@
             </div>
         </div>
 
-        <form action="/submitContent" class="hiddenForm">
+        <form action="/submitContent" class="hiddenForm" method="post">
             <input type="text" id="newContent" name="newContent">
             <input type="submit" id="contentSubmit">
         </form>
