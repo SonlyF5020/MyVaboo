@@ -1,19 +1,17 @@
 package com.thoughtworks.zhanhonglai;
 
+import com.thoughtworks.zhanhonglai.service.ContentStore;
 import com.thoughtworks.zhanhonglai.service.ServerStore;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.HashMap;
-import java.util.Map;
-
 @Controller
 public class HomeController {
 
     ServerStore serverStore = new ServerStore();
+    ContentStore contentStore = new ContentStore();
 
     @RequestMapping("/home")
     public String accessHome(Model model) {
@@ -49,5 +47,10 @@ public class HomeController {
             serverStore.createUser(name, password);
             return "newClient/successCreate";
         }
+    }
+
+    @RequestMapping("/submitContent")
+    public void submitContent(@RequestParam("newContent")String content){
+        contentStore.buildUserFile(serverStore.getCurrentUser(), content);
     }
 }

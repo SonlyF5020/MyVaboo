@@ -16,11 +16,11 @@ public class ContentStore {
         return testString;
     }
 
-    public void buildUserFile(String userName){
+    public void buildUserFile(String userName,String content){
         try {
             contentFile = new File("/data/"+userName+".txt");
             FileWriter fileWriter = new FileWriter(contentFile);
-            fileWriter.write("HelloWorld");
+            fileWriter.write("HelloWorld"+content);
             fileWriter.close();
 
         } catch (IOException e) {

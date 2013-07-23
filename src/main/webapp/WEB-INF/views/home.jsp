@@ -14,7 +14,7 @@
         var j = 0;
         var deleteContent = "";
         $(function () {
-            $('#confirm').bind("click", function () {
+            $('#confirm').live("click", function () {
                 var year = new Date().getYear().toString().substring(1, 3);
                 var month = (new Date().getMonth() + 1).toString();
                 var date = new Date().getDate().toString();
@@ -24,6 +24,9 @@
                 var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);
                 $('#weiboContent').prepend(chart);
                 $('#weibo').val("");
+
+                $('#newContent').html($('#weibo').val());
+                $('#contentSubmit').click();
             });
 
 
@@ -70,30 +73,31 @@
         <div id="weiboContent" class="weiboContent"></div>
         <hr>
 
-        <div id="editContent" class="editContent">
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-header">
+                <h3 id="myModalLabel">你确定要删除这一条记录么?</h3>
+            </div>
+            <div class="modal-footer">
+                <button class="redButton btn" data-dismiss="modal" aria-hidden="true">点错了</button>
+                <button id="sureButton" class="btn btn-primary">是的</button>
+            </div>
+        </div>
 
+        <div id="editContent" class="editContent">
             <div class="leftArea">
                 <textarea type="text" id="weibo" Value="Say something?" class="weibo"></textarea>
             </div>
-
             <div class="rightArea">
-
-                <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                     aria-hidden="true">
-
-                    <div class="modal-header">
-                        <h3 id="myModalLabel">你确定要删除这一条记录么?</h3>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button class="redButton btn" data-dismiss="modal" aria-hidden="true">点错了</button>
-                        <button id="sureButton" class="btn btn-primary">是的</button>
-                    </div>
-                </div>
-
                 <button id="confirm" class="btn">提交</button>
             </div>
         </div>
+
+        <form action="/submitContent" class="hiddenForm">
+            <input type="text" id="newContent" name="newContent">
+            <input type="submit" id="contentSubmit">
+        </form>
+
     </div>
 </div>
 </body>
