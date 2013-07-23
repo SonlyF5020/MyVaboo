@@ -13,6 +13,14 @@ public class contentStoreTest {
     public void should_read_file() throws Exception {
         contentStore.buildUserFile("zhanhonglai");
         assertThat(contentStore.readUserFile("zhanhonglai"), is("HelloWorld"));
+    }
 
+    @Test
+    public void testJava() throws Exception {
+        ContentStore initialContentStore = new ContentStore();
+        initialContentStore.setTestString("one");
+        ContentStore anotherContentStore = initialContentStore;
+        anotherContentStore.setTestString("two");
+        System.out.println(initialContentStore.getTestString());
     }
 }
