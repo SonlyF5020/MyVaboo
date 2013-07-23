@@ -20,9 +20,8 @@ public class ContentStore {
         try {
             contentFile = new File("/data/"+userName+".txt");
             FileWriter fileWriter = new FileWriter(contentFile);
-            fileWriter.write("HelloWorld"+content);
+            fileWriter.write(content);
             fileWriter.close();
-
         } catch (IOException e) {
             e.printStackTrace();
         }

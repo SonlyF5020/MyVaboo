@@ -11,7 +11,7 @@ public class contentStoreTest {
 
     @Test
     public void should_read_file() throws Exception {
-        contentStore.buildUserFile("zhanhonglai");
+        contentStore.buildUserFile("zhanhonglai","hei");
         assertThat(contentStore.readUserFile("zhanhonglai"), is("HelloWorld"));
     }
 
