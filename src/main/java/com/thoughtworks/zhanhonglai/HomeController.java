@@ -7,6 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import static java.lang.Thread.sleep;
+
 @Controller
 public class HomeController {
 
@@ -50,10 +52,11 @@ public class HomeController {
     }
 
     @RequestMapping("/submitContent")
-    public String submitContent(@RequestParam("newContent") String newContent, Model model){
-        System.out.println(newContent);
+    public String submitContent(@RequestParam("newContent") String newContent, Model model) throws InterruptedException {
         contentStore.buildUserFile("hehe", newContent);
-        model.addAttribute("content","fuck you");
-        return "testResult";
+        String response = contentStore.readUserFile("hehe");
+        model.addAttribute("content",response);
+        sleep(3000);
+        return "jsonView";
     }
 }

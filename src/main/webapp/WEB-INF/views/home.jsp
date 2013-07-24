@@ -57,7 +57,7 @@
 <div class="body">
     <div class="header">
         <div class="head">
-            <div class="miniLogo"><img src="/resources/img/zergIcon.png"></div>
+            <div class="miniLogo"><img src="/resources/img/zergIcon.png" CLASS="img-circle"></div>
             <div class="centerText"><h1>&nbspVaboo</h1></div>
         </div>
         <div class="clientInfo">

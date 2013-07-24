@@ -112,7 +112,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<div class=\"body\">\n");
       out.write("    <div class=\"header\">\n");
       out.write("        <div class=\"head\">\n");
-      out.write("            <div class=\"miniLogo\"><img src=\"/resources/img/zergIcon.png\"></div>\n");
+      out.write("            <div class=\"miniLogo\"><img src=\"/resources/img/zergIcon.png\" CLASS=\"img-circle\"></div>\n");
       out.write("            <div class=\"centerText\"><h1>&nbspVaboo</h1></div>\n");
       out.write("        </div>\n");
       out.write("        <div class=\"clientInfo\">\n");

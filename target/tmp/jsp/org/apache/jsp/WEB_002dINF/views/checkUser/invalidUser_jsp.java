@@ -58,6 +58,9 @@ public final class invalidUser_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"redBorder\">\n");
       out.write("    <h1>你输入的账号或密码有误！</h1>\n");
+      out.write("    <div class=\"progress progress-striped active\">\n");
+      out.write("        <div class=\"bar\" style=\"width: 40%;\"></div>\n");
+      out.write("    </div>\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");
