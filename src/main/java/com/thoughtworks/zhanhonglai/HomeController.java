@@ -62,8 +62,7 @@ public class HomeController {
 
     @RequestMapping("/json/userHistory")
     public String getUserHistory(Model model){
-        String response = contentStore.readContent("test");
-        model.addAttribute("content",response);
+        model.addAllAttributes(contentStore.getContents());
         return "jsonView";
     }
 }

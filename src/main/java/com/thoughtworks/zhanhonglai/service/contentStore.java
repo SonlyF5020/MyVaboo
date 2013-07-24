@@ -24,4 +24,8 @@ public class ContentStore {
         }
         return "";
     }
+
+    public Map<String, UserContent> getContents() {
+        return contents;
+    }
 }

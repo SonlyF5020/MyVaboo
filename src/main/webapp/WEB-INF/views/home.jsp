@@ -15,6 +15,11 @@
         var j = 0;
         var deleteContent = "";
         $(function () {
+            $.getJSON("/json/userHistory",function(allData){
+                alert(allData["test"]["content"]);
+                alert(typeof (allData));
+            });
+
             $('#confirm').live("click", function () {
                 var year = new Date().getYear().toString().substring(1, 3);
                 var month = (new Date().getMonth() + 1).toString();
@@ -26,8 +31,7 @@
                 $('#weiboContent').prepend(chart);
                 $('#newContent').val($('#weibo').val());
                 $('#weibo').val("");
-//                $('#contentSubmit').click();
-//                $.getJSON("/json/userHistory",function(allData){});
+                $('#contentSubmit').click();
             });
 
             $('.oneContent').live('mouseover', function () {
