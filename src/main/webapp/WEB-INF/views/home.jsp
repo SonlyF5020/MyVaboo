@@ -9,6 +9,7 @@
     <link href="<%=request.getContextPath()%>/resources/css/bootstrap.css" rel="stylesheet">
     <script type="text/javascript" src="/resources/js/bootstrap.js"></script>
     <script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/resources/js/home.js"></script>
     <script>
         var i = 0;
         var j = 0;
@@ -25,10 +26,9 @@
                 $('#weiboContent').prepend(chart);
                 $('#newContent').val($('#weibo').val());
                 $('#weibo').val("");
-                $('#contentSubmit').click();
-                $.getJSON("/JSON/userHistory",function(allData){});
+//                $('#contentSubmit').click();
+//                $.getJSON("/json/userHistory",function(allData){});
             });
-
 
             $('.oneContent').live('mouseover', function () {
                 $(this).addClass('mouseOver');

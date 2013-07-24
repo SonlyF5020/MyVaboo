@@ -60,10 +60,10 @@ public class HomeController {
         return "home";
     }
 
-    @RequestMapping("/JSON/userHistory")
+    @RequestMapping("/json/userHistory")
     public String getUserHistory(Model model){
         String response = contentStore.readContent("test");
         model.addAttribute("content",response);
-        return "home";
+        return "jsonView";
     }
 }
