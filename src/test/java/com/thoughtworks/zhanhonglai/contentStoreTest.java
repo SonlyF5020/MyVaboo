@@ -1,5 +1,7 @@
 package com.thoughtworks.zhanhonglai;
 
+import com.thoughtworks.zhanhonglai.data.UpdateDate;
+import com.thoughtworks.zhanhonglai.data.UserContent;
 import com.thoughtworks.zhanhonglai.service.ContentStore;
 import org.junit.Test;
 
@@ -11,16 +13,11 @@ public class contentStoreTest {
 
     @Test
     public void should_read_file() throws Exception {
-        contentStore.buildUserFile("zhanhonglai","hei");
-        assertThat(contentStore.readUserFile("zhanhonglai"), is("HelloWorld"));
-    }
+        String content ="first";
+        UpdateDate updateDate = new UpdateDate("2000","6","14");
+        UserContent userContent = new UserContent(content,updateDate);
 
-    @Test
-    public void testJava() throws Exception {
-        ContentStore initialContentStore = new ContentStore();
-        initialContentStore.setTestString("one");
-        ContentStore anotherContentStore = initialContentStore;
-        anotherContentStore.setTestString("two");
-        System.out.println(initialContentStore.getTestString());
+        contentStore.buildUserFile("zhanhonglai",userContent);
+        assertThat(contentStore.readContent("zhanhonglai"), is("first"));
     }
 }

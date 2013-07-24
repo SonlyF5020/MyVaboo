@@ -1,48 +1,27 @@
 package com.thoughtworks.zhanhonglai.service;
 
-import sun.misc.IOUtils;
+import com.thoughtworks.zhanhonglai.data.UpdateDate;
+import com.thoughtworks.zhanhonglai.data.UserContent;
 
-import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ContentStore {
-    File contentFile;
-    String testString;
-
-    public void setTestString(String testString) {
-        this.testString = testString;
+    Map<String,UserContent> contents = new HashMap<String,UserContent>();
+    public void buildUserFile(String userName,UserContent content){
+        contents.put(userName,content);
     }
 
-    public String getTestString() {
-        return testString;
+    public ContentStore() {
+        String testContent = "hello world you stupid";
+        UserContent userContent = new UserContent(testContent,new UpdateDate());
+        contents.put("test",userContent);
     }
 
-    public void buildUserFile(String userName,String content){
-        try {
-            contentFile = new File("/data/"+userName+".txt");
-            FileWriter fileWriter = new FileWriter(contentFile);
-            fileWriter.write("fuck you "+userName + content);
-            fileWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+    public String readContent(String userName){
+        if (contents.containsKey(userName)){
+            return contents.get(userName).getContent();
         }
-    }
-
-    public String readUserFile(String userName){
-        try {
-            BufferedReader inputStream = new BufferedReader(new FileReader(contentFile));
-            String contentString="";
-            String words;
-            while((words=inputStream.readLine())!=null){
-                contentString+=words;
-            }
-            inputStream.close();
-            return contentString;
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return userName;
+        return "";
     }
 }

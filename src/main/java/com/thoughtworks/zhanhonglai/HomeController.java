@@ -1,5 +1,7 @@
 package com.thoughtworks.zhanhonglai;
 
+import com.thoughtworks.zhanhonglai.data.UpdateDate;
+import com.thoughtworks.zhanhonglai.data.UserContent;
 import com.thoughtworks.zhanhonglai.service.ContentStore;
 import com.thoughtworks.zhanhonglai.service.ServerStore;
 import org.springframework.stereotype.Controller;
@@ -52,11 +54,16 @@ public class HomeController {
     }
 
     @RequestMapping("/submitContent")
-    public String submitContent(@RequestParam("newContent") String newContent, Model model) throws InterruptedException {
-        contentStore.buildUserFile("hehe", newContent);
-        String response = contentStore.readUserFile("hehe");
+    public String submitContent(@RequestParam("newContent") String newContent) throws InterruptedException {
+        UpdateDate currentDate = new UpdateDate("2013","7","24");
+        contentStore.buildUserFile("hehe", new UserContent(newContent,currentDate));
+        return "home";
+    }
+
+    @RequestMapping("/JSON/userHistory")
+    public String getUserHistory(Model model){
+        String response = contentStore.readContent("test");
         model.addAttribute("content",response);
-        sleep(3000);
-        return "jsonView";
+        return "home";
     }
 }

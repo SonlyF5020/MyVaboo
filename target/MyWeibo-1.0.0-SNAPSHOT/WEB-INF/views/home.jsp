@@ -13,17 +13,20 @@
         var i = 0;
         var j = 0;
         var deleteContent = "";
-        $(document).ready(function () {
-            $('#confirm').bind("click", function () {
+        $(function () {
+            $('#confirm').live("click", function () {
                 var year = new Date().getYear().toString().substring(1, 3);
                 var month = (new Date().getMonth() + 1).toString();
                 var date = new Date().getDate().toString();
                 var name=$('#client').html();
                 var dateString = "<hr>" + "---20" + year + "年" + month + "月" + date + "日"+"("+name+")";
                 var deleteButton = $('<div></div>').addClass('deleteButton');
-                var chart = $(document.createElement('div')).attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);
+                var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);
                 $('#weiboContent').prepend(chart);
+                $('#newContent').val($('#weibo').val());
                 $('#weibo').val("");
+                $('#contentSubmit').click();
+                $.getJSON("/JSON/userHistory",function(allData){});
             });
 
 
@@ -46,7 +49,6 @@
                 $('#' + deleteContent).hide();
                 $('#myModal').modal('hide');
             });
-
         });
     </script>
 
@@ -56,7 +58,7 @@
 <div class="body">
     <div class="header">
         <div class="head">
-            <div class="miniLogo"><img src="/resources/img/zergIcon.png"></div>
+            <div class="miniLogo"><img src="/resources/img/zergIcon.png" CLASS="img-circle"></div>
             <div class="centerText"><h1>&nbspVaboo</h1></div>
         </div>
         <div class="clientInfo">
@@ -66,35 +68,36 @@
     </div>
     <br>
     <hr>
-    <div class="default"><h1>欢迎使用Vaboo,留下你的足迹</h1>
+    <div class="default"><h1>留下你的足迹</h1>
 
         <div id="weiboContent" class="weiboContent"></div>
         <hr>
 
-        <div id="editContent" class="editContent">
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-header">
+                <h3 id="myModalLabel">你确定要删除这一条记录么?</h3>
+            </div>
+            <div class="modal-footer">
+                <button class="redButton btn" data-dismiss="modal" aria-hidden="true">点错了</button>
+                <button id="sureButton" class="btn btn-primary">是的</button>
+            </div>
+        </div>
 
+        <div id="editContent" class="editContent">
             <div class="leftArea">
                 <textarea type="text" id="weibo" Value="Say something?" class="weibo"></textarea>
             </div>
-
             <div class="rightArea">
-
-                <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                     aria-hidden="true">
-
-                    <div class="modal-header">
-                        <h3 id="myModalLabel">Are you sure you want to delete this tip?</h3>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button class="redButton btn" data-dismiss="modal" aria-hidden="true">NO!</button>
-                        <button id="sureButton" class="btn btn-primary">Sure</button>
-                    </div>
-                </div>
-
-                <button id="confirm" class="btn">confirm</button>
+                <button id="confirm" class="btn">提交</button>
             </div>
         </div>
+
+        <form action="/submitContent" class="hiddenForm" method="post">
+            <input type="text" id="newContent" name="newContent">
+            <input type="submit" id="contentSubmit">
+        </form>
+
     </div>
 </div>
 </body>

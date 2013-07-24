@@ -26,6 +26,7 @@
                 $('#newContent').val($('#weibo').val());
                 $('#weibo').val("");
                 $('#contentSubmit').click();
+                $.getJSON("/JSON/userHistory",function(allData){});
             });
 
 
