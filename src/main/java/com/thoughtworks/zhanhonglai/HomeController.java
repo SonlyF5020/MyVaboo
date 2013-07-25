@@ -56,7 +56,7 @@ public class HomeController {
     @RequestMapping("/submitContent")
     public String submitContent(@RequestParam("newContent") String newContent) throws InterruptedException {
         UpdateDate currentDate = new UpdateDate("2013","7","24");
-        contentStore.buildUserFile("hehe", new UserContent(newContent,currentDate));
+        contentStore.buildUserFile(serverStore.getCurrentUser(), new UserContent(newContent,currentDate));
         return "home";
     }
 

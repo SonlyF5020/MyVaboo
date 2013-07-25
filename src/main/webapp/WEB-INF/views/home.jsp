@@ -16,8 +16,12 @@
         var deleteContent = "";
         $(function () {
             $.getJSON("/json/userHistory",function(allData){
-                alert(allData["test"]["content"]);
-                alert(typeof (allData));
+                var name;
+                for(name in allData){
+                    var deleteButton = $('<div></div>').addClass('deleteButton');
+                    var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html(allData[name]["content"]+"<br><hr>"+name).append(deleteButton);
+                    $('#weiboContent').prepend(chart);
+                }
             });
 
             $('#confirm').live("click", function () {
@@ -26,9 +30,6 @@
                 var date = new Date().getDate().toString();
                 var name=$('#client').html();
                 var dateString = "<hr>" + "---20" + year + "Äê" + month + "ÔÂ" + date + "ÈÕ"+"("+name+")";
-                var deleteButton = $('<div></div>').addClass('deleteButton');
-                var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);
-                $('#weiboContent').prepend(chart);
                 $('#newContent').val($('#weibo').val());
                 $('#weibo').val("");
                 $('#contentSubmit').click();
@@ -98,6 +99,7 @@
         </div>
 
         <form action="/submitContent" class="hiddenForm" method="post">
+            <input type="text" id="newContentDate">
             <input type="text" id="newContent" name="newContent">
             <input type="submit" id="contentSubmit">
         </form>

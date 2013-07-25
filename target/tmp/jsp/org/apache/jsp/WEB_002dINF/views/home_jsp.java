@@ -71,8 +71,12 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        var deleteContent = \"\";\n");
       out.write("        $(function () {\n");
       out.write("            $.getJSON(\"/json/userHistory\",function(allData){\n");
-      out.write("                alert(allData[\"test\"][\"content\"]);\n");
-      out.write("                alert(typeof (allData));\n");
+      out.write("                var name;\n");
+      out.write("                for(name in allData){\n");
+      out.write("                    var deleteButton = $('<div></div>').addClass('deleteButton');\n");
+      out.write("                    var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html(allData[name][\"content\"]+\"<br><hr>\"+name).append(deleteButton);\n");
+      out.write("                    $('#weiboContent').prepend(chart);\n");
+      out.write("                }\n");
       out.write("            });\n");
       out.write("\n");
       out.write("            $('#confirm').live(\"click\", function () {\n");
