@@ -71,10 +71,12 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        var deleteContent = \"\";\n");
       out.write("        $(function () {\n");
       out.write("            $.getJSON(\"/json/userHistory\",function(allData){\n");
-      out.write("                var name;\n");
-      out.write("                for(name in allData){\n");
+      out.write("                var index;\n");
+      out.write("                for(index in allData){\n");
       out.write("                    var deleteButton = $('<div></div>').addClass('deleteButton');\n");
-      out.write("                    var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html(allData[name][\"content\"]+\"<br><hr>\"+name).append(deleteButton);\n");
+      out.write("                    var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent')\n");
+      out.write("                            .html(allData[index][\"content\"]+\"<br><hr>\"+allData[index][\"date\"]+\"(\"+allData[index][\"userName\"]+\")\")\n");
+      out.write("                            .append(deleteButton);\n");
       out.write("                    $('#weiboContent').prepend(chart);\n");
       out.write("                }\n");
       out.write("            });\n");
@@ -83,12 +85,9 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                var year = new Date().getYear().toString().substring(1, 3);\n");
       out.write("                var month = (new Date().getMonth() + 1).toString();\n");
       out.write("                var date = new Date().getDate().toString();\n");
-      out.write("                var name=$('#client').html();\n");
-      out.write("                var dateString = \"<hr>\" + \"---20\" + year + \"年\" + month + \"月\" + date + \"日\"+\"(\"+name+\")\";\n");
-      out.write("                var deleteButton = $('<div></div>').addClass('deleteButton');\n");
-      out.write("                var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);\n");
-      out.write("                $('#weiboContent').prepend(chart);\n");
+      out.write("                var dateString = \"---20\" + year + \".\" + month + \".\" + date;\n");
       out.write("                $('#newContent').val($('#weibo').val());\n");
+      out.write("                $('#newContentDate').val(dateString);\n");
       out.write("                $('#weibo').val(\"\");\n");
       out.write("                $('#contentSubmit').click();\n");
       out.write("            });\n");
@@ -160,6 +159,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\n");
       out.write("\n");
       out.write("        <form action=\"/submitContent\" class=\"hiddenForm\" method=\"post\">\n");
+      out.write("            <input type=\"text\" id=\"newContentDate\" name=\"newContentDate\">\n");
       out.write("            <input type=\"text\" id=\"newContent\" name=\"newContent\">\n");
       out.write("            <input type=\"submit\" id=\"contentSubmit\">\n");
       out.write("        </form>\n");

@@ -1,6 +1,5 @@
 package com.thoughtworks.zhanhonglai;
 
-import com.thoughtworks.zhanhonglai.data.UpdateDate;
 import com.thoughtworks.zhanhonglai.data.UserContent;
 import com.thoughtworks.zhanhonglai.service.ContentStore;
 import com.thoughtworks.zhanhonglai.service.ServerStore;
@@ -9,7 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import static java.lang.Thread.sleep;
+import java.util.Collection;
+
 
 @Controller
 public class HomeController {
@@ -54,15 +54,14 @@ public class HomeController {
     }
 
     @RequestMapping("/submitContent")
-    public String submitContent(@RequestParam("newContent") String newContent) throws InterruptedException {
-        UpdateDate currentDate = new UpdateDate("2013","7","24");
-        contentStore.buildUserFile(serverStore.getCurrentUser(), new UserContent(newContent,currentDate));
+    private String submitContent(@RequestParam("newContent") String newContent, @RequestParam("newContentDate") String newContentDate) throws InterruptedException {
+        contentStore.addContent(new UserContent(serverStore.getCurrentUser(),newContent, newContentDate));
         return "home";
     }
 
     @RequestMapping("/json/userHistory")
     public String getUserHistory(Model model){
-        model.addAllAttributes(contentStore.getContents());
+        model.addAllAttributes(contentStore.getAllContents());
         return "jsonView";
     }
 }
