@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" contentType="text/html; charset=GB2312" %>
+<%@ page session="false" contentType="text/html;" %>
 
 <html>
 <head>
@@ -69,13 +69,13 @@
             <div class="centerText"><h1>&nbspVaboo</h1></div>
         </div>
         <div class="clientInfo">
-            <span id="client">用户:<c:out value="${name}"></c:out></span><br>
-            <a href="/">退出</a>
+            <span id="client">User:<c:out value="${name}"></c:out></span><br>
+            <a href="/">Log out</a>
         </div>
     </div>
     <br>
     <hr>
-    <div class="default"><h1>留下你的足迹</h1>
+    <div class="default"><h1>Leave Your Step Here</h1>
 
         <div id="weiboContent" class="weiboContent"></div>
         <hr>
@@ -83,11 +83,11 @@
         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true">
             <div class="modal-header">
-                <h3 id="myModalLabel">你确定要删除这一条记录么?</h3>
+                <h3 id="myModalLabel">Are You Sure to <b>DELETE</b> ?</h3>
             </div>
             <div class="modal-footer">
-                <button class="redButton btn" data-dismiss="modal" aria-hidden="true">点错了</button>
-                <button id="sureButton" class="btn btn-primary">是的</button>
+                <button class="redButton btn" data-dismiss="modal" aria-hidden="true">NO</button>
+                <button id="sureButton" class="btn btn-primary">YES</button>
             </div>
         </div>
 
@@ -96,7 +96,7 @@
                 <textarea type="text" id="weibo" Value="Say something?" class="weibo"></textarea>
             </div>
             <div class="rightArea">
-                <button id="confirm" class="btn">提交</button>
+                <button id="confirm" class="btn">Submit</button>
             </div>
         </div>
 

@@ -9,26 +9,33 @@
     <link href="<%=request.getContextPath()%>/resources/css/bootstrap.css" rel="stylesheet">
     <script type="text/javascript" src="/resources/js/bootstrap.js"></script>
     <script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/resources/js/home.js"></script>
     <script>
         var i = 0;
         var j = 0;
         var deleteContent = "";
         $(function () {
+            $.getJSON("/json/userHistory",function(allData){
+                var index;
+                for(index in allData){
+                    var deleteButton = $('<div></div>').addClass('deleteButton');
+                    var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent')
+                            .html(allData[index]["content"]+"<br><hr>"+allData[index]["date"]+"("+allData[index]["userName"]+")")
+                            .append(deleteButton);
+                    $('#weiboContent').prepend(chart);
+                }
+            });
+
             $('#confirm').live("click", function () {
                 var year = new Date().getYear().toString().substring(1, 3);
                 var month = (new Date().getMonth() + 1).toString();
                 var date = new Date().getDate().toString();
-                var name=$('#client').html();
-                var dateString = "<hr>" + "---20" + year + "Äê" + month + "ÔÂ" + date + "ÈÕ"+"("+name+")";
-                var deleteButton = $('<div></div>').addClass('deleteButton');
-                var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent').html($('#weibo').val() + dateString).append(deleteButton);
-                $('#weiboContent').prepend(chart);
+                var dateString = "---20" + year + "." + month + "." + date;
                 $('#newContent').val($('#weibo').val());
+                $('#newContentDate').val(dateString);
                 $('#weibo').val("");
                 $('#contentSubmit').click();
-                $.getJSON("/JSON/userHistory",function(allData){});
             });
-
 
             $('.oneContent').live('mouseover', function () {
                 $(this).addClass('mouseOver');
@@ -94,6 +101,7 @@
         </div>
 
         <form action="/submitContent" class="hiddenForm" method="post">
+            <input type="text" id="newContentDate" name="newContentDate">
             <input type="text" id="newContent" name="newContent">
             <input type="submit" id="contentSubmit">
         </form>

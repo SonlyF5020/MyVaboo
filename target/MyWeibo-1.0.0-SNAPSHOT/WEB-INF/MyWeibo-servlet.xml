@@ -8,7 +8,7 @@
     <context:annotation-config/>
     <bean id="dispatcherServlet" class="org.springframework.web.servlet.DispatcherServlet"/>
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
-    <!--<bean name="jsonView" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView"/>-->
+    <bean name="jsonView" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView"/>
 
     <!--使用json数据来方便处理-->
 

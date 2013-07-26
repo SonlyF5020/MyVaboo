@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Collection;
 
 
@@ -54,8 +55,9 @@ public class HomeController {
     }
 
     @RequestMapping("/submitContent")
-    private String submitContent(@RequestParam("newContent") String newContent, @RequestParam("newContentDate") String newContentDate) throws InterruptedException {
-        contentStore.addContent(new UserContent(serverStore.getCurrentUser(),newContent, newContentDate));
+    private String submitContent(@RequestParam("newContent") String newContent, @RequestParam("newContentDate") String newContentDate) throws InterruptedException, UnsupportedEncodingException {
+        newContent = new String(newContent.getBytes("iso-8859-1"),"utf-8");
+        contentStore.addContent(new UserContent(serverStore.getCurrentUser(), newContent, newContentDate));
         return "home";
     }
 
