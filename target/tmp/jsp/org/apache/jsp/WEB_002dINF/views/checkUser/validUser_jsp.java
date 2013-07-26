@@ -29,7 +29,7 @@ public final class validUser_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html; charset=GB2312");
+      response.setContentType("text/html; charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, false, 8192, true);
       _jspx_page_context = pageContext;

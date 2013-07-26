@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" contentType="text/html; charset=GB2312" %>
+<%@ page session="false" contentType="text/html; charset=UTF-8" %>
 <link href="<%=request.getContextPath()%>/resources/css/bootstrap.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/resources/css/myStyle.css" rel="stylesheet">
 
@@ -28,11 +28,11 @@
 <div class="login">
     <div class="clientForm">
         <form>
-            ÐÕÃû£º<input type="text" id="inputName"><br>
-            ÃÜÂë£º<input type="password" id="password1"><br>
-            ÃÜÂë£º<input type="password" id="password2"><br>
-            <span class="warning">ÄúÁ½´ÎÊäÈëµÄÃÜÂë²»Ò»ÖÂ£¡</span><br>
-            <input type="button" class="btn" id="confirmShow" value="È·¶¨"><a href="/" class="btn">·µ»Ø</a>
+            å§“åï¼š<input type="text" id="inputName"><br>
+            å¯†ç ï¼š<input type="password" id="password1"><br>
+            å¯†ç ï¼š<input type="password" id="password2"><br>
+            <span class="warning">æ‚¨ä¸¤æ¬¡è¾“å…¥çš„å¯†ç ä¸ä¸€è‡´ï¼</span><br>
+            <input type="button" class="btn" id="confirmShow" value="ç¡®å®š"><a href="/" class="btn">è¿”å›ž</a>
         </form>
 
         <form action="/clientCreate" method="get" class="hiddenForm">

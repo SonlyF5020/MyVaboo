@@ -39,7 +39,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html;");
+      response.setContentType("text/html; charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, false, 8192, true);
       _jspx_page_context = pageContext;
@@ -124,16 +124,16 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"centerText\"><h1>&nbspVaboo</h1></div>\n");
       out.write("        </div>\n");
       out.write("        <div class=\"clientInfo\">\n");
-      out.write("            <span id=\"client\">User:");
+      out.write("            <span id=\"client\">用户:");
       if (_jspx_meth_c_out_0(_jspx_page_context))
         return;
       out.write("</span><br>\n");
-      out.write("            <a href=\"/\">Log out</a>\n");
+      out.write("            <a href=\"/\">退出</a>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");
       out.write("    <br>\n");
       out.write("    <hr>\n");
-      out.write("    <div class=\"default\"><h1>Leave Your Step Here</h1>\n");
+      out.write("    <div class=\"default\"><h1>留下你的足迹</h1>\n");
       out.write("\n");
       out.write("        <div id=\"weiboContent\" class=\"weiboContent\"></div>\n");
       out.write("        <hr>\n");
@@ -141,11 +141,11 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div id=\"myModal\" class=\"modal hide fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\"\n");
       out.write("             aria-hidden=\"true\">\n");
       out.write("            <div class=\"modal-header\">\n");
-      out.write("                <h3 id=\"myModalLabel\">Are You Sure to <b>DELETE</b> ?</h3>\n");
+      out.write("                <h3 id=\"myModalLabel\">你确定要删除这一条吗?</h3>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"modal-footer\">\n");
-      out.write("                <button class=\"redButton btn\" data-dismiss=\"modal\" aria-hidden=\"true\">NO</button>\n");
-      out.write("                <button id=\"sureButton\" class=\"btn btn-primary\">YES</button>\n");
+      out.write("                <button class=\"redButton btn\" data-dismiss=\"modal\" aria-hidden=\"true\">点错了</button>\n");
+      out.write("                <button id=\"sureButton\" class=\"btn btn-primary\">是的</button>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("\n");
@@ -154,7 +154,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <textarea type=\"text\" id=\"weibo\" Value=\"Say something?\" class=\"weibo\"></textarea>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"rightArea\">\n");
-      out.write("                <button id=\"confirm\" class=\"btn\">Submit</button>\n");
+      out.write("                <button id=\"confirm\" class=\"btn\">提交</button>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("\n");

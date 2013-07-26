@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" contentType="text/html; charset=GB2312"%>
+<%@ page session="false" contentType="text/html; charset=UTF-8"%>
 <link href="<%=request.getContextPath()%>/resources/css/bootstrap.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/resources/css/myStyle.css" rel="stylesheet">
 
@@ -12,7 +12,7 @@
 </head>
 <body class="allBackground">
 <div class="greenBorder">
-    <h1>ÕËºÅÉêÇë³É¹¦£¡</h1>
+    <h1>è´¦å·ç”³è¯·æˆåŠŸï¼</h1>
 </div>
 </body>
 </html>

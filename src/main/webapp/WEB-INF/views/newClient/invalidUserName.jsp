@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" contentType="text/html; charset=GB2312"%>
+<%@ page session="false" contentType="text/html; charset=UTF-8"%>
 <link href="<%=request.getContextPath()%>/resources/css/bootstrap.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/resources/css/myStyle.css" rel="stylesheet">
 
@@ -12,7 +12,7 @@
 </head>
 <body class="allBackground">
 <div class="redBorder">
-    <h1>此账号已被占用！</h1>
+    <h1>姝よ处鍙峰凡琚崰鐢紒</h1>
 </div>
 </body>
 </html>

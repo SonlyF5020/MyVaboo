@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" contentType="text/html; charset=GB2312" %>
+<%@ page session="false" contentType="text/html; charset=UTF-8" %>
 <link href="<%=request.getContextPath()%>/resources/css/bootstrap.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/resources/css/myStyle.css" rel="stylesheet">
 
@@ -13,9 +13,9 @@
 <div class="login">
     <div class="clientForm">
         <form action="/checkUser" method="get">
-            ÐÕÃû£º<input type="text" name="name"><br>
-            ÃÜÂë£º<input type="password" name="password"><br>
-            <input type="submit" class="btn" value="µÇÂ½"><a href="/register" class="btn">×¢²á</a>
+            å§“åï¼š<input type="text" name="name"><br>
+            å¯†ç ï¼š<input type="password" name="password"><br>
+            <input type="submit" class="btn" value="ç™»é™†"><a href="/register" class="btn">æ³¨å†Œ</a>
         </form>
     </div>
     <div class="bigLogo">

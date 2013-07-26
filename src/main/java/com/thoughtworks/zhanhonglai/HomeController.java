@@ -56,7 +56,6 @@ public class HomeController {
 
     @RequestMapping("/submitContent")
     private String submitContent(@RequestParam("newContent") String newContent, @RequestParam("newContentDate") String newContentDate) throws InterruptedException, UnsupportedEncodingException {
-        newContent = new String(newContent.getBytes("iso-8859-1"),"utf-8");
         contentStore.addContent(new UserContent(serverStore.getCurrentUser(), newContent, newContentDate));
         return "home";
     }
