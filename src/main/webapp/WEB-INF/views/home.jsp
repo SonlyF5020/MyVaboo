@@ -26,6 +26,10 @@
                 }
             });
 
+            $.getJSON("/json/currentUserName",function(allData){
+                $('#currentUserName').html(allData["userName"]);
+            });
+
             $('#confirm').live("click", function () {
                 var year = new Date().getYear().toString().substring(1, 3);
                 var month = (new Date().getMonth() + 1).toString();
@@ -69,7 +73,7 @@
             <div class="centerText"><h1>&nbspVaboo</h1></div>
         </div>
         <div class="clientInfo">
-            <span id="client">用户:<c:out value="${name}"></c:out></span><br>
+            <span id="client">用户:<span id="currentUserName"></span></span><br>
             <a href="/">退出</a>
         </div>
     </div>

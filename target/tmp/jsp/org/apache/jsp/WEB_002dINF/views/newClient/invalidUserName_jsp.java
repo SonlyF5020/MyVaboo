@@ -29,7 +29,7 @@ public final class invalidUserName_jsp extends org.apache.jasper.runtime.HttpJsp
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html; charset=GB2312");
+      response.setContentType("text/html; charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, false, 8192, true);
       _jspx_page_context = pageContext;
@@ -47,17 +47,36 @@ public final class invalidUserName_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("<link href=\"");
       out.print(request.getContextPath());
       out.write("/resources/css/myStyle.css\" rel=\"stylesheet\">\n");
+      out.write("<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js\"></script>\n");
+      out.write("<script type=\"text/javascript\" src=\"/resources/js/bootstrap.js\"></script>\n");
       out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
       out.write("    <title>invalidUser</title>\n");
       out.write("    <script>\n");
-      out.write("        setTimeout(\"document.location.href='/register'\",1000);\n");
+      out.write("        var p = 0;\n");
+      out.write("        $(function () {\n");
+      out.write("            run();\n");
+      out.write("        });\n");
+      out.write("        function run() {\n");
+      out.write("            p += 5;\n");
+      out.write("            $(\"div[class=bar]\").css(\"width\", p + \"%\");\n");
+      out.write("            if (p < 100) {\n");
+      out.write("                setTimeout(\"run()\", 20);\n");
+      out.write("            }\n");
+      out.write("            else {\n");
+      out.write("                setTimeout(\"document.location.href='/home'\", 1500);\n");
+      out.write("            }\n");
+      out.write("        }\n");
       out.write("    </script>\n");
       out.write("</head>\n");
       out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"redBorder\">\n");
       out.write("    <h1>此账号已被占用！</h1>\n");
+      out.write("\n");
+      out.write("    <div class=\"progress progress-striped active\">\n");
+      out.write("        <div class=\"bar\" style=\"width: 0%;\"></div>\n");
+      out.write("    </div>\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");

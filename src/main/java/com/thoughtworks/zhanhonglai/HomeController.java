@@ -19,8 +19,7 @@ public class HomeController {
     ContentStore contentStore = new ContentStore();
 
     @RequestMapping("/home")
-    public String accessHome(Model model) {
-        model.addAttribute("name", serverStore.getCurrentUser());
+    public String accessHome() {
         return "home";
     }
 
@@ -63,6 +62,11 @@ public class HomeController {
     @RequestMapping("/json/userHistory")
     public String getUserHistory(Model model){
         model.addAllAttributes(contentStore.getAllContents());
+        return "jsonView";
+    }
+    @RequestMapping("/json/currentUserName")
+    public String getCurrentUserName(Model model){
+        model.addAttribute("userName",serverStore.getCurrentUser());
         return "jsonView";
     }
 }
