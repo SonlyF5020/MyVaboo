@@ -56,16 +56,14 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <script type=\"text/javascript\" src=\"/resources/js/bootstrap.min.js\"></script>\n");
       out.write("    <script type=\"text/javascript\" src=\"/resources/js/home.js\"></script>\n");
       out.write("    <script>\n");
-      out.write("        var i = 0;\n");
-      out.write("        var j = 0;\n");
       out.write("        var deleteContent = \"\";\n");
       out.write("        $(function () {\n");
       out.write("            $.getJSON(\"/json/userHistory\",function(allData){\n");
       out.write("                var index;\n");
       out.write("                for(index in allData){\n");
       out.write("                    var deleteButton = $('<div></div>').addClass('deleteButton');\n");
-      out.write("                    var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent')\n");
-      out.write("                            .html(allData[index][\"content\"]+\"<br><hr>\"+allData[index][\"date\"]+\"(\"+allData[index][\"userName\"]+\")\")\n");
+      out.write("                    var chart = $('<div></div>').attr('id', index).attr('class', 'oneContent')\n");
+      out.write("                            .html(allData[index][\"content\"]+\"<br><hr>\"+allData[index][\"date\"]+\"(<span>\"+allData[index][\"userName\"]+\"</span>)\")\n");
       out.write("                            .append(deleteButton);\n");
       out.write("                    $('#weiboContent').prepend(chart);\n");
       out.write("                }\n");
@@ -88,7 +86,9 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("            $('.oneContent').live('mouseover', function () {\n");
       out.write("                $(this).addClass('mouseOver');\n");
-      out.write("                $('.deleteButton', this).show();\n");
+      out.write("                if($('span',this).html()===$('#currentUserName').html()){\n");
+      out.write("                    $('.deleteButton', this).show();\n");
+      out.write("                }\n");
       out.write("            });\n");
       out.write("\n");
       out.write("            $('.oneContent').live('mouseout', function () {\n");
@@ -102,7 +102,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            });\n");
       out.write("\n");
       out.write("            $('#sureButton').live('click', function () {\n");
-      out.write("                $('#' + deleteContent).hide();\n");
+      out.write("                document.location.href='/delete?deleteIndex='+deleteContent\n");
       out.write("                $('#myModal').modal('hide');\n");
       out.write("            });\n");
       out.write("        });\n");

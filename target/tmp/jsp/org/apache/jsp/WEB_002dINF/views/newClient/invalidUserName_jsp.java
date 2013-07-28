@@ -65,7 +65,7 @@ public final class invalidUserName_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("                setTimeout(\"run()\", 20);\n");
       out.write("            }\n");
       out.write("            else {\n");
-      out.write("                setTimeout(\"document.location.href='/home'\", 1500);\n");
+      out.write("                setTimeout(\"document.location.href='/register'\", 1500);\n");
       out.write("            }\n");
       out.write("        }\n");
       out.write("    </script>\n");

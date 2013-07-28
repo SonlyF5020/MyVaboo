@@ -25,4 +25,8 @@ public class ContentStore {
         }
         return result;
     }
+
+    public void deleteContent(String deleteContent) {
+        contents.remove(deleteContent);
+    }
 }

@@ -11,16 +11,14 @@
     <script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/resources/js/home.js"></script>
     <script>
-        var i = 0;
-        var j = 0;
         var deleteContent = "";
         $(function () {
             $.getJSON("/json/userHistory",function(allData){
                 var index;
                 for(index in allData){
                     var deleteButton = $('<div></div>').addClass('deleteButton');
-                    var chart = $('<div></div>').attr('id', i++).attr('class', 'oneContent')
-                            .html(allData[index]["content"]+"<br><hr>"+allData[index]["date"]+"("+allData[index]["userName"]+")")
+                    var chart = $('<div></div>').attr('id', index).attr('class', 'oneContent')
+                            .html(allData[index]["content"]+"<br><hr>"+allData[index]["date"]+"(<span>"+allData[index]["userName"]+"</span>)")
                             .append(deleteButton);
                     $('#weiboContent').prepend(chart);
                 }
@@ -43,7 +41,9 @@
 
             $('.oneContent').live('mouseover', function () {
                 $(this).addClass('mouseOver');
-                $('.deleteButton', this).show();
+                if($('span',this).html()===$('#currentUserName').html()){
+                    $('.deleteButton', this).show();
+                }
             });
 
             $('.oneContent').live('mouseout', function () {
@@ -57,7 +57,7 @@
             });
 
             $('#sureButton').live('click', function () {
-                $('#' + deleteContent).hide();
+                document.location.href='/delete?deleteIndex='+deleteContent
                 $('#myModal').modal('hide');
             });
         });

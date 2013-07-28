@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" contentType="text/html; charset=GB2312" %>
+<%@ page session="false" contentType="text/html; charset=UTF-8" %>
 
 <html>
 <head>
@@ -24,6 +24,10 @@
                             .append(deleteButton);
                     $('#weiboContent').prepend(chart);
                 }
+            });
+
+            $.getJSON("/json/currentUserName",function(allData){
+                $('#currentUserName').html(allData["userName"]);
             });
 
             $('#confirm').live("click", function () {
@@ -69,13 +73,13 @@
             <div class="centerText"><h1>&nbspVaboo</h1></div>
         </div>
         <div class="clientInfo">
-            <span id="client">ÓÃ»§:<c:out value="${name}"></c:out></span><br>
-            <a href="/">ÍË³ö</a>
+            <span id="client">ç”¨æˆ·:<span id="currentUserName"></span></span><br>
+            <a href="/">é€€å‡º</a>
         </div>
     </div>
     <br>
     <hr>
-    <div class="default"><h1>ÁôÏÂÄãµÄ×ã¼£</h1>
+    <div class="default"><h1>ç•™ä¸‹ä½ çš„è¶³è¿¹</h1>
 
         <div id="weiboContent" class="weiboContent"></div>
         <hr>
@@ -83,11 +87,11 @@
         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true">
             <div class="modal-header">
-                <h3 id="myModalLabel">ÄãÈ·¶¨ÒªÉ¾³ıÕâÒ»Ìõ¼ÇÂ¼Ã´?</h3>
+                <h3 id="myModalLabel">ä½ ç¡®å®šè¦åˆ é™¤è¿™ä¸€æ¡å—?</h3>
             </div>
             <div class="modal-footer">
-                <button class="redButton btn" data-dismiss="modal" aria-hidden="true">µã´íÁË</button>
-                <button id="sureButton" class="btn btn-primary">ÊÇµÄ</button>
+                <button class="redButton btn" data-dismiss="modal" aria-hidden="true">ç‚¹é”™äº†</button>
+                <button id="sureButton" class="btn btn-primary">æ˜¯çš„</button>
             </div>
         </div>
 
@@ -96,7 +100,7 @@
                 <textarea type="text" id="weibo" Value="Say something?" class="weibo"></textarea>
             </div>
             <div class="rightArea">
-                <button id="confirm" class="btn">Ìá½»</button>
+                <button id="confirm" class="btn">æäº¤</button>
             </div>
         </div>
 

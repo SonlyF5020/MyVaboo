@@ -69,4 +69,10 @@ public class HomeController {
         model.addAttribute("userName",serverStore.getCurrentUser());
         return "jsonView";
     }
+
+    @RequestMapping("/delete")
+    public String deleteContent(@RequestParam("deleteIndex") String deleteIndex){
+        contentStore.deleteContent(deleteIndex);
+        return "home";
+    }
 }
