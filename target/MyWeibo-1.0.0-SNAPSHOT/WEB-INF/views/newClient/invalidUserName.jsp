@@ -20,7 +20,7 @@
                 setTimeout("run()", 20);
             }
             else {
-                setTimeout("document.location.href='/home'", 1500);
+                setTimeout("document.location.href='/register'", 1500);
             }
         }
     </script>
