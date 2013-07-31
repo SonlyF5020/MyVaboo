@@ -55,7 +55,6 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <script type=\"text/javascript\" src=\"/resources/js/bootstrap.js\"></script>\n");
       out.write("    <script type=\"text/javascript\" src=\"/resources/js/bootstrap.min.js\"></script>\n");
       out.write("    <script type=\"text/javascript\" src=\"/resources/js/home.js\"></script>\n");
-      out.write("\n");
       out.write("</head>\n");
       out.write("\n");
       out.write("<body class=\"allBackground\">\n");

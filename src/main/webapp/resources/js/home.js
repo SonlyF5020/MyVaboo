@@ -5,9 +5,10 @@ $(function () {
         var index;
         for(index in allData){
             var deleteButton = $('<div></div>').addClass('deleteButton');
+            var writeButton = $('<div></div>').addClass('writeButton');
             var chart = $('<div></div>').attr('id', index).attr('class', 'oneContent')
                 .html(allData[index]["content"]+"<br><hr>"+allData[index]["date"]+"(<span>"+allData[index]["userName"]+"</span>)")
-                .append(deleteButton);
+                .append(deleteButton).append(writeButton);
             $('#weiboContent').prepend(chart);
         }
     });
@@ -32,11 +33,13 @@ $(function () {
         if($('span',this).html()===$('#currentUserName').html()){
             $('.deleteButton', this).show();
         }
+        $('.writeButton', this).show();
     });
 
     $('.oneContent').live('mouseout', function () {
         $('.oneContent').removeClass('mouseOver');
         $('.deleteButton').hide();
+        $('.writeButton').hide();
     });
 
     $('.deleteButton').live('click', function () {
