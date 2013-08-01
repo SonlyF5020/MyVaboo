@@ -1,9 +1,14 @@
 var deleteContent = "";
 
-$(function () {
-    getHistory();
-    getUserName();
+var MouseOutHandler = function() {
+    $('#weiboContent').on('mouseout', '.oneContent', function () {
+        $('.oneContent.mouseOver').removeClass('mouseOver');
+        $('.deleteButton').hide();
+        $('.writeButton').hide();
+    });
+}
 
+var submitHandler = function() {
     $('#confirm').bind("click", function () {
         var year = new Date().getYear().toString().substring(1, 3);
         var month = (new Date().getMonth() + 1).toString();
@@ -14,29 +19,41 @@ $(function () {
         $('#weibo').val("");
         $('#contentSubmit').click();
     });
-
-    $('#weiboContent').on('mouseover','.oneContent',function(){
+}
+var mouseOverHandler = function() {
+    $('#weiboContent').on('mouseover', '.oneContent', function () {
         $(this).addClass('mouseOver');
-        if($('span',this).html()===$('#currentUserName').html()){
+        if ($('span', this).html() === $('#currentUserName').html()) {
             $('.deleteButton', this).show();
         }
         $('.writeButton', this).show();
     });
-
-    $('#weiboContent').on('mouseout','.oneContent',function(){
-        $('.oneContent.mouseOver').removeClass('mouseOver');
-        $('.deleteButton').hide();
-        $('.writeButton').hide();
-    });
+}
+$(function () {
+    getHistory();
+    getUserName();
+    submitHandler();
+    mouseOverHandler();
+    MouseOutHandler();
 
     $('#weiboContent').on('click','.deleteButton',function(){
-        $('#myModal').modal('show');
+        $('#deleteModal').modal('show');
         deleteContent = $(this).parent().attr("id");
     });
 
-    $('#myModal').on('click','#sureButton',function(){
-        document.location.href='/delete?deleteIndex='+deleteContent
-        $('#myModal').modal('hide');
+    $('#weiboContent').on('click','.writeButton',function(){
+        $('#ownerName').html($('span',this.parent).html());
+        $('#editModal').modal('show');
+    });
+
+    $('#deleteModal').on('click','#deleteSure',function(){
+        document.location.href='/delete?deleteIndex='+deleteContent;
+        $('#deleteModal').modal('hide');
+    });
+
+    $('#editModal').on('click','#editSure',function(){
+        $('#editModal').modal('hide');
+        alert("coming soon");
     });
 });
 

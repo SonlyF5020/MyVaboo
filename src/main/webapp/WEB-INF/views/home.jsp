@@ -31,16 +31,8 @@
         <div id="weiboContent" class="weiboContent"></div>
         <hr>
 
-        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-             aria-hidden="true">
-            <div class="modal-header">
-                <h3 id="myModalLabel">你确定要删除这一条吗?</h3>
-            </div>
-            <div class="modal-footer">
-                <button class="redButton btn" data-dismiss="modal" aria-hidden="true">点错了</button>
-                <button id="sureButton" class="btn btn-primary">是的</button>
-            </div>
-        </div>
+        <jsp:include page="modal/deleteModal.jsp"></jsp:include>
+        <jsp:include page="modal/editModal.jsp"></jsp:include>
 
         <div id="editContent" class="editContent">
             <div class="leftArea">
