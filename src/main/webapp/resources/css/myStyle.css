@@ -25,12 +25,6 @@
     border-radius:10px;
 }
 
-.editContent{
-    width:50%;
-    margin:auto;
-    text-align:center;
-    overflow:hidden;
-}
 .weibo{
     width:400px;
     min-height:100px;
@@ -57,7 +51,7 @@
     line-height:50px;
     cursor:pointer;
 }
-.deleteButton{
+.oneContent .deleteButton{
     background-image:url("/resources/img/deleteIcon.png");
     position: absolute;
     margin-left: 745px;
@@ -67,7 +61,7 @@
     display:none;
     cursor:pointer;
 }
-.writeButton{
+.oneContent .writeButton{
     background-image:url("/resources/img/write1.png");
     position: absolute;
     margin-left: 700px;
@@ -77,12 +71,19 @@
     display:none;
     cursor:pointer;
 }
-.leftArea{
+.editContent{
+    width:50%;
+    margin:auto;
+    text-align:center;
+    overflow:hidden;
+}
+
+.editContent .leftArea{
     width:85%;
     float:left;
     text-align:right;
 }
-.rightArea{
+.editContent .rightArea{
     text-align:left;
     width:15%;
     float:left;
