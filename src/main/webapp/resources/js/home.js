@@ -42,8 +42,12 @@ $(function () {
     });
 
     $('#weiboContent').on('click','.writeButton',function(){
-        $('#ownerName').html($('span',this.parent).html());
-        $('#editModal').modal('show');
+
+        alert($('span',this.parent));
+        alert($('span',this.parent()).html());
+
+//        $('#ownerName').html($('span',this.parent).html());
+//        $('#editModal').modal('show');
     });
 
     $('#deleteModal').on('click','#deleteSure',function(){
