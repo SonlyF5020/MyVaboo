@@ -1,22 +1,15 @@
 var deleteContent = "";
 
-$(function () {
-    $.getJSON("/json/userHistory",function(allData){
-        var index;
-        for(index in allData){
-            var deleteButton = $('<div></div>').addClass('deleteButton');
-            var chart = $('<div></div>').attr('id', index).attr('class', 'oneContent')
-                .html(allData[index]["content"]+"<br><hr>"+allData[index]["date"]+"(<span>"+allData[index]["userName"]+"</span>)")
-                .append(deleteButton);
-            $('#weiboContent').prepend(chart);
-        }
+var MouseOutHandler = function() {
+    $('#weiboContent').on('mouseout', '.oneContent', function () {
+        $('.oneContent.mouseOver').removeClass('mouseOver');
+        $('.deleteButton').hide();
+        $('.writeButton').hide();
     });
+}
 
-    $.getJSON("/json/currentUserName",function(allData){
-        $('#currentUserName').html(allData["userName"]);
-    });
-
-    $('#confirm').live("click", function () {
+var submitHandler = function() {
+    $('#confirm').bind("click", function () {
         var year = new Date().getYear().toString().substring(1, 3);
         var month = (new Date().getMonth() + 1).toString();
         var date = new Date().getDate().toString();
@@ -26,26 +19,65 @@ $(function () {
         $('#weibo').val("");
         $('#contentSubmit').click();
     });
-
-    $('.oneContent').live('mouseover', function () {
+}
+var mouseOverHandler = function() {
+    $('#weiboContent').on('mouseover', '.oneContent', function () {
         $(this).addClass('mouseOver');
-        if($('span',this).html()===$('#currentUserName').html()){
+        if ($('span', this).html() === $('#currentUserName').html()) {
             $('.deleteButton', this).show();
         }
+        $('.writeButton', this).show();
     });
+}
+$(function () {
+    getHistory();
+    getUserName();
+    submitHandler();
+    mouseOverHandler();
+    MouseOutHandler();
 
-    $('.oneContent').live('mouseout', function () {
-        $('.oneContent').removeClass('mouseOver');
-        $('.deleteButton').hide();
-    });
-
-    $('.deleteButton').live('click', function () {
-        $('#myModal').modal('show');
+    $('#weiboContent').on('click','.deleteButton',function(){
+        $('#deleteModal').modal('show');
         deleteContent = $(this).parent().attr("id");
     });
 
-    $('#sureButton').live('click', function () {
-        document.location.href='/delete?deleteIndex='+deleteContent
-        $('#myModal').modal('hide');
+    $('#weiboContent').on('click','.writeButton',function(){
+
+        alert($('span',this.parent));
+        alert($('span',this.parent()).html());
+
+//        $('#ownerName').html($('span',this.parent).html());
+//        $('#editModal').modal('show');
+    });
+
+    $('#deleteModal').on('click','#deleteSure',function(){
+        document.location.href='/delete?deleteIndex='+deleteContent;
+        $('#deleteModal').modal('hide');
+    });
+
+    $('#editModal').on('click','#editSure',function(){
+        $('#editModal').modal('hide');
+        alert("coming soon");
     });
 });
+
+var getUserName = function(){
+    $.getJSON("/json/currentUserName",function(allData){
+        $('#currentUserName').html(allData["userName"]);
+    });
+}
+
+var getHistory = function(){
+    $.getJSON("/json/userHistory",function(allData){
+        var index;
+        for(index in allData){
+            var deleteButton = $('<div></div>').addClass('deleteButton');
+            var writeButton = $('<div></div>').addClass('writeButton');
+            var chart = $('<div></div>').attr('id', index).attr('class', 'oneContent')
+                .html(allData[index]["content"]+"<br><hr>"+allData[index]["date"]+"(<span>"+allData[index]["userName"]+"</span>)")
+                .append(deleteButton).append(writeButton);
+            $('#weiboContent').prepend(chart);
+        }
+    });
+}
+

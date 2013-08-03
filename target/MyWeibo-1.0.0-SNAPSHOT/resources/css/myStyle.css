@@ -25,13 +25,7 @@
     border-radius:10px;
 }
 
-.editContent{
-    width:50%;
-    margin:auto;
-    text-align:center;
-    overflow:hidden;
-}
-.weibo{
+.editContent .leftArea .weibo{
     width:400px;
     min-height:100px;
 }
@@ -57,7 +51,7 @@
     line-height:50px;
     cursor:pointer;
 }
-.deleteButton{
+.oneContent .deleteButton{
     background-image:url("/resources/img/deleteIcon.png");
     position: absolute;
     margin-left: 745px;
@@ -67,12 +61,29 @@
     display:none;
     cursor:pointer;
 }
-.leftArea{
+.oneContent .writeButton{
+    background-image:url("/resources/img/write1.png");
+    position: absolute;
+    margin-left: 700px;
+    margin-top: -30px;
+    width:50px;
+    height:50px;
+    display:none;
+    cursor:pointer;
+}
+.editContent{
+    width:50%;
+    margin:auto;
+    text-align:center;
+    overflow:hidden;
+}
+
+.editContent .leftArea{
     width:85%;
     float:left;
     text-align:right;
 }
-.rightArea{
+.editContent .rightArea{
     text-align:left;
     width:15%;
     float:left;
@@ -156,4 +167,10 @@
 .warning{
     color: red;
     display: none;
+}
+.leftArea .reply{
+    padding-top: 10px;
+    margin-top: 10px;
+    width:400px;
+    min-height:100px;
 }
