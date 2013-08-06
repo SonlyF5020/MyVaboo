@@ -1,11 +1,15 @@
 package com.thoughtworks.zhanhonglai.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ServerStore {
     Map<String,String> userMap = new HashMap<String,String>();
     String currentUser;
+    List<String> currentOnlineUsers = new ArrayList<String>();
+    //TODO : Use session to handle multi-user online problem
 
 
     public String getCurrentUser() {
