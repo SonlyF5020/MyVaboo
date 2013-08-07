@@ -3,11 +3,14 @@ package com.thoughtworks.zhanhonglai;
 import com.thoughtworks.zhanhonglai.data.UserContent;
 import com.thoughtworks.zhanhonglai.service.ContentStore;
 import com.thoughtworks.zhanhonglai.service.ServerStore;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
 import java.util.Collection;
 
@@ -24,7 +27,10 @@ public class HomeController {
     }
 
     @RequestMapping("/checkUser")
-    public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password) {
+    public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String userName = (String)session.getAttribute("currentUser");
+        //TODO the problem is : we didnot put any data(as an attribute) in session structure,so here we got null in userName
         if (passwordIsCorrect(name, password)) {
             serverStore.setCurrentUser(name);
             return "checkUser/validUser";
