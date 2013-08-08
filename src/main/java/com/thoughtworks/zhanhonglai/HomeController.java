@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
 
-@SessionAttributes({"sessionUserName", "sessionUserPassword"})
+@SessionAttributes("sessionUserName")
 @Controller
 public class HomeController {
 
@@ -28,20 +28,11 @@ public class HomeController {
     @RequestMapping("/checkUser")
     public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request, Model model) {
         HttpSession session = request.getSession();
-        if (session.isNew()) {
-            if (passwordIsCorrect(name, password)) {
-                session.setAttribute("sessionUserName", name);
-                session.setAttribute("sessionUserPassword", password);
-                serverStore.setCurrentUser(name);
-                return "checkUser/validUser";
-            } else {
-                return "checkUser/invalidUser";
-            }
-        }
-        //TODO the problem is : we didnot put any data(as an attribute) in session structure,so here we got null in userName
-        else {
+        if (passwordIsCorrect(name, password)){
+            session.setAttribute("sessionUserName",name);
             return "checkUser/validUser";
         }
+        else return "checkUser/invalidUser";
     }
 
     private boolean passwordIsCorrect(String name, String password) {
@@ -55,18 +46,24 @@ public class HomeController {
     }
 
     @RequestMapping("/clientCreate")
-    public String clientCreate(@RequestParam("name") String name, @RequestParam("password") String password) {
+    public String clientCreate(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request) {
         if (serverStore.alreadyExistUser(name)) {
             return "newClient/invalidUserName";
         } else {
             serverStore.createUser(name, password);
+            HttpSession session = request.getSession();
+            session.setAttribute("sessionUserName", name);
             return "newClient/successCreate";
         }
     }
 
     @RequestMapping("/submitContent")
-    private String submitContent(@RequestParam("newContent") String newContent, @RequestParam("newContentDate") String newContentDate) throws InterruptedException, UnsupportedEncodingException {
-        contentStore.addContent(new UserContent(serverStore.getCurrentUser(), newContent, newContentDate));
+    private String submitContent(@RequestParam("newContent") String newContent, @RequestParam("newContentDate") String newContentDate, HttpServletRequest request) throws InterruptedException, UnsupportedEncodingException {
+        HttpSession session = request.getSession();
+        if (!session.isNew()) {
+            String userName = (String) session.getAttribute("sessionUserName");
+            contentStore.addContent(new UserContent(userName, newContent, newContentDate));
+        }
         return "home";
     }
 
@@ -77,8 +74,10 @@ public class HomeController {
     }
 
     @RequestMapping("/json/currentUserName")
-    public String getCurrentUserName(Model model) {
-        model.addAttribute("userName", serverStore.getCurrentUser());
+    public String getCurrentUserName(Model model, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String userName = (String) session.getAttribute("sessionUserName");
+        model.addAttribute("userName", userName);
         return "jsonView";
     }
 
