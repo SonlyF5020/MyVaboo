@@ -3,18 +3,17 @@ package com.thoughtworks.zhanhonglai;
 import com.thoughtworks.zhanhonglai.data.UserContent;
 import com.thoughtworks.zhanhonglai.service.ContentStore;
 import com.thoughtworks.zhanhonglai.service.ServerStore;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
-import java.util.Collection;
 
-
+@SessionAttributes({"sessionUserName", "sessionUserPassword"})
 @Controller
 public class HomeController {
 
@@ -27,15 +26,21 @@ public class HomeController {
     }
 
     @RequestMapping("/checkUser")
-    public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request) {
+    public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request, Model model) {
         HttpSession session = request.getSession();
-        String userName = (String)session.getAttribute("currentUser");
+        if (session.isNew()) {
+            if (passwordIsCorrect(name, password)) {
+                session.setAttribute("sessionUserName", name);
+                session.setAttribute("sessionUserPassword", password);
+                serverStore.setCurrentUser(name);
+                return "checkUser/validUser";
+            } else {
+                return "checkUser/invalidUser";
+            }
+        }
         //TODO the problem is : we didnot put any data(as an attribute) in session structure,so here we got null in userName
-        if (passwordIsCorrect(name, password)) {
-            serverStore.setCurrentUser(name);
+        else {
             return "checkUser/validUser";
-        } else {
-            return "checkUser/invalidUser";
         }
     }
 
@@ -66,18 +71,19 @@ public class HomeController {
     }
 
     @RequestMapping("/json/userHistory")
-    public String getUserHistory(Model model){
+    public String getUserHistory(Model model) {
         model.addAllAttributes(contentStore.getAllContents());
         return "jsonView";
     }
+
     @RequestMapping("/json/currentUserName")
-    public String getCurrentUserName(Model model){
-        model.addAttribute("userName",serverStore.getCurrentUser());
+    public String getCurrentUserName(Model model) {
+        model.addAttribute("userName", serverStore.getCurrentUser());
         return "jsonView";
     }
 
     @RequestMapping("/delete")
-    public String deleteContent(@RequestParam("deleteIndex") String deleteIndex){
+    public String deleteContent(@RequestParam("deleteIndex") String deleteIndex) {
         contentStore.deleteContent(deleteIndex);
         return "home";
     }
