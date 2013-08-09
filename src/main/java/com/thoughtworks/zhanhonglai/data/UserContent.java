@@ -1,10 +1,14 @@
 package com.thoughtworks.zhanhonglai.data;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserContent {
     private final String updateData;
     private final String content;
     private final String userName;
+    private List<UserContent> responses = new ArrayList<UserContent>();
 
     public UserContent(String userName,String content, String updateDate) {
         this.userName = userName;
