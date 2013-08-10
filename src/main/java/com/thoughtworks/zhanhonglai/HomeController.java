@@ -28,6 +28,11 @@ public class HomeController {
     @RequestMapping("/checkUser")
     public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request, Model model) {
         HttpSession session = request.getSession();
+
+        if (!session.isNew()&&session.getAttribute("sessionUserName").equals(name)){
+            return "checkUser/validUser";
+        }
+
         if (passwordIsCorrect(name, password)){
             session.setAttribute("sessionUserName",name);
             return "checkUser/validUser";
