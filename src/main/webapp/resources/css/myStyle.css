@@ -106,7 +106,7 @@
 }
 
 .login{
-    width: 40%;
+    width: 500px;
     background: #ffffff;
     margin: 200px auto auto;
     padding-top: 50px;
@@ -173,4 +173,17 @@
     margin-top: 10px;
     width:400px;
     min-height:100px;
+}
+.welcome{
+    width: 800px;
+    min-height: 400px;
+    margin: 30px auto auto;
+}
+.welcome .cellphonePic{
+    width:100%;
+    margin: auto;
+}
+.listCustomer li{
+    color: #ffffff;
+    list-style-type: none;
 }
