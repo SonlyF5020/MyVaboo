@@ -10,6 +10,15 @@ public class UserContent {
     private final String userName;
     private List<UserContent> responses = new ArrayList<UserContent>();
 
+
+    public List<UserContent> getResponses() {
+        return responses;
+    }
+
+    public void setResponses(List<UserContent> responses) {
+        this.responses = responses;
+    }
+
     public UserContent(String userName,String content, String updateDate) {
         this.userName = userName;
         this.content = content;

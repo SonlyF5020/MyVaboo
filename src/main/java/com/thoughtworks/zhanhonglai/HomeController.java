@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @SessionAttributes("sessionUserName")
 @Controller
@@ -28,16 +30,10 @@ public class HomeController {
     @RequestMapping("/checkUser")
     public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request, Model model) {
         HttpSession session = request.getSession();
-
-        if (!session.isNew()&&session.getAttribute("sessionUserName").equals(name)){
+        if (passwordIsCorrect(name, password)) {
+            session.setAttribute("sessionUserName", name);
             return "checkUser/validUser";
-        }
-
-        if (passwordIsCorrect(name, password)){
-            session.setAttribute("sessionUserName",name);
-            return "checkUser/validUser";
-        }
-        else return "checkUser/invalidUser";
+        } else return "checkUser/invalidUser";
     }
 
     private boolean passwordIsCorrect(String name, String password) {
@@ -45,7 +41,7 @@ public class HomeController {
     }
 
     @RequestMapping("/login")
-    public String login(){
+    public String login() {
         return "checkUser/loginAccount";
     }
 
@@ -93,6 +89,17 @@ public class HomeController {
     @RequestMapping("/delete")
     public String deleteContent(@RequestParam("deleteIndex") String deleteIndex) {
         contentStore.deleteContent(deleteIndex);
+        return "home";
+    }
+
+    @RequestMapping("/addReply")
+    public String addReply(@RequestParam("reply") String reply,@RequestParam("id") String id,HttpServletRequest request) {
+        String responseUser = (String) request.getSession().getAttribute("sessionUserName");
+        Date currentDate = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat();
+        String responseDate = formatter.format(currentDate);
+        UserContent responseUserContent = new UserContent(responseUser, reply, responseDate);
+        contentStore.getAllContents().get("" + id).getResponses().add(responseUserContent);
         return "home";
     }
 }
