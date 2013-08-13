@@ -20,7 +20,8 @@
         <div class="carousel-inner">
 
             <div class="active item">
-                <img src="/resources/img/university/yiheyuan.jpg" class="cellphonePic">
+                <img src="/resources/img/university/yiheyuan.jpg">
+
                 <div class="carousel-caption">
                     <h4>占红来的青葱岁月</h4>
                     <ul class="listCustomer">
@@ -33,9 +34,11 @@
             </div>
 
             <div class="item">
-                <img src="/resources/img/university/guys.jpeg" class="cellphonePic">
+                <img src="/resources/img/university/guys.jpeg">
+
                 <div class="carousel-caption">
                     <h4>三剑客</h4>
+
                     <p>明天你是否会想起
                         昨天你写的日记
                         明天你是否还惦记
@@ -43,16 +46,21 @@
                 </div>
             </div>
             <div class="item">
-                <img src="/resources/img/university/friends.jpeg" class="cellphonePic">
+                <img src="/resources/img/university/friends.jpeg">
+
                 <div class="carousel-caption">
                     <h4>我们都年轻</h4>
                 </div>
             </div>
         </div>
         <!-- Carousel nav -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev" >&lsaquo;</a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next" >&rsaquo;</a>
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
+</div>
+<div class="loginLink">
+    <div class="loginLink-login"><a href="/login">登录</a></div>
+    <div class="loginLink-login"><a href="/register">注册</a></div>
 </div>
 </body>
 </html>

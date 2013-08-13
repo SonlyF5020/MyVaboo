@@ -175,15 +175,36 @@
     min-height:100px;
 }
 .welcome{
-    width: 800px;
+    width: 850px;
     min-height: 400px;
-    margin: 30px auto auto;
+    float:left;
+    margin: 30px auto auto 140px;
 }
-.welcome .cellphonePic{
+.item img{
     width:100%;
     margin: auto;
 }
 .listCustomer li{
     color: #ffffff;
     list-style-type: none;
+}
+.loginLink{
+    width: 200px;
+    float:left;
+    margin-top: 200px;
+}
+
+.loginLink .loginLink-login{
+    margin-left: 100px;
+    margin-bottom: 30px;
+    background-color: gray;
+    border-radius: 50px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 28;
+}
+.loginLink .loginLink-login a{
+    color: #ffffff;
+    text-decoration: none;
 }

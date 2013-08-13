@@ -44,10 +44,14 @@ public class HomeController {
         return serverStore.userPasswordIsCorrect(name, password);
     }
 
+    @RequestMapping("/login")
+    public String login(){
+        return "checkUser/loginAccount";
+    }
 
     @RequestMapping("/")
     public String loginAccount() {
-        return "checkUser/loginAccount";
+        return "firstSight";
     }
 
     @RequestMapping("/clientCreate")
