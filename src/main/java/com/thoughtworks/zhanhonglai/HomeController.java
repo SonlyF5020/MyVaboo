@@ -63,13 +63,19 @@ public class HomeController {
     }
 
     @RequestMapping("/submitContent")
-    private String submitContent(@RequestParam("newContent") String newContent, @RequestParam("newContentDate") String newContentDate, HttpServletRequest request) throws InterruptedException, UnsupportedEncodingException {
+    private String submitContent(@RequestParam("newContent") String newContent, HttpServletRequest request) throws InterruptedException, UnsupportedEncodingException {
         HttpSession session = request.getSession();
         if (!session.isNew()) {
             String userName = (String) session.getAttribute("sessionUserName");
-            contentStore.addContent(new UserContent(userName, newContent, newContentDate));
+            contentStore.addContent(new UserContent(userName, newContent, getCurrentDate()));
         }
         return "home";
+    }
+
+    private String getCurrentDate() {
+        Date currentDate = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat();
+        return formatter.format(currentDate);
     }
 
     @RequestMapping("/json/userHistory")
@@ -95,10 +101,7 @@ public class HomeController {
     @RequestMapping("/addReply")
     public String addReply(@RequestParam("reply") String reply,@RequestParam("id") String id,HttpServletRequest request) {
         String responseUser = (String) request.getSession().getAttribute("sessionUserName");
-        Date currentDate = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat();
-        String responseDate = formatter.format(currentDate);
-        UserContent responseUserContent = new UserContent(responseUser, reply, responseDate);
+        UserContent responseUserContent = new UserContent(responseUser, reply, getCurrentDate());
         contentStore.getAllContents().get("" + id).getResponses().add(responseUserContent);
         return "home";
     }
