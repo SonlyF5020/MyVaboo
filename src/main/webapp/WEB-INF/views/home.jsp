@@ -21,7 +21,7 @@
         </div>
         <div class="clientInfo">
             <span id="client">用户:<span id="currentUserName"></span></span><br>
-            <a href="/">退出</a>
+            <a href="/login">退出</a>
         </div>
     </div>
     <br>
@@ -44,7 +44,6 @@
         </div>
 
         <form action="/submitContent" class="hiddenForm" method="post">
-            <input type="text" id="newContentDate" name="newContentDate">
             <input type="text" id="newContent" name="newContent">
             <input type="submit" id="contentSubmit">
         </form>

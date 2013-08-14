@@ -66,7 +66,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\n");
       out.write("        <div class=\"clientInfo\">\n");
       out.write("            <span id=\"client\">用户:<span id=\"currentUserName\"></span></span><br>\n");
-      out.write("            <a href=\"/\">退出</a>\n");
+      out.write("            <a href=\"/login\">退出</a>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");
       out.write("    <br>\n");
@@ -93,7 +93,6 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\n");
       out.write("\n");
       out.write("        <form action=\"/submitContent\" class=\"hiddenForm\" method=\"post\">\n");
-      out.write("            <input type=\"text\" id=\"newContentDate\" name=\"newContentDate\">\n");
       out.write("            <input type=\"text\" id=\"newContent\" name=\"newContent\">\n");
       out.write("            <input type=\"submit\" id=\"contentSubmit\">\n");
       out.write("        </form>\n");

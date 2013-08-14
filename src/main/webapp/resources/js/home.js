@@ -11,12 +11,7 @@ var MouseOutHandler = function () {
 
 var submitHandler = function () {
     $('#confirm').bind("click", function () {
-        var year = new Date().getYear().toString().substring(1, 3);
-        var month = (new Date().getMonth() + 1).toString();
-        var date = new Date().getDate().toString();
-        var dateString = "---20" + year + "." + month + "." + date;
         $('#newContent').val($('#weibo').val());
-        $('#newContentDate').val(dateString);
         $('#weibo').val("");
         $('#contentSubmit').click();
     });
