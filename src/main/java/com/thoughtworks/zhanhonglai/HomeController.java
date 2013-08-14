@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 @SessionAttributes("sessionUserName")
 @Controller
@@ -74,7 +75,7 @@ public class HomeController {
 
     private String getCurrentDate() {
         Date currentDate = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒 E", Locale.CHINESE);
         return formatter.format(currentDate);
     }
 
