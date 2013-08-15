@@ -53,15 +53,20 @@ $(function () {
     $('#editModal').on('click', '#editSure', function () {
         $('#editModal').modal('hide');
         editContent.content = $('#reply').val();
+        $('#reply').val("");
         $.getJSON("/addReply?reply="+editContent.content+"&id="+editContent.contentID,function(newResponseContent){
             var response = newResponseContent["response"];
-            var newResponserSpan = $('<span></span>').html("-"+response["userName"]);
-            var newResponseDate = $('<p></p>').html(response["date"]).append(newResponserSpan);
-            var newResponseDiv = $('<div></div>').addClass('responseArea').html(response["content"]).append(newResponseDate)
-            currentResponseDiv.append(newResponseDiv);
+            renderResponse(currentResponseDiv,response);
         })
     });
 });
+
+var renderResponse = function(content,response){
+    var newResponserSpan = $('<span></span>').html("-"+response["userName"]);
+    var newResponseDate = $('<p></p>').html(response["date"]).append(newResponserSpan);
+    var newResponseDiv = $('<div></div>').addClass('responseArea').html(response["content"]).append(newResponseDate);
+    content.append(newResponseDiv);
+}
 
 var getUserName = function () {
     $.getJSON("/json/currentUserName", function (allData) {
@@ -84,11 +89,9 @@ var getHistory = function () {
             var responses = allData[index]["responses"];
             var responseIndex;
             for(responseIndex in responses){
-                if(typeof (responses[responseIndex])!=="undefined"){
-                    var responserSpan = $('<span></span>').html("-"+responses[responseIndex]["userName"]);
-                    var responseDate = $('<p></p>').html(responses[responseIndex]["date"]).append(responserSpan);
-                    var responseDiv = $('<div></div>').addClass('responseArea').html(responses[responseIndex]["content"]).append(responseDate);
-                    chart.append(responseDiv);
+                var response = responses[responseIndex];
+                if(typeof (response!=="undefined")){
+                    renderResponse(chart,response);
                 }
             }
             $('#weiboContent').prepend(chart);
