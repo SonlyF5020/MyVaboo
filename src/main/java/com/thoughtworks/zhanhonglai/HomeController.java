@@ -75,7 +75,7 @@ public class HomeController {
 
     private String getCurrentDate() {
         Date currentDate = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒 E", Locale.CHINESE);
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss E ", Locale.CHINESE);
         return formatter.format(currentDate);
     }
 
@@ -100,10 +100,11 @@ public class HomeController {
     }
 
     @RequestMapping("/addReply")
-    public String addReply(@RequestParam("reply") String reply,@RequestParam("id") String id,HttpServletRequest request) {
+    public String addReply(@RequestParam("reply") String reply,@RequestParam("id") String id,HttpServletRequest request,Model model) {
         String responseUser = (String) request.getSession().getAttribute("sessionUserName");
         UserContent responseUserContent = new UserContent(responseUser, reply, getCurrentDate());
-        contentStore.getAllContents().get("" + id).getResponses().add(responseUserContent);
-        return "home";
+        contentStore.getAllContents().get("" + id).addResponse(responseUserContent);
+        model.addAttribute("response",responseUserContent);
+        return "jsonView";
     }
 }

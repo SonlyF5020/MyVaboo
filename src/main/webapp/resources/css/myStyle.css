@@ -50,12 +50,13 @@
     padding-right:10px;
     line-height:50px;
     cursor:pointer;
+    overflow: hidden;
 }
 .oneContent .deleteButton{
     background-image:url("/resources/img/deleteIcon.png");
     position: absolute;
     margin-left: 745px;
-    margin-top: -26px;
+    margin-top: -100px;
     width:50px;
     height:50px;
     display:none;
@@ -65,7 +66,7 @@
     background-image:url("/resources/img/write1.png");
     position: absolute;
     margin-left: 700px;
-    margin-top: -30px;
+    margin-top: -105px;
     width:50px;
     height:50px;
     display:none;
@@ -227,4 +228,15 @@ header{
     font-weight: bold;
     text-align: center;
     line-height: 50px;
+}
+
+.oneContent .responseArea{
+    background: gainsboro;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #DDD;
+    margin-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    float: left;
 }

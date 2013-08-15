@@ -1,5 +1,6 @@
 var deleteContent = "";
 var editContent = {};
+var currentResponseDiv = null;
 
 var MouseOutHandler = function () {
     $('#weiboContent').on('mouseout', '.oneContent', function () {
@@ -40,6 +41,7 @@ $(function () {
     $('#weiboContent').on('click', '.writeButton', function () {
         $('#ownerName').html($('span', $(this).parent()).html());
         editContent.contentID = $(this).parent().attr("id");
+        currentResponseDiv = $(this).parent();
         $('#editModal').modal('show');
     });
 
@@ -51,7 +53,13 @@ $(function () {
     $('#editModal').on('click', '#editSure', function () {
         $('#editModal').modal('hide');
         editContent.content = $('#reply').val();
-        document.location.href='/addReply?reply='+editContent.content+'&id='+editContent.contentID;
+        $.getJSON("/addReply?reply="+editContent.content+"&id="+editContent.contentID,function(newResponseContent){
+            var response = newResponseContent["response"];
+            var newResponserSpan = $('<span></span>').html("-"+response["userName"]);
+            var newResponseDate = $('<p></p>').html(response["date"]).append(newResponserSpan);
+            var newResponseDiv = $('<div></div>').addClass('responseArea').html(response["content"]).append(newResponseDate)
+            currentResponseDiv.append(newResponseDiv);
+        })
     });
 });
 
@@ -67,9 +75,22 @@ var getHistory = function () {
         for (index in allData) {
             var deleteButton = $('<div></div>').addClass('deleteButton');
             var writeButton = $('<div></div>').addClass('writeButton');
+
+            var contentUser = $('<span></span>').html(allData[index]["userName"]);
+            var contentDate = $('<p></p>').html(allData[index]["date"]).append(contentUser);
             var chart = $('<div></div>').attr('id', index).attr('class', 'oneContent')
-                .html(allData[index]["content"] + "<br><hr>" + allData[index]["date"] + "(<span>" + allData[index]["userName"] + "</span>)")
+                .html(allData[index]["content"]).append(contentDate)
                 .append(deleteButton).append(writeButton);
+            var responses = allData[index]["responses"];
+            var responseIndex;
+            for(responseIndex in responses){
+                if(typeof (responses[responseIndex])!=="undefined"){
+                    var responserSpan = $('<span></span>').html("-"+responses[responseIndex]["userName"]);
+                    var responseDate = $('<p></p>').html(responses[responseIndex]["date"]).append(responserSpan);
+                    var responseDiv = $('<div></div>').addClass('responseArea').html(responses[responseIndex]["content"]).append(responseDate);
+                    chart.append(responseDiv);
+                }
+            }
             $('#weiboContent').prepend(chart);
         }
     });
