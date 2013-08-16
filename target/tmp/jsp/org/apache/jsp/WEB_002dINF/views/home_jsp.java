@@ -72,7 +72,10 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <br>\n");
       out.write("    <hr>\n");
       out.write("    <div class=\"default\"><h1>留下你的足迹</h1>\n");
-      out.write("\n");
+      out.write("        <div class=\"navigator\" id=\"navigator\">\n");
+      out.write("            <div divName=\"all\">大家的</div>\n");
+      out.write("            <div divName=\"mine\">我自己的</div>\n");
+      out.write("        </div>\n");
       out.write("        <div id=\"weiboContent\" class=\"weiboContent\"></div>\n");
       out.write("        <hr>\n");
       out.write("\n");

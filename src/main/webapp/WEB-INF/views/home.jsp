@@ -27,7 +27,10 @@
     <br>
     <hr>
     <div class="default"><h1>留下你的足迹</h1>
-
+        <div class="navigator" id="navigator">
+            <div divName="all">大家的</div>
+            <div divName="mine">我自己的</div>
+        </div>
         <div id="weiboContent" class="weiboContent"></div>
         <hr>
 

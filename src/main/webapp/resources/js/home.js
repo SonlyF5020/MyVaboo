@@ -33,6 +33,29 @@ $(function () {
     mouseOverHandler();
     MouseOutHandler();
 
+    $('.navigator').on('mouseover','div',function(){
+       $(this).addClass('mouseOver');
+    });
+
+    $('.navigator').on('mouseout','div',function(){
+        $(this).removeClass('mouseOver');
+    });
+
+    $('.navigator').on('click','div[divName="mine"]',function(){
+        $('.navigator div').removeClass('mouseDone');
+        $(this).addClass('mouseDone');
+        $('#weiboContent').html("");
+        getMyHistory();
+    })
+
+
+    $('.navigator').on('click','div[divName="all"]',function(){
+        $('.navigator div').removeClass('mouseDone');
+        $(this).addClass('mouseDone');
+        $('#weiboContent').html("");
+        getHistory();
+    })
+
     $('#weiboContent').on('click', '.deleteButton', function () {
         $('#deleteModal').modal('show');
         deleteContent = $(this).parent().attr("id");
@@ -76,6 +99,31 @@ var getUserName = function () {
 
 var getHistory = function () {
     $.getJSON("/json/userHistory", function (allData) {
+        var index;
+        for (index in allData) {
+            var deleteButton = $('<div></div>').addClass('deleteButton');
+            var writeButton = $('<div></div>').addClass('writeButton');
+
+            var contentUser = $('<span></span>').html(allData[index]["userName"]);
+            var contentDate = $('<p></p>').html(allData[index]["date"]).append(contentUser);
+            var chart = $('<div></div>').attr('id', index).attr('class', 'oneContent')
+                .html(allData[index]["content"]).append(contentDate)
+                .append(deleteButton).append(writeButton);
+            var responses = allData[index]["responses"];
+            var responseIndex;
+            for(responseIndex in responses){
+                var response = responses[responseIndex];
+                if(typeof (response!=="undefined")){
+                    renderResponse(chart,response);
+                }
+            }
+            $('#weiboContent').prepend(chart);
+        }
+    });
+}
+
+var getMyHistory = function () {
+    $.getJSON("/json/getMyHistory", function (allData) {
         var index;
         for (index in allData) {
             var deleteButton = $('<div></div>').addClass('deleteButton');

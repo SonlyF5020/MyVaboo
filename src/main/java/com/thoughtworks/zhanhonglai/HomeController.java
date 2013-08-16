@@ -107,4 +107,11 @@ public class HomeController {
         model.addAttribute("response",responseUserContent);
         return "jsonView";
     }
+
+    @RequestMapping("/json/getMyHistory")
+    public String getMyHistory(Model model,HttpServletRequest request){
+        String currentUser = (String) request.getSession().getAttribute("sessionUserName");
+        model.addAllAttributes(contentStore.getUserContent(currentUser));
+        return "jsonView";
+    }
 }

@@ -1,5 +1,6 @@
 var deleteContent = "";
 var editContent = {};
+var currentResponseDiv = null;
 
 var MouseOutHandler = function () {
     $('#weiboContent').on('mouseout', '.oneContent', function () {
@@ -11,12 +12,7 @@ var MouseOutHandler = function () {
 
 var submitHandler = function () {
     $('#confirm').bind("click", function () {
-        var year = new Date().getYear().toString().substring(1, 3);
-        var month = (new Date().getMonth() + 1).toString();
-        var date = new Date().getDate().toString();
-        var dateString = "---20" + year + "." + month + "." + date;
         $('#newContent').val($('#weibo').val());
-        $('#newContentDate').val(dateString);
         $('#weibo').val("");
         $('#contentSubmit').click();
     });
@@ -37,6 +33,10 @@ $(function () {
     mouseOverHandler();
     MouseOutHandler();
 
+    $('.navigator').on('mouseover','div',function(){
+       $(this).addClass('mouseOver');
+    });
+
     $('#weiboContent').on('click', '.deleteButton', function () {
         $('#deleteModal').modal('show');
         deleteContent = $(this).parent().attr("id");
@@ -44,7 +44,8 @@ $(function () {
 
     $('#weiboContent').on('click', '.writeButton', function () {
         $('#ownerName').html($('span', $(this).parent()).html());
-        editContent.contentID = $('span', $(this).parent()).html();
+        editContent.contentID = $(this).parent().attr("id");
+        currentResponseDiv = $(this).parent();
         $('#editModal').modal('show');
     });
 
@@ -56,9 +57,20 @@ $(function () {
     $('#editModal').on('click', '#editSure', function () {
         $('#editModal').modal('hide');
         editContent.content = $('#reply').val();
-        document.location.href='/addReply?reply='+editContent.content+'&id='+editContent.contentID;
+        $('#reply').val("");
+        $.getJSON("/addReply?reply="+editContent.content+"&id="+editContent.contentID,function(newResponseContent){
+            var response = newResponseContent["response"];
+            renderResponse(currentResponseDiv,response);
+        })
     });
 });
+
+var renderResponse = function(content,response){
+    var newResponserSpan = $('<span></span>').html("-"+response["userName"]);
+    var newResponseDate = $('<p></p>').html(response["date"]).append(newResponserSpan);
+    var newResponseDiv = $('<div></div>').addClass('responseArea').html(response["content"]).append(newResponseDate);
+    content.append(newResponseDiv);
+}
 
 var getUserName = function () {
     $.getJSON("/json/currentUserName", function (allData) {
@@ -72,9 +84,20 @@ var getHistory = function () {
         for (index in allData) {
             var deleteButton = $('<div></div>').addClass('deleteButton');
             var writeButton = $('<div></div>').addClass('writeButton');
+
+            var contentUser = $('<span></span>').html(allData[index]["userName"]);
+            var contentDate = $('<p></p>').html(allData[index]["date"]).append(contentUser);
             var chart = $('<div></div>').attr('id', index).attr('class', 'oneContent')
-                .html(allData[index]["content"] + "<br><hr>" + allData[index]["date"] + "(<span>" + allData[index]["userName"] + "</span>)")
+                .html(allData[index]["content"]).append(contentDate)
                 .append(deleteButton).append(writeButton);
+            var responses = allData[index]["responses"];
+            var responseIndex;
+            for(responseIndex in responses){
+                var response = responses[responseIndex];
+                if(typeof (response!=="undefined")){
+                    renderResponse(chart,response);
+                }
+            }
             $('#weiboContent').prepend(chart);
         }
     });

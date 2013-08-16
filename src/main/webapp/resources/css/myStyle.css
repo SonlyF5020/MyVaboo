@@ -38,9 +38,8 @@
     border-radius:10px;
 }
 .oneContent{
-    width:90%;
     min-height:50px;
-    margin: 10px auto;
+    margin: 15px;
     box-shadow:3px 3px 3px #888888;
     background-color:white;
     text-align: left;
@@ -90,10 +89,10 @@
     float:left;
 }
 
-.mouseOver{
+.weiboContent .mouseOver{
     background:yellow;
-    width:95%;
-    font-size:24;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .default{
     width:100%;
@@ -239,4 +238,25 @@ header{
     padding-left: 10px;
     margin-bottom: 10px;
     float: left;
+}
+.default .navigator{
+    margin-left: 140px;
+    font-size: 20px;
+    text-align: left;
+}
+.default .navigator div{
+    display: inline-block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-right: 10px;
+    padding: 6px;
+}
+
+.navigator .mouseOver{
+    background: yellow;
+    padding: 8px;
+}
+.navigator .mouseDone{
+    background: yellowgreen;
+    padding: 8px;
 }

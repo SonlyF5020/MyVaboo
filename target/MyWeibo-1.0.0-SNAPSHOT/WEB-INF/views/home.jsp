@@ -21,13 +21,16 @@
         </div>
         <div class="clientInfo">
             <span id="client">用户:<span id="currentUserName"></span></span><br>
-            <a href="/">退出</a>
+            <a href="/login">退出</a>
         </div>
     </div>
     <br>
     <hr>
     <div class="default"><h1>留下你的足迹</h1>
-
+        <div class="navigator" id="navigator">
+            <div>大家的</div>
+            <div>我自己的</div>
+        </div>
         <div id="weiboContent" class="weiboContent"></div>
         <hr>
 
@@ -44,7 +47,6 @@
         </div>
 
         <form action="/submitContent" class="hiddenForm" method="post">
-            <input type="text" id="newContentDate" name="newContentDate">
             <input type="text" id="newContent" name="newContent">
             <input type="submit" id="contentSubmit">
         </form>
