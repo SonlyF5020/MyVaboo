@@ -27,33 +27,22 @@ var mouseOverHandler = function () {
     });
 }
 $(function () {
-    getHistory();
-    getUserName();
-    submitHandler();
-    mouseOverHandler();
-    MouseOutHandler();
 
     $('.navigator').on('mouseover','div',function(){
-       $(this).addClass('mouseOver');
+        $(this).addClass('mouseOver');
     });
 
     $('.navigator').on('mouseout','div',function(){
         $(this).removeClass('mouseOver');
     });
 
-    $('.navigator').on('click','div[divName="mine"]',function(){
+
+    $('.navigator').on('click','div',function(){
         $('.navigator div').removeClass('mouseDone');
         $(this).addClass('mouseDone');
         $('#weiboContent').html("");
-        getMyHistory();
-    })
-
-
-    $('.navigator').on('click','div[divName="all"]',function(){
-        $('.navigator div').removeClass('mouseDone');
-        $(this).addClass('mouseDone');
-        $('#weiboContent').html("");
-        getHistory();
+        var history = $(this).attr("divName");
+        getHistory(history);
     })
 
     $('#weiboContent').on('click', '.deleteButton', function () {
@@ -82,6 +71,13 @@ $(function () {
             renderResponse(currentResponseDiv,response);
         })
     });
+
+    $('.navigator div[divName="My"]').click();
+//    getAllHistory();
+    getUserName();
+    submitHandler();
+    mouseOverHandler();
+    MouseOutHandler();
 });
 
 var renderResponse = function(content,response){
@@ -97,33 +93,12 @@ var getUserName = function () {
     });
 }
 
-var getHistory = function () {
-    $.getJSON("/json/userHistory", function (allData) {
-        var index;
-        for (index in allData) {
-            var deleteButton = $('<div></div>').addClass('deleteButton');
-            var writeButton = $('<div></div>').addClass('writeButton');
-
-            var contentUser = $('<span></span>').html(allData[index]["userName"]);
-            var contentDate = $('<p></p>').html(allData[index]["date"]).append(contentUser);
-            var chart = $('<div></div>').attr('id', index).attr('class', 'oneContent')
-                .html(allData[index]["content"]).append(contentDate)
-                .append(deleteButton).append(writeButton);
-            var responses = allData[index]["responses"];
-            var responseIndex;
-            for(responseIndex in responses){
-                var response = responses[responseIndex];
-                if(typeof (response!=="undefined")){
-                    renderResponse(chart,response);
-                }
-            }
-            $('#weiboContent').prepend(chart);
-        }
-    });
+var getAllHistory = function () {
+    getHistory("All");
 }
 
-var getMyHistory = function () {
-    $.getJSON("/json/getMyHistory", function (allData) {
+var getHistory = function(user){
+    $.getJSON("/json/get"+user+"History", function (allData) {
         var index;
         for (index in allData) {
             var deleteButton = $('<div></div>').addClass('deleteButton');

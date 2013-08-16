@@ -79,7 +79,7 @@ public class HomeController {
         return formatter.format(currentDate);
     }
 
-    @RequestMapping("/json/userHistory")
+    @RequestMapping("/json/getAllHistory")
     public String getUserHistory(Model model) {
         model.addAllAttributes(contentStore.getAllContents());
         return "jsonView";
