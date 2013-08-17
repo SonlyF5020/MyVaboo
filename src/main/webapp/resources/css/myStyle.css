@@ -296,7 +296,10 @@ header {
 
 .searchCustomise {
     margin-left: 627px;
-    width: 330px
+    width: 330px;
+    position: absolute;
+    left: 255;
+    top: 149;
 }
 
 .searchCustomise .search-input{
