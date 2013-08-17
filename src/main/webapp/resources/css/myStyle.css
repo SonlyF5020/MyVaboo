@@ -244,6 +244,8 @@ header{
     margin-left: 140px;
     font-size: 20px;
     text-align: left;
+    width:300px;
+    float:left;
 }
 .default .navigator div{
     display: inline-block;

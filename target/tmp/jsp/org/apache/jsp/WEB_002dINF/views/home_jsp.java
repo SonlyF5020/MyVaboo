@@ -11,10 +11,20 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_import_url_nobody;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_import_url_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_import_url_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -59,46 +69,28 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"body\">\n");
-      out.write("    <div class=\"header\">\n");
-      out.write("        <div class=\"head\">\n");
-      out.write("            <div class=\"miniLogo\"><img src=\"/resources/img/zergIcon.png\" CLASS=\"img-circle\"></div>\n");
-      out.write("            <div class=\"centerText\"><h1>&nbspVaboo</h1></div>\n");
-      out.write("        </div>\n");
-      out.write("        <div class=\"clientInfo\">\n");
-      out.write("            <span id=\"client\">用户:<span id=\"currentUserName\"></span></span><br>\n");
-      out.write("            <a href=\"/login\">退出</a>\n");
-      out.write("        </div>\n");
-      out.write("    </div>\n");
+      out.write("    ");
+      if (_jspx_meth_c_import_0(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("    <br>\n");
       out.write("    <hr>\n");
       out.write("    <div class=\"default\"><h1>留下你的足迹</h1>\n");
-      out.write("        <div class=\"navigator\" id=\"navigator\">\n");
-      out.write("            <div divName=\"All\">大家的</div>\n");
-      out.write("            <div divName=\"My\">我自己的</div>\n");
-      out.write("        </div>\n");
+      out.write("        ");
+      if (_jspx_meth_c_import_1(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("        <div id=\"weiboContent\" class=\"weiboContent\"></div>\n");
       out.write("        <hr>\n");
-      out.write("\n");
       out.write("        ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "modal/deleteModal.jsp", out, false);
       out.write("\n");
       out.write("        ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "modal/editModal.jsp", out, false);
       out.write("\n");
-      out.write("\n");
-      out.write("        <div id=\"editContent\" class=\"editContent\">\n");
-      out.write("            <div class=\"leftArea\">\n");
-      out.write("                <textarea type=\"text\" id=\"weibo\" Value=\"Say something?\" class=\"weibo\"></textarea>\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"rightArea\">\n");
-      out.write("                <button id=\"confirm\" class=\"btn\">提交</button>\n");
-      out.write("            </div>\n");
-      out.write("        </div>\n");
-      out.write("\n");
-      out.write("        <form action=\"/submitContent\" class=\"hiddenForm\" method=\"post\">\n");
-      out.write("            <input type=\"text\" id=\"newContent\" name=\"newContent\">\n");
-      out.write("            <input type=\"submit\" id=\"contentSubmit\">\n");
-      out.write("        </form>\n");
+      out.write("        ");
+      if (_jspx_meth_c_import_2(_jspx_page_context))
+        return;
       out.write("\n");
       out.write("    </div>\n");
       out.write("</div>\n");
@@ -115,5 +107,83 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_import_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:import
+    org.apache.taglibs.standard.tag.rt.core.ImportTag _jspx_th_c_import_0 = (org.apache.taglibs.standard.tag.rt.core.ImportTag) _jspx_tagPool_c_import_url_nobody.get(org.apache.taglibs.standard.tag.rt.core.ImportTag.class);
+    _jspx_th_c_import_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_import_0.setParent(null);
+    _jspx_th_c_import_0.setUrl("/WEB-INF/views/homePage/head.jsp");
+    int[] _jspx_push_body_count_c_import_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_import_0 = _jspx_th_c_import_0.doStartTag();
+      if (_jspx_th_c_import_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_import_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_import_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_import_0.doFinally();
+      _jspx_tagPool_c_import_url_nobody.reuse(_jspx_th_c_import_0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_import_1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:import
+    org.apache.taglibs.standard.tag.rt.core.ImportTag _jspx_th_c_import_1 = (org.apache.taglibs.standard.tag.rt.core.ImportTag) _jspx_tagPool_c_import_url_nobody.get(org.apache.taglibs.standard.tag.rt.core.ImportTag.class);
+    _jspx_th_c_import_1.setPageContext(_jspx_page_context);
+    _jspx_th_c_import_1.setParent(null);
+    _jspx_th_c_import_1.setUrl("/WEB-INF/views/homePage/navigator.jsp");
+    int[] _jspx_push_body_count_c_import_1 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_import_1 = _jspx_th_c_import_1.doStartTag();
+      if (_jspx_th_c_import_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_import_1[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_import_1.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_import_1.doFinally();
+      _jspx_tagPool_c_import_url_nobody.reuse(_jspx_th_c_import_1);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_import_2(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:import
+    org.apache.taglibs.standard.tag.rt.core.ImportTag _jspx_th_c_import_2 = (org.apache.taglibs.standard.tag.rt.core.ImportTag) _jspx_tagPool_c_import_url_nobody.get(org.apache.taglibs.standard.tag.rt.core.ImportTag.class);
+    _jspx_th_c_import_2.setPageContext(_jspx_page_context);
+    _jspx_th_c_import_2.setParent(null);
+    _jspx_th_c_import_2.setUrl("/WEB-INF/views/homePage/edit.jsp");
+    int[] _jspx_push_body_count_c_import_2 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_import_2 = _jspx_th_c_import_2.doStartTag();
+      if (_jspx_th_c_import_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_import_2[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_import_2.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_import_2.doFinally();
+      _jspx_tagPool_c_import_url_nobody.reuse(_jspx_th_c_import_2);
+    }
+    return false;
   }
 }
