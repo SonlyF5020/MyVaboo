@@ -46,11 +46,11 @@ public final class navigator_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <div divName=\"All\">大家的</div>\n");
       out.write("    <div divName=\"My\">我自己的</div>\n");
       out.write("</div>\n");
-      out.write("<form class=\"navbar-form navbar-left\" role=\"search\" style=\"margin-left: 627px;width: 330px\">\n");
-      out.write("    <div class=\"form-group\" style=\"float:left\">\n");
-      out.write("        <input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n");
+      out.write("<form class=\"navbar-form navbar-left searchCustomise\" role=\"search\">\n");
+      out.write("    <div class=\"form-group\">\n");
+      out.write("        <input type=\"text\" class=\"form-control search-input\" placeholder=\"Search\">\n");
       out.write("    </div>\n");
-      out.write("    <button type=\"submit\" class=\"btn btn-default\" style=\"float: left\">Submit</button>\n");
+      out.write("    <button type=\"submit\" class=\"btn btn-default\" ><img src=\"/resources/img/searchIcon.jpg\"></button>\n");
       out.write("</form>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

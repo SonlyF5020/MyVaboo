@@ -1,112 +1,120 @@
-.centerText h1{
-    text-align:center;
-    line-height:50px;
+.centerText h1 {
+    text-align: center;
+    line-height: 50px;
     height: 50px;
-    float:left;
+    float: left;
     font-size: 60px;
 }
 
-.miniLogo img{
-    width:50px;
-    height:50px;
+.miniLogo img {
+    width: 50px;
+    height: 50px;
     border-radius: 7px;
     border: 3 solid #000000;
-    float:left;
-}
-.title{
-    background-image:url("/resources/img/retina_wood.png");
+    float: left;
 }
 
-.body{
-    width:1000px;
-    background-image:url("/resources/img/retina_wood.png");
+.title {
+    background-image: url("/resources/img/retina_wood.png");
+}
+
+.body {
+    width: 1000px;
+    background-image: url("/resources/img/retina_wood.png");
     margin: 20px auto auto;
     background-size: 100% 100%;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
-.editContent .leftArea .weibo{
-    width:400px;
-    min-height:100px;
+.editContent .leftArea .weibo {
+    width: 400px;
+    min-height: 100px;
 }
 
-.weiboContent{
-    width:80%;
-    overflow:hidden;
-    margin:auto;
-    background-color:yellowgreen;
-    border-radius:10px;
+.weiboContent {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    background-color: yellowgreen;
+    border-radius: 10px;
     min-height: 5px;
 }
-.oneContent{
-    min-height:50px;
+
+.oneContent {
+    min-height: 50px;
     margin: 15px;
-    box-shadow:3px 3px 3px #888888;
-    background-color:white;
+    box-shadow: 3px 3px 3px #888888;
+    background-color: white;
     text-align: left;
     font-size: 18px;
-    border-radius:5px;
-    padding-left:10px;
-    padding-right:10px;
-    line-height:50px;
-    cursor:pointer;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 50px;
+    cursor: pointer;
     overflow: hidden;
 }
-.oneContent .deleteButton{
-    background-image:url("/resources/img/deleteIcon.png");
+
+.oneContent .deleteButton {
+    background-image: url("/resources/img/deleteIcon.png");
     position: absolute;
     margin-left: 745px;
     margin-top: -100px;
-    width:50px;
-    height:50px;
-    display:none;
-    cursor:pointer;
+    width: 50px;
+    height: 50px;
+    display: none;
+    cursor: pointer;
 }
-.oneContent .writeButton{
-    background-image:url("/resources/img/write1.png");
+
+.oneContent .writeButton {
+    background-image: url("/resources/img/write1.png");
     position: absolute;
     margin-left: 700px;
     margin-top: -105px;
-    width:50px;
-    height:50px;
-    display:none;
-    cursor:pointer;
-}
-.editContent{
-    width:50%;
-    margin:auto;
-    text-align:center;
-    overflow:hidden;
+    width: 50px;
+    height: 50px;
+    display: none;
+    cursor: pointer;
 }
 
-.editContent .leftArea{
-    width:85%;
-    float:left;
-    text-align:right;
-}
-.editContent .rightArea{
-    text-align:left;
-    width:15%;
-    float:left;
+.editContent {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
 }
 
-.weiboContent .mouseOver{
-    background:yellow;
+.editContent .leftArea {
+    width: 85%;
+    float: left;
+    text-align: right;
+}
+
+.editContent .rightArea {
+    text-align: left;
+    width: 15%;
+    float: left;
+}
+
+.weiboContent .mouseOver {
+    background: yellow;
     margin-left: 10px;
     margin-right: 10px;
 }
-.default{
-    width:100%;
-    min-height:80px;
-    vertical-align:middle;
-    text-align:center;
-    margin:auto;
-}
-.redButton{
-    background:red;
+
+.default {
+    width: 100%;
+    min-height: 80px;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
 }
 
-.login{
+.redButton {
+    background: red;
+}
+
+.login {
     width: 500px;
     background: #ffffff;
     margin: 200px auto auto;
@@ -116,86 +124,101 @@
     border: solid yellowgreen;
     overflow: hidden;
 }
-.redBorder{
-    border:solid red;
+
+.redBorder {
+    border: solid red;
     width: 40%;
     background: #ffffff;
     margin: 200px auto auto;
     padding: 50px 50px 30px;
     border-radius: 6px;
 }
-.clientForm{
+
+.clientForm {
     width: 60%;
-    float:left;
+    float: left;
 }
-.bigLogo img{
+
+.bigLogo img {
     position: absolute;
     margin-top: -35px;
-    width:120px;
-    height:120px;
+    width: 120px;
+    height: 120px;
     border-radius: 20px;
     border: 5 solid #000000;
 }
+
 .head {
     padding-top: 50px;
-    width:26%;
+    width: 26%;
     overflow: hidden;
     padding-left: 380px;
 }
-.clientInfo{
+
+.clientInfo {
     width: 100px;
-    float:right;
+    float: right;
     margin-top: -50px;
     padding-right: 20px;
 }
-.header{
+
+.header {
     overflow: hidden;
- }
-.greenBorder{
-    border:solid yellowgreen;
+}
+
+.greenBorder {
+    border: solid yellowgreen;
     width: 40%;
     background: #ffffff;
     margin: 200px auto auto;
     padding: 50px 50 30px 50px;
     border-radius: 6px;
 }
-.allBackground{
+
+.allBackground {
     background: url("/resources/img/allBackground.gif") repeat;
 }
-.hiddenForm{
+
+.hiddenForm {
     display: none;
 }
-.warning{
+
+.warning {
     color: red;
     display: none;
 }
-.leftArea .reply{
+
+.leftArea .reply {
     padding-top: 10px;
     margin-top: 10px;
-    width:400px;
-    min-height:100px;
+    width: 400px;
+    min-height: 100px;
 }
-.welcome{
+
+.welcome {
     width: 850px;
     min-height: 400px;
-    float:left;
+    float: left;
     margin: 30px auto auto 100px;
 }
-.item img{
-    width:100%;
+
+.item img {
+    width: 100%;
     margin: auto;
 }
-.listCustomer li{
+
+.listCustomer li {
     color: #ffffff;
     list-style-type: none;
 }
-.loginLink{
+
+.loginLink {
     width: 200px;
-    float:left;
+    float: left;
     margin-top: 200px;
 }
 
-.loginLink .loginLink-login{
+.loginLink .loginLink-login {
     margin-left: 100px;
     margin-bottom: 30px;
     background-color: gray;
@@ -206,11 +229,13 @@
     font-size: 28;
     box-shadow: 2px 2px 2px #999999;
 }
-.loginLink .loginLink-login a{
+
+.loginLink .loginLink-login a {
     color: #ffffff;
     text-decoration: none;
 }
-.firstSight-body{
+
+.firstSight-body {
     overflow: hidden;
     width: 1200px;
     height: 700px;
@@ -219,7 +244,8 @@
     background: #333;
     box-shadow: 10px 10px 10px #888888;
 }
-header{
+
+header {
     background: dimgrey;
     min-height: 30px;
     margin: auto;
@@ -230,7 +256,7 @@ header{
     line-height: 50px;
 }
 
-.oneContent .responseArea{
+.oneContent .responseArea {
     background: gainsboro;
     width: 600px;
     border-radius: 10px;
@@ -240,14 +266,16 @@ header{
     margin-bottom: 10px;
     float: left;
 }
-.default .navigator{
+
+.default .navigator {
     margin-left: 140px;
     font-size: 20px;
     text-align: left;
-    width:300px;
-    float:left;
+    width: 300px;
+    float: left;
 }
-.default .navigator div{
+
+.default .navigator div {
     display: inline-block;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -256,11 +284,42 @@ header{
     cursor: pointer;
 }
 
-.navigator .mouseOver{
+.navigator .mouseOver {
     background: yellow;
     padding: 8px;
 }
-.navigator .mouseDone{
+
+.navigator .mouseDone {
     background: yellowgreen;
     padding: 14px;
+}
+
+.searchCustomise {
+    margin-left: 627px;
+    width: 330px
+}
+
+.searchCustomise .search-input{
+    margin: 0px;
+    height: 28px;
+    border-radius: 14px;
+    padding-left: 14px;
+}
+
+.searchCustomise div{
+    float:left;
+}
+
+.searchCustomise button{
+    float: left;
+    height: 28px;
+    border-radius: 14px;
+    width: 28px;
+    padding: 0px;
+    background: #ffffff;
+}
+
+.searchCustomise button img{
+    height: 18px;
+    width: 18px;
 }
