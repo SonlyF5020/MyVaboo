@@ -1,10 +1,10 @@
-package org.apache.jsp.WEB_002dINF.views.homePage;
+package org.apache.jsp.WEB_002dINF.views.newClient;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class navigator_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class facesLightbox_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -21,6 +21,7 @@ public final class navigator_jsp extends org.apache.jasper.runtime.HttpJspBase
         throws java.io.IOException, ServletException {
 
     PageContext pageContext = null;
+    HttpSession session = null;
     ServletContext application = null;
     ServletConfig config = null;
     JspWriter out = null;
@@ -29,29 +30,30 @@ public final class navigator_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html; charset=UTF-8");
+      response.setContentType("text/html");
       pageContext = _jspxFactory.getPageContext(this, request, response,
-      			null, false, 8192, true);
+      			null, true, 8192, true);
       _jspx_page_context = pageContext;
       application = pageContext.getServletContext();
       config = pageContext.getServletConfig();
+      session = pageContext.getSession();
       out = pageContext.getOut();
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<div class=\"navigator\" id=\"navigator\">\n");
-      out.write("    <div divName=\"All\">大家的</div>\n");
-      out.write("    <div divName=\"My\">我自己的</div>\n");
-      out.write("</div>\n");
-      out.write("<form class=\"navbar-form navbar-left searchCustomise\" role=\"search\">\n");
-      out.write("    <div class=\"form-group\">\n");
-      out.write("        <input type=\"text\" class=\"form-control search-input\" placeholder=\"Search\">\n");
+      out.write("<div class=\"modal fade\" id=\"faceChosen\">\n");
+      out.write("    <div class=\"modal-dialog\">\n");
+      out.write("        <div class=\"modal-content\">\n");
+      out.write("            <div class=\"modal-header\">\n");
+      out.write("                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n");
+      out.write("                <h4 class=\"modal-title\">Chose one face</h4>\n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"modal-body\">\n");
+      out.write("               <div id=\"facesContainer\"></div>\n");
+      out.write("            </div>\n");
+      out.write("        </div>\n");
       out.write("    </div>\n");
-      out.write("    <button type=\"submit\" class=\"btn btn-default\" ><img src=\"/resources/img/searchIcon.png\"></button>\n");
-      out.write("</form>");
+      out.write("</div>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

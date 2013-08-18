@@ -118,8 +118,8 @@
     width: 500px;
     background: #ffffff;
     margin: 200px auto auto;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 30px;
+    padding-left: 30px;
     border-radius: 6px;
     border: solid yellowgreen;
     overflow: hidden;
@@ -139,9 +139,19 @@
     float: left;
 }
 
+.bigLogo{
+    width: 160px;
+    height: 140px;
+    float: left;
+}
+
+.bigLogo a{
+    margin-left: 40px;
+}
+
 .bigLogo img {
-    position: absolute;
-    margin-top: -35px;
+    margin-top: -20px;
+    margin-left: 10px;
     width: 120px;
     height: 120px;
     border-radius: 20px;
@@ -325,4 +335,10 @@ header {
 .searchCustomise button img{
     height: 18px;
     width: 18px;
+}
+
+#facesContainer .oneFace img{
+    width: 100px;
+    height: 100px;
+    float:left;
 }

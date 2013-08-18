@@ -11,10 +11,20 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_import_url_nobody;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_import_url_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_import_url_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -53,6 +63,8 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<head>\n");
       out.write("    <title>welcome</title>\n");
       out.write("    <script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"/resources/js/bootstrap.js\"></script>\n");
+      out.write("\n");
       out.write("    <script>\n");
       out.write("        $(document).ready(function(){\n");
       out.write("            $('#confirmShow').live(\"click\",function(){\n");
@@ -64,6 +76,18 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                else{\n");
       out.write("                    $(\".warning\").show();\n");
       out.write("                }\n");
+      out.write("            });\n");
+      out.write("            var index = 1;\n");
+      out.write("            while(index<6){\n");
+      out.write("                var faceUrl = '/resources/img/Face-Icons/Males/'+index+'.png';\n");
+      out.write("                var newFace = $(\"<img>\").attr(\"src\",faceUrl);\n");
+      out.write("                var faceDiv = $(\"<div class='oneFace'><div>\").append(newFace);\n");
+      out.write("                $('#facesContainer').append(faceDiv);\n");
+      out.write("                index++;\n");
+      out.write("            }\n");
+      out.write("\n");
+      out.write("            $('.bigLogo a').bind(\"click\",function(){\n");
+      out.write("                $('#faceChosen').modal();\n");
       out.write("            });\n");
       out.write("        });\n");
       out.write("    </script>\n");
@@ -87,7 +111,12 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </div>\n");
       out.write("    <div class=\"bigLogo\">\n");
       out.write("        <img src=\"/resources/img/zergIcon.png\">\n");
+      out.write("        <a class=\"btn\">选择头像</a>\n");
       out.write("    </div>\n");
+      out.write("    ");
+      if (_jspx_meth_c_import_0(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");
@@ -102,5 +131,31 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_import_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:import
+    org.apache.taglibs.standard.tag.rt.core.ImportTag _jspx_th_c_import_0 = (org.apache.taglibs.standard.tag.rt.core.ImportTag) _jspx_tagPool_c_import_url_nobody.get(org.apache.taglibs.standard.tag.rt.core.ImportTag.class);
+    _jspx_th_c_import_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_import_0.setParent(null);
+    _jspx_th_c_import_0.setUrl("/WEB-INF/views/newClient/facesLightbox.jsp");
+    int[] _jspx_push_body_count_c_import_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_import_0 = _jspx_th_c_import_0.doStartTag();
+      if (_jspx_th_c_import_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_import_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_import_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_import_0.doFinally();
+      _jspx_tagPool_c_import_url_nobody.reuse(_jspx_th_c_import_0);
+    }
+    return false;
   }
 }

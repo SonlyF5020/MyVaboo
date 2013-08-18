@@ -9,5 +9,5 @@
     <div class="form-group">
         <input type="text" class="form-control search-input" placeholder="Search">
     </div>
-    <button type="submit" class="btn btn-default" ><img src="/resources/img/searchIcon.jpg"></button>
+    <button type="submit" class="btn btn-default" ><img src="/resources/img/searchIcon.png"></button>
 </form>
