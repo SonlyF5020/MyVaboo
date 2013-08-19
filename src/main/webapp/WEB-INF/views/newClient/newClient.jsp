@@ -23,7 +23,7 @@
                 }
             });
             var index = 1;
-            while(index<6){
+            while(index<21){
                 var faceUrl = '/resources/img/Face-Icons/Males/'+index+'.png';
                 var newFace = $("<img>").attr("src",faceUrl);
                 var faceDiv = $("<div class='oneFace'><div>").append(newFace);

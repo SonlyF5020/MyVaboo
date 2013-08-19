@@ -78,7 +78,7 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                }\n");
       out.write("            });\n");
       out.write("            var index = 1;\n");
-      out.write("            while(index<6){\n");
+      out.write("            while(index<21){\n");
       out.write("                var faceUrl = '/resources/img/Face-Icons/Males/'+index+'.png';\n");
       out.write("                var newFace = $(\"<img>\").attr(\"src\",faceUrl);\n");
       out.write("                var faceDiv = $(\"<div class='oneFace'><div>\").append(newFace);\n");
