@@ -86,6 +86,14 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                index++;\n");
       out.write("            }\n");
       out.write("\n");
+      out.write("            $('#faceChosen').on(\"click\",\"div.oneFace\",function(){\n");
+      out.write("                var src = $('img',this).attr(\"src\");\n");
+      out.write("                $('.hiddenForm input[name=\"faceUrl\"]').val(src);\n");
+      out.write("                $('#faceChosen').modal('hide');\n");
+      out.write("                $('.login .bigLogo img').attr(\"src\",src);\n");
+      out.write("            })\n");
+      out.write("\n");
+      out.write("\n");
       out.write("            $('.bigLogo a').bind(\"click\",function(){\n");
       out.write("                $('#faceChosen').modal();\n");
       out.write("            });\n");
@@ -105,7 +113,10 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </form>\n");
       out.write("\n");
       out.write("        <form action=\"/clientCreate\" method=\"get\" class=\"hiddenForm\">\n");
-      out.write("            <input type=\"text\" name=\"name\"><input type=\"password\" name=\"password\"><input type=\"submit\" id=\"confirmHidden\">\n");
+      out.write("            <input type=\"text\" name=\"name\">\n");
+      out.write("            <input type=\"password\" name=\"password\">\n");
+      out.write("            <input type=\"text\" name=\"faceUrl\">\n");
+      out.write("            <input type=\"submit\" id=\"confirmHidden\">\n");
       out.write("        </form>\n");
       out.write("\n");
       out.write("    </div>\n");

@@ -1,32 +1,29 @@
 package com.thoughtworks.zhanhonglai.service;
 
+import com.thoughtworks.zhanhonglai.data.UserInfo;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class ServerStore {
-    Map<String, String> userPasswordStore = new HashMap<String, String>();
-    String currentUser;
+    Map<String,UserInfo> userInfoStore = new HashMap<String, UserInfo>();
     //TODO : Use session to handle multi-user online problem
 
-
-    public void setCurrentUser(String currentUser) {
-        this.currentUser = currentUser;
+    public boolean isPasswordCorrect(String name, String password){
+        String userPassword = userInfoStore.get(name).getPassword();
+        return password==userPassword;
     }
 
-    public boolean userPasswordIsCorrect(String name, String password) {
-        return userPasswordStore.containsKey(name) && userPasswordStore.get(name).equals(password);
-    }
-
-    public void createUser(String name, String password) {
-        userPasswordStore.put(name, password);
-        setCurrentUser(name);
+    public void createNewUser(String name, String password, String faceUrl){
+        UserInfo newUserInfo = new UserInfo(name, password, faceUrl);
+        userInfoStore.put(name,newUserInfo);
     }
 
     public ServerStore() {
-        userPasswordStore.put("test", "123");
+        userInfoStore.put("test",new UserInfo("test","123","/resources/img/zergIcon.png"));
     }
 
-    public boolean alreadyExistUser(String name) {
-        return userPasswordStore.containsKey(name);
+    public boolean isUserNameExisted(String name){
+        return userInfoStore.containsKey(name);
     }
 }

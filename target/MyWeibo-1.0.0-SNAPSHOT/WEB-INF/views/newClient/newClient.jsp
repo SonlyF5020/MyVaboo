@@ -8,6 +8,8 @@
 <head>
     <title>welcome</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/resources/js/bootstrap.js"></script>
+
     <script>
         $(document).ready(function(){
             $('#confirmShow').live("click",function(){
@@ -19,6 +21,24 @@
                 else{
                     $(".warning").show();
                 }
+            });
+            var index = 1;
+            while(index<21){
+                var faceUrl = '/resources/img/Face-Icons/Males/'+index+'.png';
+                var newFace = $("<img>").attr("src",faceUrl);
+                var faceDiv = $("<div class='oneFace'><div>").append(newFace);
+                $('#facesContainer').append(faceDiv);
+                index++;
+            }
+
+            $('#faceChosen').on("click","div.oneFace",function(){
+                var src = $('img',this).attr("src");
+                $('.hiddenForm input[name="faceUrl"]').val(src);
+            })
+
+
+            $('.bigLogo a').bind("click",function(){
+                $('#faceChosen').modal();
             });
         });
     </script>
@@ -36,13 +56,18 @@
         </form>
 
         <form action="/clientCreate" method="get" class="hiddenForm">
-            <input type="text" name="name"><input type="password" name="password"><input type="submit" id="confirmHidden">
+            <input type="text" name="name">
+            <input type="password" name="password">
+            <input type="text" name="faceUrl">
+            <input type="submit" id="confirmHidden">
         </form>
 
     </div>
     <div class="bigLogo">
         <img src="/resources/img/zergIcon.png">
+        <a class="btn">选择头像</a>
     </div>
+    <c:import url="/WEB-INF/views/newClient/facesLightbox.jsp"></c:import>
 </div>
 </body>
 </html>

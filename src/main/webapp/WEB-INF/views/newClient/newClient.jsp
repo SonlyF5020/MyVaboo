@@ -31,6 +31,14 @@
                 index++;
             }
 
+            $('#faceChosen').on("click","div.oneFace",function(){
+                var src = $('img',this).attr("src");
+                $('.hiddenForm input[name="faceUrl"]').val(src);
+                $('#faceChosen').modal('hide');
+                $('.login .bigLogo img').attr("src",src);
+            })
+
+
             $('.bigLogo a').bind("click",function(){
                 $('#faceChosen').modal();
             });
@@ -50,7 +58,10 @@
         </form>
 
         <form action="/clientCreate" method="get" class="hiddenForm">
-            <input type="text" name="name"><input type="password" name="password"><input type="submit" id="confirmHidden">
+            <input type="text" name="name">
+            <input type="password" name="password">
+            <input type="text" name="faceUrl">
+            <input type="submit" id="confirmHidden">
         </form>
 
     </div>

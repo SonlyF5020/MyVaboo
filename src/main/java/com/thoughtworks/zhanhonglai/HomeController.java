@@ -38,7 +38,7 @@ public class HomeController {
     }
 
     private boolean passwordIsCorrect(String name, String password) {
-        return serverStore.userPasswordIsCorrect(name, password);
+        return serverStore.isPasswordCorrect(name, password);
     }
 
     @RequestMapping("/login")
@@ -52,11 +52,15 @@ public class HomeController {
     }
 
     @RequestMapping("/clientCreate")
-    public String clientCreate(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request) {
-        if (serverStore.alreadyExistUser(name)) {
+    public String clientCreate(@RequestParam("name") String name,
+                               @RequestParam("password") String password,
+                               @RequestParam("faceUrl") String faceUrl,
+                               HttpServletRequest request) {
+        if (serverStore.isUserNameExisted(name)) {
             return "newClient/invalidUserName";
         } else {
-            serverStore.createUser(name, password);
+            faceUrl = faceUrl==""?"/resources/img/zergIcon.png":faceUrl;
+            serverStore.createNewUser(name, password, faceUrl);
             HttpSession session = request.getSession();
             session.setAttribute("sessionUserName", name);
             return "newClient/successCreate";

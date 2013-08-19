@@ -27,15 +27,23 @@ var mouseOverHandler = function () {
     });
 }
 $(function () {
-    getHistory();
-    getUserName();
-    submitHandler();
-    mouseOverHandler();
-    MouseOutHandler();
 
     $('.navigator').on('mouseover','div',function(){
-       $(this).addClass('mouseOver');
+        $(this).addClass('mouseOver');
     });
+
+    $('.navigator').on('mouseout','div',function(){
+        $(this).removeClass('mouseOver');
+    });
+
+
+    $('.navigator').on('click','div',function(){
+        $('.navigator div').removeClass('mouseDone');
+        $(this).addClass('mouseDone');
+        $('#weiboContent').html("");
+        var history = $(this).attr("divName");
+        getHistory(history);
+    })
 
     $('#weiboContent').on('click', '.deleteButton', function () {
         $('#deleteModal').modal('show');
@@ -63,6 +71,13 @@ $(function () {
             renderResponse(currentResponseDiv,response);
         })
     });
+
+    $('.navigator div[divName="My"]').click();
+//    getAllHistory();
+    getUserName();
+    submitHandler();
+    mouseOverHandler();
+    MouseOutHandler();
 });
 
 var renderResponse = function(content,response){
@@ -78,8 +93,12 @@ var getUserName = function () {
     });
 }
 
-var getHistory = function () {
-    $.getJSON("/json/userHistory", function (allData) {
+var getAllHistory = function () {
+    getHistory("All");
+}
+
+var getHistory = function(user){
+    $.getJSON("/json/get"+user+"History", function (allData) {
         var index;
         for (index in allData) {
             var deleteButton = $('<div></div>').addClass('deleteButton');
