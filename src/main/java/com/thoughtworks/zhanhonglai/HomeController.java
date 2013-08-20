@@ -89,11 +89,13 @@ public class HomeController {
         return "jsonView";
     }
 
-    @RequestMapping("/json/currentUserName")
+    @RequestMapping("/json/currentUserInfo")
     public String getCurrentUserName(Model model, HttpServletRequest request) {
         HttpSession session = request.getSession();
         String userName = (String) session.getAttribute("sessionUserName");
         model.addAttribute("userName", userName);
+        String userUrl = serverStore.getUserFaceUrl(userName);
+        model.addAttribute("userFaceUrl", userUrl);
         return "jsonView";
     }
 

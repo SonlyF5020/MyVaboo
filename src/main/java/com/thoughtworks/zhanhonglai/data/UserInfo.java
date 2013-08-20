@@ -3,12 +3,17 @@ package com.thoughtworks.zhanhonglai.data;
 public class UserInfo {
     String UserName;
     String password;
+
+    public String getUserFaceUrl() {
+        return UserFaceUrl;
+    }
+
     String UserFaceUrl;
 
     public UserInfo(String userName, String password, String userFaceUrl) {
-        UserName = userName;
+        this.UserName = userName;
         this.password = password;
-        UserFaceUrl = userFaceUrl;
+        this.UserFaceUrl = userFaceUrl;
     }
 
     public String getPassword() {

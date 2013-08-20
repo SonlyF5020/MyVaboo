@@ -11,7 +11,7 @@ public class ServerStore {
 
     public boolean isPasswordCorrect(String name, String password){
         String userPassword = userInfoStore.get(name).getPassword();
-        return password==userPassword;
+        return password.equals(userPassword);
     }
 
     public void createNewUser(String name, String password, String faceUrl){
@@ -20,10 +20,14 @@ public class ServerStore {
     }
 
     public ServerStore() {
-        userInfoStore.put("test",new UserInfo("test","123","/resources/img/zergIcon.png"));
+        this.userInfoStore.put("test",new UserInfo("test","123","/resources/img/zergIcon.png"));
     }
 
     public boolean isUserNameExisted(String name){
         return userInfoStore.containsKey(name);
+    }
+
+    public String getUserFaceUrl(String userName){
+        return userInfoStore.get(userName).getUserFaceUrl();
     }
 }
