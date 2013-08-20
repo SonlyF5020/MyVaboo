@@ -14,13 +14,24 @@ public class ServerStore {
         return password.equals(userPassword);
     }
 
-    public void createNewUser(String name, String password, String faceUrl){
-        UserInfo newUserInfo = new UserInfo(name, password, faceUrl);
+    public void createNewUser(String name, String password, String faceUrl,String emailAddress){
+        UserInfo newUserInfo = new UserInfo();
+        newUserInfo.setUserName(name);
+        newUserInfo.setPassword(password);
+        newUserInfo.setUserFaceUrl(faceUrl);
+        newUserInfo.setEmailAddress(emailAddress);
         userInfoStore.put(name,newUserInfo);
     }
 
     public ServerStore() {
-        this.userInfoStore.put("test",new UserInfo("test","123","/resources/img/zergIcon.png"));
+        UserInfo defaultUser = new UserInfo();
+
+        defaultUser.setUserName("test");
+        defaultUser.setPassword("123");
+        defaultUser.setUserFaceUrl("/resources/img/zergIcon.png");
+        defaultUser.setEmailAddress("502089948@qq.com");
+
+        this.userInfoStore.put(defaultUser.getUserName(),defaultUser);
     }
 
     public boolean isUserNameExisted(String name){
@@ -29,5 +40,17 @@ public class ServerStore {
 
     public String getUserFaceUrl(String userName){
         return userInfoStore.get(userName).getUserFaceUrl();
+    }
+
+    public boolean isEmailCorrect(String userName, String emailAddress) {
+        if (userInfoStore.containsKey(userName)){
+            String userEmailAddress = userInfoStore.get(userName).getEmailAddress();
+            return userEmailAddress.equals(emailAddress);
+        }
+        return false;
+    }
+
+    public String getUserPassword(String userName) {
+        return userInfoStore.get(userName).getPassword();
     }
 }

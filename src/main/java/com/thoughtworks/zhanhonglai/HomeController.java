@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
@@ -49,20 +50,25 @@ public class HomeController {
 
     @RequestMapping("/")
     public String loginAccount() throws javax.mail.MessagingException {
-        HostMail.sendMail();
         return "firstSight";
+    }
+
+    @RequestMapping("/forgetPassword")
+    public String forgetPassword(){
+        return "checkUser/forgetPassword";
     }
 
     @RequestMapping("/clientCreate")
     public String clientCreate(@RequestParam("name") String name,
                                @RequestParam("password") String password,
                                @RequestParam("faceUrl") String faceUrl,
+                               @RequestParam("emailAddress") String emailAddress,
                                HttpServletRequest request) {
         if (serverStore.isUserNameExisted(name)) {
             return "newClient/invalidUserName";
         } else {
-            faceUrl = faceUrl==""?"/resources/img/zergIcon.png":faceUrl;
-            serverStore.createNewUser(name, password, faceUrl);
+            faceUrl = faceUrl == "" ? "/resources/img/zergIcon.png" : faceUrl;
+            serverStore.createNewUser(name, password, faceUrl,emailAddress);
             HttpSession session = request.getSession();
             session.setAttribute("sessionUserName", name);
             return "newClient/successCreate";
@@ -108,18 +114,30 @@ public class HomeController {
     }
 
     @RequestMapping("/addReply")
-    public String addReply(@RequestParam("reply") String reply,@RequestParam("id") String id,HttpServletRequest request,Model model) {
+    public String addReply(@RequestParam("reply") String reply, @RequestParam("id") String id, HttpServletRequest request, Model model) {
         String responseUser = (String) request.getSession().getAttribute("sessionUserName");
         UserContent responseUserContent = new UserContent(responseUser, reply, getCurrentDate());
         contentStore.getAllContents().get("" + id).addResponse(responseUserContent);
-        model.addAttribute("response",responseUserContent);
+        model.addAttribute("response", responseUserContent);
         return "jsonView";
     }
 
     @RequestMapping("/json/getMyHistory")
-    public String getMyHistory(Model model,HttpServletRequest request){
+    public String getMyHistory(Model model, HttpServletRequest request) {
         String currentUser = (String) request.getSession().getAttribute("sessionUserName");
         model.addAllAttributes(contentStore.getUserContent(currentUser));
         return "jsonView";
     }
+
+    @RequestMapping("/getBackPassword")
+    public String getBackPassword(@RequestParam("userName") String userName,
+                                  @RequestParam("emailAddress") String emailAddress ) throws MessagingException {
+        if (serverStore.isEmailCorrect(userName,emailAddress)){
+            String password = serverStore.getUserPassword(userName);
+            HostMail.sendMail(emailAddress,password);
+            return "checkUser/mailSend";
+        }
+        return "checkUser/invalidUser";
+    }
+
 }

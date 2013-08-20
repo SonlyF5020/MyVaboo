@@ -71,6 +71,7 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                if($('#password1').val() == $('#password2').val()){\n");
       out.write("                    $(\".hiddenForm>[name='name']\").val($('#inputName').val());\n");
       out.write("                    $(\".hiddenForm>[name='password']\").val($('#password1').val());\n");
+      out.write("                    $(\".hiddenForm>[name='emailAddress']\").val($('#emailAddress').val());\n");
       out.write("                    $(\"#confirmHidden\").click();\n");
       out.write("                }\n");
       out.write("                else{\n");
@@ -108,7 +109,8 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            姓名：<input type=\"text\" id=\"inputName\"><br>\n");
       out.write("            密码：<input type=\"password\" id=\"password1\"><br>\n");
       out.write("            密码：<input type=\"password\" id=\"password2\"><br>\n");
-      out.write("            <span class=\"warning\">您两次输入的密码不一致！</span><br>\n");
+      out.write("            邮箱：<input type=\"text\" id=\"emailAddress\">\n");
+      out.write("            <span class=\"warning\"><br>您两次输入的密码不一致！</span><br>\n");
       out.write("            <input type=\"button\" class=\"btn\" id=\"confirmShow\" value=\"确定\"><a href=\"/\" class=\"btn\">返回</a>\n");
       out.write("        </form>\n");
       out.write("\n");
@@ -116,6 +118,7 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <input type=\"text\" name=\"name\">\n");
       out.write("            <input type=\"password\" name=\"password\">\n");
       out.write("            <input type=\"text\" name=\"faceUrl\">\n");
+      out.write("            <input type=\"text\" name=\"emailAddress\">\n");
       out.write("            <input type=\"submit\" id=\"confirmHidden\">\n");
       out.write("        </form>\n");
       out.write("\n");

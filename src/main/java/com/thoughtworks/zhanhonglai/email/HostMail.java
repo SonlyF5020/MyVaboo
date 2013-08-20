@@ -6,12 +6,12 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import javax.mail.internet.MimeMessage;
 
 public class HostMail {
-    public static void sendMail() throws javax.mail.MessagingException {
+    public static void sendMail(String emailAddress,String password) throws javax.mail.MessagingException {
         JavaMailSenderImpl senderImpl = new JavaMailSenderImpl();
 
         // 设定mail server
         senderImpl.setHost("smtp.163.com");
-        senderImpl.setUsername("502089948");
+        senderImpl.setUsername("vaboo_bigz");
         senderImpl.setPassword("zhan123456789");
 
         // 建立HTML邮件消息
@@ -21,11 +21,11 @@ public class HostMail {
         MimeMessageHelper messageHelper = new MimeMessageHelper(mailMessage, true, "utf-8");
 
         // 设置收件人，寄件人
-        messageHelper.setTo("502089948@qq.com");
-        messageHelper.setFrom("502089948@163.com");
-        messageHelper.setSubject("测试邮件！");
+        messageHelper.setTo(emailAddress);
+        messageHelper.setFrom("vaboo_bigz@163.com");
+        messageHelper.setSubject("找回密码");
         // true 表示启动HTML格式的邮件
-        messageHelper.setText("<html><head></head><body><h1>你好：附件！！</h1></body></html>", true);
+        messageHelper.setText("<html><head></head><body><h1>你的密码是："+password+"</h1></body></html>", true);
 
         // 发送邮件
         senderImpl.send(mailMessage);

@@ -15,6 +15,7 @@
         <form action="/checkUser" method="get">
             姓名：<input type="text" name="name"><br>
             密码：<input type="password" name="password"><br>
+            <a href="/forgetPassword">忘记密码？</a> <br><br>
             <input type="submit" class="btn" value="登陆"><a href="/register" class="btn">注册</a>
         </form>
     </div>

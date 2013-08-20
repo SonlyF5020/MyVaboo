@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class loginAccount_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class mailSend_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -41,32 +41,20 @@ public final class loginAccount_jsp extends org.apache.jasper.runtime.HttpJspBas
 
       out.write("\n");
       out.write("\n");
-      out.write("<link href=\"");
-      out.print(request.getContextPath());
-      out.write("/resources/css/bootstrap.css\" rel=\"stylesheet\">\n");
-      out.write("<link href=\"");
-      out.print(request.getContextPath());
-      out.write("/resources/css/myStyle.css\" rel=\"stylesheet\">\n");
-      out.write("\n");
-      out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
-      out.write("    <title>welcome</title>\n");
+      out.write("    <link href=\"");
+      out.print(request.getContextPath());
+      out.write("/resources/css/bootstrap.css\" rel=\"stylesheet\">\n");
+      out.write("    <link href=\"");
+      out.print(request.getContextPath());
+      out.write("/resources/css/myStyle.css\" rel=\"stylesheet\">\n");
+      out.write("    <title></title>\n");
       out.write("</head>\n");
-      out.write("\n");
       out.write("<body class=\"allBackground\">\n");
-      out.write("<div class=\"login\">\n");
-      out.write("    <div class=\"clientForm\">\n");
-      out.write("        <form action=\"/checkUser\" method=\"get\">\n");
-      out.write("            姓名：<input type=\"text\" name=\"name\"><br>\n");
-      out.write("            密码：<input type=\"password\" name=\"password\"><br>\n");
-      out.write("            <a href=\"/forgetPassword\">忘记密码？</a> <br><br>\n");
-      out.write("            <input type=\"submit\" class=\"btn\" value=\"登陆\"><a href=\"/register\" class=\"btn\">注册</a>\n");
-      out.write("        </form>\n");
-      out.write("    </div>\n");
-      out.write("    <div class=\"bigLogo\">\n");
-      out.write("        <img src=\"/resources/img/zergIcon.png\">\n");
-      out.write("    </div>\n");
+      out.write("<div class=\"redBorder\">\n");
+      out.write("    <h2>一封包含您密码的邮件已经发送到您的邮箱，请查收后登录！</h2>\n");
+      out.write("    <a class=\"btn\" href=\"/login\">登录</a>\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");

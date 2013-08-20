@@ -16,6 +16,7 @@
                 if($('#password1').val() == $('#password2').val()){
                     $(".hiddenForm>[name='name']").val($('#inputName').val());
                     $(".hiddenForm>[name='password']").val($('#password1').val());
+                    $(".hiddenForm>[name='emailAddress']").val($('#emailAddress').val());
                     $("#confirmHidden").click();
                 }
                 else{
@@ -53,7 +54,8 @@
             姓名：<input type="text" id="inputName"><br>
             密码：<input type="password" id="password1"><br>
             密码：<input type="password" id="password2"><br>
-            <span class="warning">您两次输入的密码不一致！</span><br>
+            邮箱：<input type="text" id="emailAddress">
+            <span class="warning"><br>您两次输入的密码不一致！</span><br>
             <input type="button" class="btn" id="confirmShow" value="确定"><a href="/" class="btn">返回</a>
         </form>
 
@@ -61,6 +63,7 @@
             <input type="text" name="name">
             <input type="password" name="password">
             <input type="text" name="faceUrl">
+            <input type="text" name="emailAddress">
             <input type="submit" id="confirmHidden">
         </form>
 
