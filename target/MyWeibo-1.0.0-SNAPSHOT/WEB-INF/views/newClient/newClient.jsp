@@ -34,6 +34,8 @@
             $('#faceChosen').on("click","div.oneFace",function(){
                 var src = $('img',this).attr("src");
                 $('.hiddenForm input[name="faceUrl"]').val(src);
+                $('#faceChosen').modal('hide');
+                $('.login .bigLogo img').attr("src",src);
             })
 
 

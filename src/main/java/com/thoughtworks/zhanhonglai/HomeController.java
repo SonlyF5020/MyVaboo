@@ -1,6 +1,7 @@
 package com.thoughtworks.zhanhonglai;
 
 import com.thoughtworks.zhanhonglai.data.UserContent;
+import com.thoughtworks.zhanhonglai.email.HostMail;
 import com.thoughtworks.zhanhonglai.service.ContentStore;
 import com.thoughtworks.zhanhonglai.service.ServerStore;
 import org.springframework.stereotype.Controller;
@@ -47,7 +48,8 @@ public class HomeController {
     }
 
     @RequestMapping("/")
-    public String loginAccount() {
+    public String loginAccount() throws javax.mail.MessagingException {
+        HostMail.sendMail();
         return "firstSight";
     }
 

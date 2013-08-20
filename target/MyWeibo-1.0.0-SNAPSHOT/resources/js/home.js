@@ -74,7 +74,7 @@ $(function () {
 
     $('.navigator div[divName="My"]').click();
 //    getAllHistory();
-    getUserName();
+    initialUserInfo();
     submitHandler();
     mouseOverHandler();
     MouseOutHandler();
@@ -87,9 +87,10 @@ var renderResponse = function(content,response){
     content.append(newResponseDiv);
 }
 
-var getUserName = function () {
-    $.getJSON("/json/currentUserName", function (allData) {
+var initialUserInfo = function () {
+    $.getJSON("/json/currentUserInfo", function (allData) {
         $('#currentUserName').html(allData["userName"]);
+        $('.header .miniLogo img').attr("src",allData["userFaceUrl"]);
     });
 }
 
