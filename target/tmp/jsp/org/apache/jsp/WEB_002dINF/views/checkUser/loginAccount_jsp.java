@@ -60,7 +60,7 @@ public final class loginAccount_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <form action=\"/checkUser\" method=\"get\">\n");
       out.write("            姓名：<input type=\"text\" name=\"name\"><br>\n");
       out.write("            密码：<input type=\"password\" name=\"password\"><br>\n");
-      out.write("            <a href=\"/forgetPassword\">忘记密码？</a> <br><br>\n");
+      out.write("            <a href=\"/forgetPassword\">忘记密码？</a> <br>\n");
       out.write("            <input type=\"submit\" class=\"btn\" value=\"登陆\"><a href=\"/register\" class=\"btn\">注册</a>\n");
       out.write("        </form>\n");
       out.write("    </div>\n");

@@ -56,7 +56,7 @@
             密码：<input type="password" id="password2"><br>
             邮箱：<input type="text" id="emailAddress">
             <span class="warning"><br>您两次输入的密码不一致！</span><br>
-            <input type="button" class="btn" id="confirmShow" value="确定"><a href="/" class="btn">返回</a>
+            <input type="button" class="btn" id="confirmShow" value="确定"><a href="/login" class="btn">返回</a>
         </form>
 
         <form action="/clientCreate" method="get" class="hiddenForm">
