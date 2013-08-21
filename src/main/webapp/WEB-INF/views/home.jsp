@@ -25,6 +25,7 @@
         <jsp:include page="modal/editModal.jsp"></jsp:include>
         <c:import url="/WEB-INF/views/homePage/edit.jsp"></c:import>
     </div>
+    <jsp:include page="/WEB-INF/views/modal/facesLightbox.jsp"></jsp:include>
 </div>
 </body>
 </html>

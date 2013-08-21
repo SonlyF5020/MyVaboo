@@ -53,4 +53,9 @@ public class ServerStore {
     public String getUserPassword(String userName) {
         return userInfoStore.get(userName).getPassword();
     }
+
+    public void updateUserFace(String currentUser, String src) {
+        UserInfo currentUserInfo = userInfoStore.get(currentUser);
+        currentUserInfo.setUserFaceUrl(src);
+    }
 }

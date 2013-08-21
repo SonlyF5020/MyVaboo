@@ -6,12 +6,18 @@
     font-size: 60px;
 }
 
+.miniLogo{
+    float: left;
+    overflow: hidden;
+}
+
 .miniLogo img {
     width: 50px;
     height: 50px;
     border-radius: 7px;
     border: 3 solid #000000;
     float: left;
+    cursor: pointer;
 }
 
 .title {

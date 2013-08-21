@@ -140,4 +140,11 @@ public class HomeController {
         return "checkUser/invalidUser";
     }
 
+    @RequestMapping("/json/changeFace")
+    public String changeFace(@RequestParam("src") String src,Model model,HttpServletRequest request){
+        String currentUser = (String) request.getSession().getAttribute("sessionUserName");
+        serverStore.updateUserFace(currentUser,src);
+        model.addAttribute("src",serverStore.getUserFaceUrl(currentUser));
+        return "jsonView";
+    }
 }

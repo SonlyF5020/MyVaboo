@@ -93,6 +93,9 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       out.write("\n");
       out.write("    </div>\n");
+      out.write("    ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "/WEB-INF/views/modal/facesLightbox.jsp", out, false);
+      out.write("\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");

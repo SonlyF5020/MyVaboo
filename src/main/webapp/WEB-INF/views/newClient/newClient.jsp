@@ -72,7 +72,7 @@
         <img src="/resources/img/zergIcon.png">
         <a class="btn">选择头像</a>
     </div>
-    <c:import url="/WEB-INF/views/newClient/facesLightbox.jsp"></c:import>
+    <jsp:include page="/WEB-INF/views/modal/facesLightbox.jsp"></jsp:include>
 </div>
 </body>
 </html>
