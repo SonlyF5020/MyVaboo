@@ -21,7 +21,7 @@
                 setTimeout("run()",20);
             }
             else{
-                setTimeout("document.location.href='/login'",1500);
+                setTimeout("document.location.href='/logout'",1500);
             }
         }
     </script>

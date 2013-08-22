@@ -12,7 +12,7 @@
         用户名称：<input type="text" name="userName"><br>
         登记邮箱：<input type="text" name="emailAddress"><br>
         <input type="submit" class="btn" value="找回密码">
-        <a class="btn" href="/login">返回登录</a>
+        <a class="btn" href="/logout">返回登录</a>
     </form>
 </div>
 </body>

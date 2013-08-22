@@ -2,31 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2743f347-cc08-4ddc-99df-f33c1680f671" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/newClient/facesLightbox.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modal/facesLightbox.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/home.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/forgetPassword.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/forgetPassword.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/invalidUser.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/invalidUser.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/mailSend.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/mailSend.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/newClient/newClient.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/newClient/newClient.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyWeibo.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374663632479" ignored="false" />
     <file path="$PROJECT_DIR$/../HelloWorld100Times/pom.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1373949057886" ignored="false" />
     <file path="/home.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377077953375" ignored="false" />
-    <file path="/HomeController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377079096904" ignored="false" />
+    <file path="/HomeController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377083478211" ignored="false" />
     <file path="/MyWeibo-servlet.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374663264131" ignored="false" />
     <file path="/a.dummy" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377079467149" ignored="false" />
     <file path="/web.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1373954081475" ignored="false" />
     <file path="/myStyle.css" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377079475781" ignored="false" />
-    <file path="/Dummy.txt" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377077524060" ignored="false" />
+    <file path="/Dummy.txt" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377083007856" ignored="false" />
     <file path="/checkAccount.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374311819392" ignored="false" />
     <file path="/invalidUser.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377076316149" ignored="false" />
     <file path="/500.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374138949699" ignored="false" />
     <file path="/homePage.js" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374191480950" ignored="false" />
     <file path="/Qiu.html" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374191631192" ignored="false" />
-    <file path="/newClient.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377077918287" ignored="false" />
+    <file path="/newClient.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377083975121" ignored="false" />
     <file path="/clientCreate.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374224064486" ignored="false" />
     <file path="/successCreate.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374880596833" ignored="false" />
     <file path="/validUser.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374880623501" ignored="false" />
@@ -34,7 +33,7 @@
     <file path="/RegisterController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374278819152" ignored="false" />
     <file path="/loginAccount.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377006696766" ignored="false" />
     <file path="/serverStore.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374401627584" ignored="false" />
-    <file path="/ServerStore.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377079062473" ignored="false" />
+    <file path="/ServerStore.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377084272523" ignored="false" />
     <file path="/invalidUserName.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374880615299" ignored="false" />
     <file path="/contentStore.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374537183182" ignored="false" />
     <file path="/contentStoreTest.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374794403954" ignored="false" />
@@ -80,10 +79,10 @@
     <file path="/facesLightbox.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1376826486314" ignored="false" />
     <file path="/UserInfo.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377003153316" ignored="false" />
     <file path="/UserStore.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1376926083672" ignored="false" />
-    <file path="/head.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377077256416" ignored="false" />
+    <file path="/head.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377083451350" ignored="false" />
     <file path="/HostMail.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377006341908" ignored="false" />
-    <file path="/forgetPassword.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377005755059" ignored="false" />
-    <file path="/mailSend.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377006829717" ignored="false" />
+    <file path="/forgetPassword.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377083930683" ignored="false" />
+    <file path="/mailSend.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377083898556" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +97,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -134,7 +134,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -148,7 +147,7 @@
       <file leaf-file-name="HomeController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="5" selection-start="6188" selection-end="6188" vertical-scroll-proportion="0.0">
+            <state line="42" column="29" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,7 +156,25 @@
       <file leaf-file-name="mailSend.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/mailSend.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="23" selection-start="471" selection-end="475" vertical-scroll-proportion="-6.875">
+            <state line="14" column="19" selection-start="515" selection-end="515" vertical-scroll-proportion="-8.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validUser.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/validUser.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerStore.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/ServerStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="23" selection-start="554" selection-end="554" vertical-scroll-proportion="0.42207792">
               <folding />
             </state>
           </provider>
@@ -166,16 +183,7 @@
       <file leaf-file-name="loginAccount.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/loginAccount.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="17" selection-start="759" selection-end="759" vertical-scroll-proportion="-10.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerStore.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/ServerStore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="44" selection-start="2059" selection-end="2059" vertical-scroll-proportion="0.0">
+            <state line="19" column="17" selection-start="759" selection-end="759" vertical-scroll-proportion="-11.125">
               <folding />
             </state>
           </provider>
@@ -184,7 +192,25 @@
       <file leaf-file-name="newClient.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/newClient/newClient.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="30" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-8.25">
+            <state line="58" column="89" selection-start="2426" selection-end="2426" vertical-scroll-proportion="-8.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="invalidUser.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/invalidUser.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="59" selection-start="870" selection-end="870" vertical-scroll-proportion="-6.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forgetPassword.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/forgetPassword.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="18" selection-start="591" selection-end="591" vertical-scroll-proportion="-8.125">
               <folding />
             </state>
           </provider>
@@ -193,25 +219,7 @@
       <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="42" selection-start="1348" selection-end="1348" vertical-scroll-proportion="-15.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="facesLightbox.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modal/facesLightbox.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="40" selection-start="3041" selection-end="3044" vertical-scroll-proportion="0.0">
+            <state line="29" column="42" selection-start="1348" selection-end="1348" vertical-scroll-proportion="-13.875">
               <folding />
             </state>
           </provider>
@@ -220,16 +228,7 @@
       <file leaf-file-name="head.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="14" selection-start="432" selection-end="432" vertical-scroll-proportion="-6.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myStyle.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="20" selection-start="317" selection-end="317" vertical-scroll-proportion="0.55097085">
+            <state line="9" column="17" selection-start="397" selection-end="404" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
@@ -257,18 +256,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/UserStore.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/data/UserInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/forgetPassword.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/email/HostMail.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/mailSend.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/invalidUser.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/loginAccount.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/newClient/newClient.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/home.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/ServerStore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/invalidUser.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/mailSend.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/forgetPassword.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/newClient/newClient.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/ServerStore.java" />
       </list>
     </option>
   </component>
@@ -366,6 +365,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -497,6 +498,74 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="newClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWeibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWeibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homePage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWeibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWeibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="checkUser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -692,8 +761,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -882,12 +949,6 @@
       <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
       <setting name="vmparams" value="" />
@@ -896,6 +957,12 @@
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -928,19 +995,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -969,6 +1023,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -982,13 +1049,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1012,15 +1072,11 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 7.01">
@@ -1049,6 +1105,17 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="false" name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 7.01">
@@ -1129,7 +1196,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3280116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46879536" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1142,14 +1208,15 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2446198" sideWeight="0.67198837" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2446198" sideWeight="0.76342523" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985073" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24677187" sideWeight="0.67198837" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24677187" sideWeight="0.76342523" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23657474" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3280116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1219,97 +1286,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/data/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="40" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/validUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="33" selection-start="307" selection-end="418" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/email/HostMail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="76" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/forgetPassword.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/firstSight.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/invalidUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="21" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="432" selection-end="432" vertical-scroll-proportion="-6.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/loginAccount.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="17" selection-start="759" selection-end="759" vertical-scroll-proportion="-10.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/mailSend.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="471" selection-end="475" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modal/facesLightbox.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="42" selection-start="1348" selection-end="1348" vertical-scroll-proportion="-15.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/ServerStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="44" selection-start="2059" selection-end="2059" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/newClient/newClient.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="30" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-8.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="91" column="40" selection-start="3041" selection-end="3044" vertical-scroll-proportion="0.0">
@@ -1317,16 +1293,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="5" selection-start="6188" selection-end="6188" vertical-scroll-proportion="0.0">
+        <state line="26" column="29" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/ContentStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="20" selection-start="317" selection-end="317" vertical-scroll-proportion="0.55097085">
+        <state line="5" column="13" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/data/UserContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/data/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/email/HostMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="42" selection-start="1348" selection-end="1348" vertical-scroll-proportion="-13.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="397" selection-end="404" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/validUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/loginAccount.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="17" selection-start="759" selection-end="759" vertical-scroll-proportion="-11.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/newClient/newClient.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="89" selection-start="2426" selection-end="2426" vertical-scroll-proportion="-8.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/invalidUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="59" selection-start="870" selection-end="870" vertical-scroll-proportion="-6.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/forgetPassword.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="18" selection-start="591" selection-end="591" vertical-scroll-proportion="-8.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/mailSend.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="19" selection-start="515" selection-end="515" vertical-scroll-proportion="-8.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="29" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/ServerStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="23" selection-start="554" selection-end="554" vertical-scroll-proportion="0.42207792">
           <folding />
         </state>
       </provider>

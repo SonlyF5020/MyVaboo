@@ -48,7 +48,7 @@ public final class head_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </div>\n");
       out.write("    <div class=\"clientInfo\">\n");
       out.write("        <span id=\"client\">用户:<span id=\"currentUserName\"></span></span><br>\n");
-      out.write("        <a href=\"/login\">切换用户</a><br>\n");
+      out.write("        <a href=\"/logout\">切换用户</a><br>\n");
       out.write("        <a href=\"/\">退出</a>\n");
       out.write("    </div>\n");
       out.write("</div>");

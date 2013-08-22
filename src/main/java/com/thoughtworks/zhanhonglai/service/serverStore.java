@@ -10,6 +10,9 @@ public class ServerStore {
     //TODO : Use session to handle multi-user online problem
 
     public boolean isPasswordCorrect(String name, String password){
+        if (!userInfoStore.containsKey(name)){
+            return false;
+        }
         String userPassword = userInfoStore.get(name).getPassword();
         return password.equals(userPassword);
     }

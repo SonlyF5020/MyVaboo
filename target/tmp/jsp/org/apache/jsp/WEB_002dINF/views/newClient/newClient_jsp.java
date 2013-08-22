@@ -101,7 +101,7 @@ public final class newClient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            密码：<input type=\"password\" id=\"password2\"><br>\n");
       out.write("            邮箱：<input type=\"text\" id=\"emailAddress\">\n");
       out.write("            <span class=\"warning\"><br>您两次输入的密码不一致！</span><br>\n");
-      out.write("            <input type=\"button\" class=\"btn\" id=\"confirmShow\" value=\"确定\"><a href=\"/login\" class=\"btn\">返回</a>\n");
+      out.write("            <input type=\"button\" class=\"btn\" id=\"confirmShow\" value=\"确定\"><a href=\"/logout\" class=\"btn\">返回</a>\n");
       out.write("        </form>\n");
       out.write("\n");
       out.write("        <form action=\"/clientCreate\" method=\"get\" class=\"hiddenForm\">\n");

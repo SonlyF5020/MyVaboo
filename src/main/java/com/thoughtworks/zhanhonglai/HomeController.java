@@ -31,7 +31,7 @@ public class HomeController {
     }
 
     @RequestMapping("/checkUser")
-    public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request, Model model) {
+    public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request) {
         HttpSession session = request.getSession();
         if (passwordIsCorrect(name, password)) {
             session.setAttribute("sessionUserName", name);
@@ -44,7 +44,18 @@ public class HomeController {
     }
 
     @RequestMapping("/login")
-    public String login() {
+    public String login(HttpServletRequest request) {
+        if (!request.getSession().isNew()){
+            String userName = (String) request.getSession().getAttribute("sessionUserName");
+            if (serverStore.isUserNameExisted(userName)){
+                return "checkUser/validUser";
+            }
+        }
+        return "checkUser/loginAccount";
+    }
+
+    @RequestMapping("/logout")
+    public String logout(){
         return "checkUser/loginAccount";
     }
 

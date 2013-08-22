@@ -57,7 +57,7 @@ public final class forgetPassword_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("        用户名称：<input type=\"text\" name=\"userName\"><br>\n");
       out.write("        登记邮箱：<input type=\"text\" name=\"emailAddress\"><br>\n");
       out.write("        <input type=\"submit\" class=\"btn\" value=\"找回密码\">\n");
-      out.write("        <a class=\"btn\" href=\"/login\">返回登录</a>\n");
+      out.write("        <a class=\"btn\" href=\"/logout\">返回登录</a>\n");
       out.write("    </form>\n");
       out.write("</div>\n");
       out.write("</body>\n");

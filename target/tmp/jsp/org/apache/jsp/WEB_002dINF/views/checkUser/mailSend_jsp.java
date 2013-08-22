@@ -54,7 +54,7 @@ public final class mailSend_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"redBorder\">\n");
       out.write("    <h2>一封包含您密码的邮件已经发送到您的邮箱，请查收后登录！</h2>\n");
-      out.write("    <a class=\"btn\" href=\"/login\">登录</a>\n");
+      out.write("    <a class=\"btn\" href=\"/logout\">登录</a>\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");

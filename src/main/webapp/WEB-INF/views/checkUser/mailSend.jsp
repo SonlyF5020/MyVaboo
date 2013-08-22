@@ -9,7 +9,7 @@
 <body class="allBackground">
 <div class="redBorder">
     <h2>一封包含您密码的邮件已经发送到您的邮箱，请查收后登录！</h2>
-    <a class="btn" href="/login">登录</a>
+    <a class="btn" href="/logout">登录</a>
 </div>
 </body>
 </html>
