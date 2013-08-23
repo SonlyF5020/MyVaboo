@@ -7,6 +7,7 @@
     </div>
     <div class="clientInfo">
         <span id="client">用户:<span id="currentUserName"></span></span><br>
+        <a href="/changePassword">修改密码</a><br>
         <a href="/logout">切换用户</a><br>
         <a href="/">退出</a>
     </div>
