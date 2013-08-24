@@ -158,4 +158,8 @@ public class HomeController {
         model.addAttribute("src",serverStore.getUserFaceUrl(currentUser));
         return "jsonView";
     }
+    @RequestMapping("/changePassword")
+    public String changePassword(){
+        return "register";
+    }
 }
