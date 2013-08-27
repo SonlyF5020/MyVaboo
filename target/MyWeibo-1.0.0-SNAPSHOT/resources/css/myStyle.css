@@ -6,12 +6,18 @@
     font-size: 60px;
 }
 
+.miniLogo{
+    float: left;
+    overflow: hidden;
+}
+
 .miniLogo img {
     width: 50px;
     height: 50px;
     border-radius: 7px;
     border: 3 solid #000000;
     float: left;
+    cursor: pointer;
 }
 
 .title {
@@ -171,6 +177,9 @@
     margin-top: -50px;
     padding-right: 20px;
 }
+.clientInfo a{
+    padding-right: 5px;
+}
 
 .header {
     overflow: hidden;
@@ -308,8 +317,8 @@ header {
     margin-left: 627px;
     width: 330px;
     position: absolute;
-    left: 255;
-    top: 149;
+    margin-left: 663px;
+    margin-top: -70px;
 }
 
 .searchCustomise .search-input{

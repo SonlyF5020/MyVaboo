@@ -72,6 +72,27 @@ $(function () {
         })
     });
 
+    $('.miniLogo').bind("click",function(){
+        $('#faceChosen').modal();
+    });
+
+    var index = 1;
+    while(index<21){
+        var faceUrl = '/resources/img/Face-Icons/Males/'+index+'.png';
+        var newFace = $("<img>").attr("src",faceUrl);
+        var faceDiv = $("<div class='oneFace'><div>").append(newFace);
+        $('#facesContainer').append(faceDiv);
+        index++;
+    };
+
+    $('#faceChosen').on("click","div.oneFace",function(){
+        var src = $('img',this).attr("src");
+        $('#faceChosen').modal('hide');
+        $.getJSON("/json/changeFace?src="+src,function(allData){
+            $('.miniLogo img').attr("src",allData["src"]);
+        });
+    })
+
     $('.navigator div[divName="My"]').click();
 //    getAllHistory();
     initialUserInfo();
@@ -92,10 +113,6 @@ var initialUserInfo = function () {
         $('#currentUserName').html(allData["userName"]);
         $('.header .miniLogo img').attr("src",allData["userFaceUrl"]);
     });
-}
-
-var getAllHistory = function () {
-    getHistory("All");
 }
 
 var getHistory = function(user){

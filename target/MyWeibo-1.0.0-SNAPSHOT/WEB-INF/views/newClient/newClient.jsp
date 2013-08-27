@@ -16,6 +16,7 @@
                 if($('#password1').val() == $('#password2').val()){
                     $(".hiddenForm>[name='name']").val($('#inputName').val());
                     $(".hiddenForm>[name='password']").val($('#password1').val());
+                    $(".hiddenForm>[name='emailAddress']").val($('#emailAddress').val());
                     $("#confirmHidden").click();
                 }
                 else{
@@ -53,14 +54,16 @@
             姓名：<input type="text" id="inputName"><br>
             密码：<input type="password" id="password1"><br>
             密码：<input type="password" id="password2"><br>
-            <span class="warning">您两次输入的密码不一致！</span><br>
-            <input type="button" class="btn" id="confirmShow" value="确定"><a href="/" class="btn">返回</a>
+            邮箱：<input type="text" id="emailAddress">
+            <span class="warning"><br>您两次输入的密码不一致！</span><br>
+            <input type="button" class="btn" id="confirmShow" value="确定"><a href="/logout" class="btn">返回</a>
         </form>
 
         <form action="/clientCreate" method="get" class="hiddenForm">
             <input type="text" name="name">
             <input type="password" name="password">
             <input type="text" name="faceUrl">
+            <input type="text" name="emailAddress">
             <input type="submit" id="confirmHidden">
         </form>
 
@@ -69,7 +72,7 @@
         <img src="/resources/img/zergIcon.png">
         <a class="btn">选择头像</a>
     </div>
-    <c:import url="/WEB-INF/views/newClient/facesLightbox.jsp"></c:import>
+    <jsp:include page="/WEB-INF/views/modal/facesLightbox.jsp"></jsp:include>
 </div>
 </body>
 </html>

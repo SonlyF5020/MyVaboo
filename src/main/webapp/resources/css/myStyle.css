@@ -317,8 +317,8 @@ header {
     margin-left: 627px;
     width: 330px;
     position: absolute;
-    left: 255;
-    top: 170;
+    margin-left: 663px;
+    margin-top: -70px;
 }
 
 .searchCustomise .search-input{

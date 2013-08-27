@@ -2,7 +2,114 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2743f347-cc08-4ddc-99df-f33c1680f671" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FE01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FE02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FE03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FE04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FE05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FG01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FG02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FG03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FG04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FG05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FH01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FH02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FH03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FH04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FH05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FI01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FI02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FI03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FI04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/FI05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Females/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/E01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/E02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/E03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/E04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/E05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/F01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/F02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/F03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/F04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/F05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/G01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/G02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/G03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/G04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/G05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/H01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/H02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/H03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/H04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/H05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/I01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/I02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/I03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/I04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/I05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/J01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/J02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/J03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/J04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/J05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/K01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/K02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/K03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/K04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/K05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/L01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/L02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/L03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/L04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/L05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/M01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/M02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/M03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/M04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/M05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/N01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/N02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/N03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/N04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/N05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/O01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/O02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/O03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/O04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/O05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/Face-Icons/Males/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/cellphone/WP_20130811_024.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/cellphone/WP_20130811_025.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/cellphone/WP_20130811_029.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/cellphone/WP_20130811_034.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/cellphone/WP_20130811_035.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/cellphone/WP_20130811_047.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/cellphone/WP_20130812_009.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/cellphone/WP_20130812_010.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/cellphone/WP_20130812_011.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyWeibo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,8 +120,8 @@
     <file path="/MyWeibo-servlet.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374663264131" ignored="false" />
     <file path="/a.dummy" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377079467149" ignored="false" />
     <file path="/web.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1373954081475" ignored="false" />
-    <file path="/myStyle.css" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377079475781" ignored="false" />
-    <file path="/Dummy.txt" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377340977212" ignored="false" />
+    <file path="/myStyle.css" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377583514464" ignored="false" />
+    <file path="/Dummy.txt" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377583260821" ignored="false" />
     <file path="/checkAccount.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374311819392" ignored="false" />
     <file path="/invalidUser.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377076316149" ignored="false" />
     <file path="/500.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374138949699" ignored="false" />
@@ -139,10 +246,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HomeController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HomeController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="26" selection-start="6673" selection-end="6673" vertical-scroll-proportion="0.784">
+            <state line="148" column="43" selection-start="6119" selection-end="6119" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -205,7 +312,7 @@
       <file leaf-file-name="head.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="32" selection-start="398" selection-end="412" vertical-scroll-proportion="-5.625">
+            <state line="9" column="32" selection-start="398" selection-end="412" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -220,10 +327,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myStyle.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="myStyle.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="320" column="12" selection-start="5324" selection-end="5324" vertical-scroll-proportion="0.0">
+            <state line="320" column="21" selection-start="5342" selection-end="5342" vertical-scroll-proportion="0.5">
               <folding />
             </state>
           </provider>
@@ -260,9 +367,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/forgetPassword.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/newClient/newClient.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/ServerStore.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css" />
       </list>
     </option>
   </component>
@@ -359,6 +466,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -617,6 +725,10 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -784,7 +896,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1215,7 +1326,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="809" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1401,23 +1512,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="320" column="12" selection-start="5324" selection-end="5324" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="32" selection-start="398" selection-end="412" vertical-scroll-proportion="-5.625">
+        <state line="9" column="32" selection-start="398" selection-end="412" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="26" selection-start="6673" selection-end="6673" vertical-scroll-proportion="0.784">
+        <state line="148" column="43" selection-start="6119" selection-end="6119" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="320" column="21" selection-start="5342" selection-end="5342" vertical-scroll-proportion="0.5">
           <folding />
         </state>
       </provider>
