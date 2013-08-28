@@ -4,6 +4,7 @@ import com.thoughtworks.zhanhonglai.data.UserContent;
 import com.thoughtworks.zhanhonglai.email.HostMail;
 import com.thoughtworks.zhanhonglai.service.ContentStore;
 import com.thoughtworks.zhanhonglai.service.ServerStore;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,7 @@ import java.util.Locale;
 @SessionAttributes("sessionUserName")
 @Controller
 public class HomeController {
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     ServerStore serverStore = new ServerStore();
     ContentStore contentStore = new ContentStore();
@@ -55,12 +57,14 @@ public class HomeController {
     }
 
     @RequestMapping("/logout")
-    public String logout(){
+    public String logout(HttpServletRequest request){
+        request.getSession().invalidate();
         return "checkUser/loginAccount";
     }
 
     @RequestMapping("/")
-    public String loginAccount() throws javax.mail.MessagingException {
+    public String loginAccount(HttpServletRequest request){
+        request.getSession().invalidate();
         return "firstSight";
     }
 
@@ -110,11 +114,26 @@ public class HomeController {
 
     @RequestMapping("/json/currentUserInfo")
     public String getCurrentUserName(Model model, HttpServletRequest request) {
-        HttpSession session = request.getSession();
-        String userName = (String) session.getAttribute("sessionUserName");
+        try{
+        long start = System.currentTimeMillis();
+
+        String userName = (String) request.getSession().getAttribute("sessionUserName");
+
+        logger.warn(userName);
+
         model.addAttribute("userName", userName);
         String userUrl = serverStore.getUserFaceUrl(userName);
+
+        logger.warn(userUrl);
+
         model.addAttribute("userFaceUrl", userUrl);
+
+        logger.warn("spend time: "+(System.currentTimeMillis() - start));
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error(e.getMessage(),e);
+            model.addAttribute(e);
+        }
         return "jsonView";
     }
 
