@@ -1,5 +1,6 @@
 package com.thoughtworks.zhanhonglai;
 
+import com.thoughtworks.zhanhonglai.MySQL.MySQLmanager;
 import com.thoughtworks.zhanhonglai.data.UserContent;
 import com.thoughtworks.zhanhonglai.email.HostMail;
 import com.thoughtworks.zhanhonglai.service.ContentStore;
@@ -15,6 +16,7 @@ import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -78,11 +80,13 @@ public class HomeController {
                                @RequestParam("password") String password,
                                @RequestParam("faceUrl") String faceUrl,
                                @RequestParam("emailAddress") String emailAddress,
-                               HttpServletRequest request) {
+                               HttpServletRequest request) throws SQLException, ClassNotFoundException {
         if (serverStore.isUserNameExisted(name)) {
             return "newClient/invalidUserName";
         } else {
             faceUrl = faceUrl == "" ? "/resources/img/zergIcon.png" : faceUrl;
+            MySQLmanager newSQLmanager = new MySQLmanager();
+            newSQLmanager.createUser(name, password, faceUrl, emailAddress);
             serverStore.createNewUser(name, password, faceUrl,emailAddress);
             HttpSession session = request.getSession();
             session.setAttribute("sessionUserName", name);
