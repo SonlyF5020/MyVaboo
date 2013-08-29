@@ -133,4 +133,30 @@ public class MySQLmanagerTest {
             System.out.println("exception");
         }
     }
+
+    @Test
+    public void souldDeleteOneContent() throws Exception {
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        try{
+            mySQLmanager.deleteContent("00000000003");
+            assertNotNull(true);
+        }
+        catch (Exception e){
+            System.out.println("exception");
+        }
+    }
+
+    @Test
+    public void test() throws Exception {
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        try{
+            mySQLmanager.updateUserFaceUrl("test","二球");
+            String testresult = mySQLmanager.getUserFaceUrl("test");
+            assertThat(testresult,is("二球"));
+        }
+        catch (Exception e){
+            System.out.println("exception");
+        }
+
+    }
 }

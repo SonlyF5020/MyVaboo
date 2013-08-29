@@ -1,27 +1,25 @@
 package com.thoughtworks.zhanhonglai.data;
 
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class UserContent {
     private final String updateData;
     private final String content;
     private final String userName;
-    private Map<String,UserContent> responses = new HashMap<String,UserContent>();
+    private Map<String, UserContent> responses = new HashMap<String, UserContent>();
     int responseIndex = 0;
 
     public Map<String, UserContent> getResponses() {
         return responses;
     }
 
-    public void setResponses(Map<String,UserContent> responses) {
+    public void setResponses(Map<String, UserContent> responses) {
         this.responses = responses;
     }
 
-    public UserContent(String userName,String content, String updateDate) {
+    public UserContent(String userName, String content, String updateDate) {
         this.userName = userName;
         this.content = content;
         this.updateData = updateDate;
@@ -30,7 +28,8 @@ public class UserContent {
     public String getContent() {
         return content;
     }
-    public String getDate(){
+
+    public String getDate() {
         return updateData;
     }
 
@@ -39,7 +38,7 @@ public class UserContent {
     }
 
     public void addResponse(UserContent responseUserContent) {
-        responses.put(""+responseIndex,responseUserContent);
+        responses.put("" + responseIndex, responseUserContent);
         responseIndex++;
     }
 }

@@ -3,7 +3,6 @@ package com.thoughtworks.zhanhonglai;
 import com.thoughtworks.zhanhonglai.MySQL.MySQLmanager;
 import com.thoughtworks.zhanhonglai.data.UserContent;
 import com.thoughtworks.zhanhonglai.email.HostMail;
-import com.thoughtworks.zhanhonglai.service.ContentStore;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,13 +18,12 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Map;
 
 @SessionAttributes("sessionUserName")
 @Controller
 public class HomeController {
     private final Logger logger = Logger.getLogger(this.getClass());
-
-    ContentStore contentStore = new ContentStore();
 
     @RequestMapping("/home")
     public String accessHome() {
@@ -148,24 +146,28 @@ public class HomeController {
     }
 
     @RequestMapping("/delete")
-    public String deleteContent(@RequestParam("deleteIndex") String deleteIndex) {
-        contentStore.deleteContent(deleteIndex);
+    public String deleteContent(@RequestParam("deleteIndex") String deleteIndex) throws SQLException, ClassNotFoundException {
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        mySQLmanager.deleteContent(deleteIndex);
         return "home";
     }
 
     @RequestMapping("/addReply")
-    public String addReply(@RequestParam("reply") String reply, @RequestParam("id") String id, HttpServletRequest request, Model model) {
+    public String addReply(@RequestParam("reply") String reply, @RequestParam("id") String id, HttpServletRequest request, Model model) throws SQLException, ClassNotFoundException {
         String responseUser = (String) request.getSession().getAttribute("sessionUserName");
         UserContent responseUserContent = new UserContent(responseUser, reply, getCurrentDate());
-        contentStore.getAllContents().get("" + id).addResponse(responseUserContent);
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        mySQLmanager.addResponseForContent(""+id,responseUser,reply,getCurrentDate());
         model.addAttribute("response", responseUserContent);
         return "jsonView";
     }
 
     @RequestMapping("/json/getMyHistory")
-    public String getMyHistory(Model model, HttpServletRequest request) {
+    public String getMyHistory(Model model, HttpServletRequest request) throws SQLException, ClassNotFoundException {
         String currentUser = (String) request.getSession().getAttribute("sessionUserName");
-        model.addAllAttributes(contentStore.getUserContent(currentUser));
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        Map<String,UserContent> userContents = mySQLmanager.getUserContent(currentUser);
+        model.addAllAttributes(userContents);
         return "jsonView";
     }
 

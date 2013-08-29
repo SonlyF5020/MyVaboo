@@ -159,4 +159,57 @@ public class MySQLmanager {
         connection.close();
         return resultMap;
     }
+
+    public void deleteContent(String id) throws SQLException, ClassNotFoundException {
+        connectDatabase();
+        String deleteContent = "DELETE FROM CoreBase.MainContent WHERE id="+id;
+        statement.execute(deleteContent);
+        String deleteResponse = "DELETE FROM CoreBase.Reply WHERE contentid="+id;
+        statement.execute(deleteResponse);
+        connection.close();
+    }
+
+    public void addResponseForContent(String contentid, String responser, String replycontent, String date) throws SQLException, ClassNotFoundException {
+        connectDatabase();
+        String values = format(responser)+","+contentid+","+format(date)+","+format(replycontent);
+        String addSQL = "INSERT INTO CoreBase.Reply(responser,contentid,responsedate,replycontent) " +
+                "values(" +values+ ")";
+        statement.execute(addSQL);
+        connection.close();
+    }
+
+    public Map<String, UserContent> getUserContent(String username) throws SQLException, ClassNotFoundException {
+        connectDatabase();
+        Map<String,UserContent> resultMap = new HashMap<String, UserContent>();
+
+        // Construct Initial User Content Without Reply.
+        String queryKEYs = "SELECT id,username,content,constructdate FROM CoreBase.MainContent WHERE username="+format(username);
+        resultSet = statement.executeQuery(queryKEYs);
+        while (resultSet.next()){
+            String id = resultSet.getString(1);
+            String user = resultSet.getString(2);
+            String content = resultSet.getString(3);
+            String date = resultSet.getString(4);
+            UserContent userContent = new UserContent(user,content,date);
+            resultMap.put(id,userContent);
+        }
+
+        // Add Response Content
+        for (String mainContentKey : resultMap.keySet()){
+            Map<String,UserContent> responseMap = new HashMap<String, UserContent>();
+            String queryReply = "SELECT id,responser,replycontent,responsedate FROM CoreBase.Reply WHERE contentid="+format(mainContentKey);
+            resultSet = statement.executeQuery(queryReply);
+            while (resultSet.next()){
+                String id = resultSet.getString(1);
+                String user = resultSet.getString(2);
+                String content = resultSet.getString(3);
+                String date = resultSet.getString(4);
+                UserContent userContent = new UserContent(user,content,date);
+                responseMap.put(id,userContent);
+            }
+            resultMap.get(mainContentKey).setResponses(responseMap);
+        }
+        connection.close();
+        return resultMap;
+    }
 }
