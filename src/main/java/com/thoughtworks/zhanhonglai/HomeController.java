@@ -35,7 +35,7 @@ public class HomeController {
     }
 
     @RequestMapping("/checkUser")
-    public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request) {
+    public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request) throws SQLException, ClassNotFoundException {
         HttpSession session = request.getSession();
         if (passwordIsCorrect(name, password)) {
             session.setAttribute("sessionUserName", name);
@@ -43,15 +43,18 @@ public class HomeController {
         } else return "checkUser/invalidUser";
     }
 
-    private boolean passwordIsCorrect(String name, String password) {
-        return serverStore.isPasswordCorrect(name, password);
+    private boolean passwordIsCorrect(String name, String password) throws SQLException, ClassNotFoundException {
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        mySQLmanager.isPasswordCorrect(name, password);
+        return mySQLmanager.isPasswordCorrect(name, password);
     }
 
     @RequestMapping("/login")
-    public String login(HttpServletRequest request) {
-        if (!request.getSession().isNew()){
+    public String login(HttpServletRequest request) throws SQLException, ClassNotFoundException {
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        if (!request.getSession().isNew()) {
             String userName = (String) request.getSession().getAttribute("sessionUserName");
-            if (serverStore.isUserNameExisted(userName)){
+            if (mySQLmanager.isUserNameExisted(userName)) {
                 return "checkUser/validUser";
             }
         }
@@ -59,19 +62,19 @@ public class HomeController {
     }
 
     @RequestMapping("/logout")
-    public String logout(HttpServletRequest request){
+    public String logout(HttpServletRequest request) {
         request.getSession().invalidate();
         return "checkUser/loginAccount";
     }
 
     @RequestMapping("/")
-    public String loginAccount(HttpServletRequest request){
+    public String loginAccount(HttpServletRequest request) {
         request.getSession().invalidate();
         return "firstSight";
     }
 
     @RequestMapping("/forgetPassword")
-    public String forgetPassword(){
+    public String forgetPassword() {
         return "checkUser/forgetPassword";
     }
 
@@ -81,13 +84,13 @@ public class HomeController {
                                @RequestParam("faceUrl") String faceUrl,
                                @RequestParam("emailAddress") String emailAddress,
                                HttpServletRequest request) throws SQLException, ClassNotFoundException {
-        if (serverStore.isUserNameExisted(name)) {
+
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        if (mySQLmanager.isUserNameExisted(name)) {
             return "newClient/invalidUserName";
         } else {
             faceUrl = faceUrl == "" ? "/resources/img/zergIcon.png" : faceUrl;
-            MySQLmanager newSQLmanager = new MySQLmanager();
-            newSQLmanager.createUser(name, password, faceUrl, emailAddress);
-            serverStore.createNewUser(name, password, faceUrl,emailAddress);
+            mySQLmanager.createUser(name, password, faceUrl, emailAddress);
             HttpSession session = request.getSession();
             session.setAttribute("sessionUserName", name);
             return "newClient/successCreate";
@@ -118,24 +121,27 @@ public class HomeController {
 
     @RequestMapping("/json/currentUserInfo")
     public String getCurrentUserName(Model model, HttpServletRequest request) {
-        try{
-        long start = System.currentTimeMillis();
+        try {
+            long start = System.currentTimeMillis();
 
-        String userName = (String) request.getSession().getAttribute("sessionUserName");
+            String userName = (String) request.getSession().getAttribute("sessionUserName");
 
-        logger.warn(userName);
+            logger.warn(userName);
 
-        model.addAttribute("userName", userName);
-        String userUrl = serverStore.getUserFaceUrl(userName);
+            model.addAttribute("userName", userName);
 
-        logger.warn(userUrl);
+            MySQLmanager mySQLmanager = new MySQLmanager();
+            mySQLmanager.getUserFaceUrl(userName);
+            String userUrl = mySQLmanager.getUserFaceUrl(userName);
 
-        model.addAttribute("userFaceUrl", userUrl);
+            logger.warn(userUrl);
 
-        logger.warn("spend time: "+(System.currentTimeMillis() - start));
+            model.addAttribute("userFaceUrl", userUrl);
+
+            logger.warn("spend time: " + (System.currentTimeMillis() - start));
         } catch (Exception e) {
             e.printStackTrace();
-            logger.error(e.getMessage(),e);
+            logger.error(e.getMessage(), e);
             model.addAttribute(e);
         }
         return "jsonView";
@@ -165,24 +171,26 @@ public class HomeController {
 
     @RequestMapping("/getBackPassword")
     public String getBackPassword(@RequestParam("userName") String userName,
-                                  @RequestParam("emailAddress") String emailAddress ) throws MessagingException {
-        if (serverStore.isEmailCorrect(userName,emailAddress)){
-            String password = serverStore.getUserPassword(userName);
-            HostMail.sendMail(emailAddress,password);
+                                  @RequestParam("emailAddress") String emailAddress) throws MessagingException, SQLException, ClassNotFoundException {
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        if (mySQLmanager.isEmailCorrect(userName, emailAddress)) {
+            String password = mySQLmanager.getUserPassword(userName);
+            HostMail.sendMail(emailAddress, password);
             return "checkUser/mailSend";
         }
         return "checkUser/invalidUser";
     }
 
     @RequestMapping("/json/changeFace")
-    public String changeFace(@RequestParam("src") String src,Model model,HttpServletRequest request){
+    public String changeFace(@RequestParam("src") String src, Model model, HttpServletRequest request) {
         String currentUser = (String) request.getSession().getAttribute("sessionUserName");
-        serverStore.updateUserFace(currentUser,src);
-        model.addAttribute("src",serverStore.getUserFaceUrl(currentUser));
+        serverStore.updateUserFace(currentUser, src);
+        model.addAttribute("src", serverStore.getUserFaceUrl(currentUser));
         return "jsonView";
     }
+
     @RequestMapping("/changePassword")
-    public String changePassword(){
+    public String changePassword() {
         return "register";
     }
 }
