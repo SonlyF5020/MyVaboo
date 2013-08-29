@@ -10,7 +10,7 @@
 </head>
 <body class="allBackground">
 <div class="greenBorder">
-    <form action="/getBackPassword" method="get">
+    <form action="/getBackPassword" method="get" style="margin-left:20px;margin-top: 20px">
         用户名称：<input type="text" name="userName"><br>
         登记邮箱：<input type="text" name="emailAddress"><br>
         <input type="submit" class="btn" value="找回密码">

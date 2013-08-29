@@ -109,4 +109,13 @@ public class MySQLmanager {
         statement.execute(initSQL);
         connection.close();
     }
+
+    public void addContent(String userName, String content, String date) throws SQLException, ClassNotFoundException {
+        connectDatabase();
+        String values = format(userName)+","+format(content)+","+format(date);
+        String initSQL = "INSERT INTO CoreBase.MainContent(username,content,constructdate) " +
+                "values(" + values + ")";
+        statement.execute(initSQL);
+        connection.close();
+    }
 }

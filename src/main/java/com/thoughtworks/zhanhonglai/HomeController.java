@@ -100,6 +100,8 @@ public class HomeController {
         HttpSession session = request.getSession();
         if (!session.isNew()) {
             String userName = (String) session.getAttribute("sessionUserName");
+            MySQLmanager mySQLmanager = new MySQLmanager();
+            mySQLmanager.addContent(userName, newContent, getCurrentDate());
             contentStore.addContent(new UserContent(userName, newContent, getCurrentDate()));
         }
         return "home";
