@@ -17,8 +17,8 @@ public class UserContent {
         return responses;
     }
 
-    public void setResponses(List<UserContent> responses) {
-        this.responses = (Map<String, UserContent>) responses;
+    public void setResponses(Map<String,UserContent> responses) {
+        this.responses = responses;
     }
 
     public UserContent(String userName,String content, String updateDate) {

@@ -96,13 +96,12 @@ public class HomeController {
     }
 
     @RequestMapping("/submitContent")
-    private String submitContent(@RequestParam("newContent") String newContent, HttpServletRequest request) throws InterruptedException, UnsupportedEncodingException {
+    private String submitContent(@RequestParam("newContent") String newContent, HttpServletRequest request) throws InterruptedException, UnsupportedEncodingException, SQLException, ClassNotFoundException {
         HttpSession session = request.getSession();
         if (!session.isNew()) {
             String userName = (String) session.getAttribute("sessionUserName");
             MySQLmanager mySQLmanager = new MySQLmanager();
             mySQLmanager.addContent(userName, newContent, getCurrentDate());
-            contentStore.addContent(new UserContent(userName, newContent, getCurrentDate()));
         }
         return "home";
     }
@@ -114,8 +113,9 @@ public class HomeController {
     }
 
     @RequestMapping("/json/getAllHistory")
-    public String getUserHistory(Model model) {
-        model.addAllAttributes(contentStore.getAllContents());
+    public String getUserHistory(Model model) throws SQLException, ClassNotFoundException {
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        model.addAllAttributes(mySQLmanager.getAllContents());
         return "jsonView";
     }
 

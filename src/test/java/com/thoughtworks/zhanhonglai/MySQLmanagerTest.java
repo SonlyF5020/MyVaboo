@@ -1,11 +1,14 @@
 package com.thoughtworks.zhanhonglai;
 
 import com.thoughtworks.zhanhonglai.MySQL.MySQLmanager;
+import com.thoughtworks.zhanhonglai.data.UserContent;
 import org.junit.Test;
 
 import java.sql.SQLException;
+import java.util.Map;
 
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 
 public class MySQLmanagerTest {
@@ -99,6 +102,35 @@ public class MySQLmanagerTest {
         }
         catch (SQLException a){
             System.out.println("SQLException");
+        }
+    }
+
+    @Test
+    public void shouldInsertDateInMainContentTable() throws Exception {
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        try{
+            mySQLmanager.addContent("zhanhonglai","helloworld","2003-08-28");
+            assertThat(true,is(true));
+        }
+        catch (Exception e){
+            System.out.println("exception");
+        }
+
+    }
+
+    @Test
+    public void shouldGetAllContentCorrectly() throws Exception {
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        try{
+            mySQLmanager.addContent("zhanhonglai","helloworld","2003-08-28");
+            mySQLmanager.addContent("honglai","ball","2003-08-29");
+            mySQLmanager.addContent("lai","refactor","2003-08-28");
+            mySQLmanager.addContent("dashabi","dashabi","2003-08-29");
+            Map<String,UserContent> result = mySQLmanager.getAllContents();
+            assertNotNull(result);
+        }
+        catch (Exception e){
+            System.out.println("exception");
         }
     }
 }

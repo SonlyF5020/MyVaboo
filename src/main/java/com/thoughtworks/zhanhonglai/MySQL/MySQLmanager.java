@@ -1,9 +1,15 @@
 package com.thoughtworks.zhanhonglai.MySQL;
 
+import com.thoughtworks.zhanhonglai.data.UserContent;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class MySQLmanager {
     private Connection connection = null;
@@ -117,5 +123,40 @@ public class MySQLmanager {
                 "values(" + values + ")";
         statement.execute(initSQL);
         connection.close();
+    }
+
+    public Map<String, UserContent> getAllContents() throws SQLException, ClassNotFoundException {
+        connectDatabase();
+        Map<String,UserContent> resultMap = new HashMap<String, UserContent>();
+
+        // Construct Initial User Content Without Reply.
+        String queryKEYs = "SELECT id,username,content,constructdate FROM CoreBase.MainContent";
+        resultSet = statement.executeQuery(queryKEYs);
+        while (resultSet.next()){
+            String id = resultSet.getString(1);
+            String username = resultSet.getString(2);
+            String content = resultSet.getString(3);
+            String date = resultSet.getString(4);
+            UserContent userContent = new UserContent(username,content,date);
+            resultMap.put(id,userContent);
+        }
+
+        // Add Response Content
+        for (String mainContentKey : resultMap.keySet()){
+            Map<String,UserContent> responseMap = new HashMap<String, UserContent>();
+            String queryReply = "SELECT id,responser,replycontent,responsedate FROM CoreBase.Reply WHERE contentid="+format(mainContentKey);
+            resultSet = statement.executeQuery(queryReply);
+            while (resultSet.next()){
+                String id = resultSet.getString(1);
+                String username = resultSet.getString(2);
+                String content = resultSet.getString(3);
+                String date = resultSet.getString(4);
+                UserContent userContent = new UserContent(username,content,date);
+                responseMap.put(id,userContent);
+            }
+            resultMap.get(mainContentKey).setResponses(responseMap);
+        }
+        connection.close();
+        return resultMap;
     }
 }
