@@ -4,7 +4,6 @@ import com.thoughtworks.zhanhonglai.MySQL.MySQLmanager;
 import com.thoughtworks.zhanhonglai.data.UserContent;
 import com.thoughtworks.zhanhonglai.email.HostMail;
 import com.thoughtworks.zhanhonglai.service.ContentStore;
-import com.thoughtworks.zhanhonglai.service.ServerStore;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,7 +25,6 @@ import java.util.Locale;
 public class HomeController {
     private final Logger logger = Logger.getLogger(this.getClass());
 
-    ServerStore serverStore = new ServerStore();
     ContentStore contentStore = new ContentStore();
 
     @RequestMapping("/home")
@@ -182,10 +180,11 @@ public class HomeController {
     }
 
     @RequestMapping("/json/changeFace")
-    public String changeFace(@RequestParam("src") String src, Model model, HttpServletRequest request) {
+    public String changeFace(@RequestParam("src") String src, Model model, HttpServletRequest request) throws SQLException, ClassNotFoundException {
         String currentUser = (String) request.getSession().getAttribute("sessionUserName");
-        serverStore.updateUserFace(currentUser, src);
-        model.addAttribute("src", serverStore.getUserFaceUrl(currentUser));
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        mySQLmanager.updateUserFaceUrl(currentUser, src);
+        model.addAttribute("src", mySQLmanager.getUserFaceUrl(currentUser));
         return "jsonView";
     }
 

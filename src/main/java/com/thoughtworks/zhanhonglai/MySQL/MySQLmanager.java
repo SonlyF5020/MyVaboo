@@ -102,4 +102,11 @@ public class MySQLmanager {
         connection.close();
         return password;
     }
+
+    public void updateUserFaceUrl(String userName, String faceurl) throws SQLException, ClassNotFoundException {
+        connectDatabase();
+        String initSQL = "UPDATE CoreBase.UserInfo SET faceurl ="+format(faceurl)+" WHERE username="+format(userName);
+        statement.execute(initSQL);
+        connection.close();
+    }
 }

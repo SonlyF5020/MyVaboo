@@ -81,4 +81,24 @@ public class MySQLmanagerTest {
             System.out.println("SQLException");
         }
     }
+
+    @Test
+    public void shouldGetRightFaceUrlAfterUpdate() throws Exception {
+        MySQLmanager mySQLmanager = new MySQLmanager();
+        try{
+            mySQLmanager.updateUserFaceUrl("zhanhonglai","/resources/img/Face-Icons/Males/9.png");
+            assertThat(mySQLmanager.getUserFaceUrl("zhanhonglai"),is("/resources/img/Face-Icons/Males/9.png"));
+
+            mySQLmanager.updateUserFaceUrl("zhanhonglai","/resources/img/Face-Icons/Males/3.png");
+            assertThat(mySQLmanager.getUserFaceUrl("zhanhonglai"),is("/resources/img/Face-Icons/Males/3.png"));
+
+            mySQLmanager.updateUserFaceUrl("zhanhonglai","/resources/img/Face-Icons/Males/9.png");
+        }
+        catch (ClassNotFoundException e){
+            System.out.println("InterruptedException SQL error");
+        }
+        catch (SQLException a){
+            System.out.println("SQLException");
+        }
+    }
 }
