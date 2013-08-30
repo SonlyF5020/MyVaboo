@@ -2,6 +2,7 @@ package com.thoughtworks.zhanhonglai;
 
 import com.thoughtworks.zhanhonglai.MySQL.MySQLmanager;
 import com.thoughtworks.zhanhonglai.data.UserContent;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.sql.SQLException;
@@ -12,6 +13,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 
 public class MySQLmanagerTest {
+    @Ignore
     @Test
     public void shouldJudgeWhetherUserNameExistedOrNot(){
         MySQLmanager mySQLmaneger = new MySQLmanager();
@@ -22,7 +24,7 @@ public class MySQLmanagerTest {
             System.out.println("SQL error!");
         }
     }
-
+    @Ignore
     @Test
     public void shouldJudgeWhetherUserPasswordIsCorrect() throws Exception {
         MySQLmanager mySQLmanager = new MySQLmanager();
@@ -36,7 +38,7 @@ public class MySQLmanagerTest {
             System.out.println("SQL error");
         }
     }
-
+    @Ignore
     @Test
     public void shouldGetRightFaceUrl(){
         MySQLmanager mySQLmanager = new MySQLmanager();
@@ -52,7 +54,7 @@ public class MySQLmanagerTest {
             System.out.println("SQLException");
         }
     }
-
+    @Ignore
     @Test
     public void shouldJudgeWhereEmailIsCorrectOrNot() throws Exception {
         MySQLmanager mySQLmanager = new MySQLmanager();
@@ -68,7 +70,7 @@ public class MySQLmanagerTest {
             System.out.println("SQLException");
         }
     }
-
+    @Ignore
     @Test
     public void shouldGetRightPassword() throws Exception {
         MySQLmanager mySQLmanager = new MySQLmanager();
@@ -84,7 +86,7 @@ public class MySQLmanagerTest {
             System.out.println("SQLException");
         }
     }
-
+    @Ignore
     @Test
     public void shouldGetRightFaceUrlAfterUpdate() throws Exception {
         MySQLmanager mySQLmanager = new MySQLmanager();
@@ -104,7 +106,7 @@ public class MySQLmanagerTest {
             System.out.println("SQLException");
         }
     }
-
+    @Ignore
     @Test
     public void shouldInsertDateInMainContentTable() throws Exception {
         MySQLmanager mySQLmanager = new MySQLmanager();
@@ -117,7 +119,7 @@ public class MySQLmanagerTest {
         }
 
     }
-
+    @Ignore
     @Test
     public void shouldGetAllContentCorrectly() throws Exception {
         MySQLmanager mySQLmanager = new MySQLmanager();
@@ -133,7 +135,7 @@ public class MySQLmanagerTest {
             System.out.println("exception");
         }
     }
-
+    @Ignore
     @Test
     public void souldDeleteOneContent() throws Exception {
         MySQLmanager mySQLmanager = new MySQLmanager();
@@ -145,7 +147,7 @@ public class MySQLmanagerTest {
             System.out.println("exception");
         }
     }
-
+    @Ignore
     @Test
     public void test() throws Exception {
         MySQLmanager mySQLmanager = new MySQLmanager();
@@ -157,6 +159,5 @@ public class MySQLmanagerTest {
         catch (Exception e){
             System.out.println("exception");
         }
-
     }
 }

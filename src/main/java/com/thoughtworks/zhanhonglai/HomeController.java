@@ -106,7 +106,7 @@ public class HomeController {
 
     private String getCurrentDate() {
         Date currentDate = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss E ", Locale.CHINESE);
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ( E ) ");
         return formatter.format(currentDate);
     }
 
