@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2743f347-cc08-4ddc-99df-f33c1680f671" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="MyWeibo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -15,7 +14,7 @@
     <file path="/a.dummy" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377660923440" ignored="false" />
     <file path="/web.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377600758381" ignored="false" />
     <file path="/myStyle.css" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377583514464" ignored="false" />
-    <file path="/Dummy.txt" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378195316856" ignored="false" />
+    <file path="/Dummy.txt" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378196364519" ignored="false" />
     <file path="/checkAccount.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374311819392" ignored="false" />
     <file path="/invalidUser.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377592805525" ignored="false" />
     <file path="/500.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374138949699" ignored="false" />
@@ -25,7 +24,7 @@
     <file path="/clientCreate.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374224064486" ignored="false" />
     <file path="/successCreate.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377592932022" ignored="false" />
     <file path="/validUser.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377592787127" ignored="false" />
-    <file path="/README.md" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374226504209" ignored="false" />
+    <file path="/README.md" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378196550468" ignored="false" />
     <file path="/RegisterController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374278819152" ignored="false" />
     <file path="/loginAccount.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377592801276" ignored="false" />
     <file path="/serverStore.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374401627584" ignored="false" />
@@ -99,8 +98,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -137,6 +134,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -150,35 +149,24 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="103" column="35" selection-start="4061" selection-end="4061" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="method#createUser#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#isUserNameExisted#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#connectDatabase#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#buildValues#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#format#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#isPasswordCorrect#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#getUserFaceUrl#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#isEmailCorrect#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#updateUserFaceUrl#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#addContent#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#getAllContents#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="e#5152#5173#0" expanded="true" />
-                <element signature="e#5909#5930#0" expanded="true" />
-                <element signature="method#deleteContent#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#addResponseForContent#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="method#getUserContent#0;class#MySQLmanager#0" expanded="false" />
-                <element signature="e#7764#7785#0" expanded="true" />
-                <element signature="e#8546#8567#0" expanded="true" />
-                <element signature="method#code#0;class#MySQLmanager#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HostMail.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HostMail.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/email/HostMail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="31" selection-start="1182" selection-end="1182" vertical-scroll-proportion="1.4412811">
+            <state line="32" column="55" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="532" selection-end="532" vertical-scroll-proportion="0.47342193">
               <folding />
             </state>
           </provider>
@@ -215,15 +203,6 @@
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/src.zip!/java/security/MessageDigestSpi.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="149" column="35" selection-start="4212" selection-end="4212" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hashing.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/Hashing.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="12" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -274,7 +253,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modal/deleteModal.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modal/editModal.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modal/facesLightbox.jsp" />
@@ -290,6 +268,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/thoughtworks/zhanhonglai/MySQLmanagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/data/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -386,8 +365,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -850,6 +827,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1041,12 +1020,6 @@
       <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
       <setting name="vmparams" value="" />
@@ -1055,6 +1028,12 @@
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -1087,19 +1066,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1128,6 +1094,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -1141,13 +1120,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1171,15 +1143,11 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 7.01">
@@ -1208,6 +1176,17 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="false" name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 7.01">
@@ -1300,7 +1279,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="809" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1395,13 +1374,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/data/UserContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="11" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/ContentStore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="35" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0" />
@@ -1437,9 +1409,7 @@
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="19" selection-start="3638" selection-end="3638" vertical-scroll-proportion="1.7876254">
-          <folding />
-        </state>
+        <state line="107" column="19" selection-start="3638" selection-end="3638" vertical-scroll-proportion="1.7876254" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/ServerStore.java">
@@ -1484,6 +1454,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="35" selection-start="4061" selection-end="4061" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="0" selection-start="3480" selection-end="3480" vertical-scroll-proportion="0.0">
@@ -1491,36 +1468,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/email/HostMail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="35" selection-start="4061" selection-end="4061" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="method#createUser#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#isUserNameExisted#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#connectDatabase#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#buildValues#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#format#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#isPasswordCorrect#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#getUserFaceUrl#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#isEmailCorrect#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#updateUserFaceUrl#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#addContent#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#getAllContents#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="e#5152#5173#0" expanded="true" />
-            <element signature="e#5909#5930#0" expanded="true" />
-            <element signature="method#deleteContent#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#addResponseForContent#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="method#getUserContent#0;class#MySQLmanager#0" expanded="false" />
-            <element signature="e#7764#7785#0" expanded="true" />
-            <element signature="e#8546#8567#0" expanded="true" />
-            <element signature="method#code#0;class#MySQLmanager#0" expanded="false" />
-          </folding>
+        <state line="32" column="55" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/email/HostMail.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="31" selection-start="1182" selection-end="1182" vertical-scroll-proportion="1.4412811">
+        <state line="19" column="0" selection-start="532" selection-end="532" vertical-scroll-proportion="0.47342193">
           <folding />
         </state>
       </provider>
