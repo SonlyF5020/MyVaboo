@@ -8,9 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class MySQLmanager {
@@ -20,7 +18,7 @@ public class MySQLmanager {
 
     public void createUser(String userName, String password, String faceUrl, String email) throws ClassNotFoundException, SQLException {
         connectDatabase();
-        String values = buildCreateValues(userName, password, faceUrl, email);
+        String values = buildValues(userName, password, faceUrl, email);
         String initSQL = "INSERT INTO CoreBase.UserInfo(username,password,faceurl,email) " +
                 "values(" + values + ")";
         statement.execute(initSQL);
@@ -47,8 +45,8 @@ public class MySQLmanager {
         statement = connection.createStatement();
     }
 
-    private String buildCreateValues(String userName, String password, String faceUrl, String email) {
-        return format(userName) + "," + format(password) + "," + format(faceUrl) + "," + format(email);
+    private String buildValues(String userName, String password, String faceUrl, String email) {
+        return format(userName) + "," + format(code(password)) + "," + format(faceUrl) + "," + format(email);
     }
 
     private String format(String input) {
@@ -57,7 +55,7 @@ public class MySQLmanager {
 
     public boolean isPasswordCorrect(String userName, String password) throws SQLException, ClassNotFoundException {
         connectDatabase();
-        String querySQL = "SELECT username FROM CoreBase.UserInfo WHERE username="+format(userName)+" AND password="+format(password);
+        String querySQL = "SELECT username FROM CoreBase.UserInfo WHERE username="+format(userName)+" AND password="+format(code(password));
         resultSet = statement.executeQuery(querySQL);
         while (resultSet.next()){
             if (resultSet.getString(1)!=null){
