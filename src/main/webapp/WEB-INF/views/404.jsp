@@ -1,6 +1,6 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page session="true" contentType="text/html; charset=UTF-8"%>
+<%@ page session="true" contentType="text/html;charset=UTF-8"%>
 <link href="<%=request.getContextPath()%>/resources/css/bootstrap.css" rel="stylesheet">
 
 <html>

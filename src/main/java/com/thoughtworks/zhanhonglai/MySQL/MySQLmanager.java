@@ -17,7 +17,7 @@ public class MySQLmanager {
     private ResultSet resultSet = null;
 
     public void createUser(String userName, String password, String faceUrl, String email) throws ClassNotFoundException, SQLException {
-        connectDatabase();
+        connectWrite();
         String values = buildValues(userName, password, faceUrl, email);
         String initSQL = "INSERT INTO CoreBase.UserInfo(username,password,faceurl,email) " +
                 "values(" + values + ")";
@@ -26,7 +26,7 @@ public class MySQLmanager {
     }
 
     public boolean isUserNameExisted(String userName) throws SQLException, ClassNotFoundException {
-        connectDatabase();
+        connectRead();
         String querySQL = "SELECT username FROM CoreBase.UserInfo WHERE username="+format(userName);
         resultSet = statement.executeQuery(querySQL);
         while (resultSet.next()){
@@ -39,9 +39,29 @@ public class MySQLmanager {
         return false;
     }
 
-    private void connectDatabase() throws ClassNotFoundException, SQLException {
+    private void connectRead() throws ClassNotFoundException, SQLException {
+        connectLocal();
+    }
+
+    private void connectWrite() throws ClassNotFoundException, SQLException {
+        connectLocal();
+    }
+
+    private void connectLocal() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
         connection = DriverManager.getConnection("jdbc:mysql://localhost/CoreBase", "root", "");
+        statement = connection.createStatement();
+    }
+
+    private void connectSinaRead() throws ClassNotFoundException, SQLException {
+        Class.forName("com.mysql.jdbc.Driver");
+        connection = DriverManager.getConnection("jdbc:mysql://r.rdc.sae.sina.com.cn:3307/app_vaboo", "1oxo2zow41", "kwjyh3ijxxi23l0hx5h0200yli3wi2035545zi34");
+        statement = connection.createStatement();
+    }
+
+    private void connectSinaWrite() throws ClassNotFoundException, SQLException {
+        Class.forName("com.mysql.jdbc.Driver");
+        connection = DriverManager.getConnection("jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_vaboo", "1oxo2zow41", "kwjyh3ijxxi23l0hx5h0200yli3wi2035545zi34");
         statement = connection.createStatement();
     }
 
@@ -54,7 +74,7 @@ public class MySQLmanager {
     }
 
     public boolean isPasswordCorrect(String userName, String password) throws SQLException, ClassNotFoundException {
-        connectDatabase();
+        connectRead();
         String querySQL = "SELECT username FROM CoreBase.UserInfo WHERE username="+format(userName)+" AND password="+format(code(password));
         resultSet = statement.executeQuery(querySQL);
         while (resultSet.next()){
@@ -68,7 +88,7 @@ public class MySQLmanager {
     }
 
     public String getUserFaceUrl(String userName) throws SQLException, ClassNotFoundException {
-        connectDatabase();
+        connectRead();
         String querySQL = "SELECT faceurl FROM CoreBase.UserInfo WHERE username="+format(userName);
         resultSet = statement.executeQuery(querySQL);
         String userFaceUrl = "";
@@ -82,7 +102,7 @@ public class MySQLmanager {
     }
 
     public boolean isEmailCorrect(String userName, String email) throws SQLException, ClassNotFoundException {
-        connectDatabase();
+        connectRead();
         String querySQL = "SELECT email FROM CoreBase.UserInfo WHERE username="+format(userName)+" AND email="+format(email);
         resultSet = statement.executeQuery(querySQL);
         while (resultSet.next()){
@@ -96,7 +116,7 @@ public class MySQLmanager {
     }
 
     public String getUserPassword(String userName) throws SQLException, ClassNotFoundException {
-        connectDatabase();
+        connectRead();
         String querySQL = "SELECT password FROM CoreBase.UserInfo WHERE username="+format(userName);
         resultSet = statement.executeQuery(querySQL);
         String password = "";
@@ -110,14 +130,14 @@ public class MySQLmanager {
     }
 
     public void updateUserFaceUrl(String userName, String faceurl) throws SQLException, ClassNotFoundException {
-        connectDatabase();
+        connectWrite();
         String initSQL = "UPDATE CoreBase.UserInfo SET faceurl ="+format(faceurl)+" WHERE username="+format(userName);
         statement.execute(initSQL);
         connection.close();
     }
 
     public void addContent(String userName, String content, String date) throws SQLException, ClassNotFoundException {
-        connectDatabase();
+        connectWrite();
         String values = format(userName)+","+format(content)+","+format(date);
         String initSQL = "INSERT INTO CoreBase.MainContent(username,content,constructdate) " +
                 "values(" + values + ")";
@@ -126,7 +146,7 @@ public class MySQLmanager {
     }
 
     public Map<String, UserContent> getAllContents() throws SQLException, ClassNotFoundException {
-        connectDatabase();
+        connectRead();
         Map<String,UserContent> resultMap = new HashMap<String, UserContent>();
 
         // Construct Initial User Content Without Reply.
@@ -161,7 +181,7 @@ public class MySQLmanager {
     }
 
     public void deleteContent(String id) throws SQLException, ClassNotFoundException {
-        connectDatabase();
+        connectWrite();
         String deleteContent = "DELETE FROM CoreBase.MainContent WHERE id="+id;
         statement.execute(deleteContent);
         String deleteResponse = "DELETE FROM CoreBase.Reply WHERE contentid="+id;
@@ -170,7 +190,7 @@ public class MySQLmanager {
     }
 
     public void addResponseForContent(String contentid, String responser, String replycontent, String date) throws SQLException, ClassNotFoundException {
-        connectDatabase();
+        connectWrite();
         String values = format(responser)+","+contentid+","+format(date)+","+format(replycontent);
         String addSQL = "INSERT INTO CoreBase.Reply(responser,contentid,responsedate,replycontent) " +
                 "values(" +values+ ")";
@@ -179,7 +199,7 @@ public class MySQLmanager {
     }
 
     public Map<String, UserContent> getUserContent(String username) throws SQLException, ClassNotFoundException {
-        connectDatabase();
+        connectRead();
         Map<String,UserContent> resultMap = new HashMap<String, UserContent>();
 
         // Construct Initial User Content Without Reply.
