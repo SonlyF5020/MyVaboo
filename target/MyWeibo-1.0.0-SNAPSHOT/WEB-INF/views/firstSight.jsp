@@ -66,6 +66,20 @@
         <div class="loginLink-login"><a href="/login">登录</a></div>
         <div class="loginLink-login"><a href="/register">注册</a></div>
     </div>
+
 </div>
+
+<link rel="stylesheet" href="http://lab.lepture.com/editor/css/editor.css"/>
+<script type="text/javascript" src="http://lab.lepture.com/editor/js/editor.js"></script>
+<script>
+    $(function () {
+        var editor = new Editor();
+        editor.render();
+    });
+</script>
+<div id="testArea" style="width: 500px;">
+    <textarea>hehe</textarea>
+</div>
+
 </body>
 </html>

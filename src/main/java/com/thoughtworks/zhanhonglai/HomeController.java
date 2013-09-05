@@ -46,12 +46,17 @@ public class HomeController {
     }
 
     @RequestMapping("/login")
-    public String login(HttpServletRequest request) throws SQLException, ClassNotFoundException {
+    public String login(HttpServletRequest request) {
         MySQLmanager mySQLmanager = new MySQLmanager();
         if (!request.getSession().isNew()) {
             String userName = (String) request.getSession().getAttribute("sessionUserName");
-            if (mySQLmanager.isUserNameExisted(userName)) {
-                return "checkUser/validUser";
+            try {
+                if (mySQLmanager.isUserNameExisted(userName)) {
+                    return "checkUser/validUser";
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                logger.error(e.getMessage(), e);
             }
         }
         return "checkUser/loginAccount";
@@ -94,12 +99,17 @@ public class HomeController {
     }
 
     @RequestMapping("/submitContent")
-    private String submitContent(@RequestParam("newContent") String newContent, HttpServletRequest request) throws InterruptedException, UnsupportedEncodingException, SQLException, ClassNotFoundException {
+    private String submitContent(@RequestParam("newContent") String newContent, HttpServletRequest request) throws InterruptedException, UnsupportedEncodingException{
         HttpSession session = request.getSession();
         if (!session.isNew()) {
             String userName = (String) session.getAttribute("sessionUserName");
             MySQLmanager mySQLmanager = new MySQLmanager();
-            mySQLmanager.addContent(userName, newContent, getCurrentDate());
+            try {
+                mySQLmanager.addContent(userName, newContent, getCurrentDate());
+            } catch (Exception e) {
+                e.printStackTrace();
+                logger.error(e.getMessage(), e);
+            }
         }
         return "home";
     }
@@ -111,9 +121,14 @@ public class HomeController {
     }
 
     @RequestMapping("/json/getAllHistory")
-    public String getUserHistory(Model model) throws SQLException, ClassNotFoundException {
-        MySQLmanager mySQLmanager = new MySQLmanager();
-        model.addAllAttributes(mySQLmanager.getAllContents());
+    public String getUserHistory(Model model){
+        try {
+            MySQLmanager mySQLmanager = new MySQLmanager();
+            model.addAllAttributes(mySQLmanager.getAllContents());
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error(e.getMessage(), e);
+        }
         return "jsonView";
     }
 
@@ -146,49 +161,77 @@ public class HomeController {
     }
 
     @RequestMapping("/delete")
-    public String deleteContent(@RequestParam("deleteIndex") String deleteIndex) throws SQLException, ClassNotFoundException {
-        MySQLmanager mySQLmanager = new MySQLmanager();
-        mySQLmanager.deleteContent(deleteIndex);
+    public String deleteContent(@RequestParam("deleteIndex") String deleteIndex){
+        try {
+            MySQLmanager mySQLmanager = new MySQLmanager();
+            mySQLmanager.deleteContent(deleteIndex);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error(e.getMessage(), e);
+        }
         return "home";
     }
 
     @RequestMapping("/addReply")
-    public String addReply(@RequestParam("reply") String reply, @RequestParam("id") String id, HttpServletRequest request, Model model) throws SQLException, ClassNotFoundException {
-        String responseUser = (String) request.getSession().getAttribute("sessionUserName");
-        UserContent responseUserContent = new UserContent(responseUser, reply, getCurrentDate());
-        MySQLmanager mySQLmanager = new MySQLmanager();
-        mySQLmanager.addResponseForContent(""+id,responseUser,reply,getCurrentDate());
-        model.addAttribute("response", responseUserContent);
+    public String addReply(@RequestParam("reply") String reply, @RequestParam("id") String id, HttpServletRequest request, Model model){
+        try {
+            String responseUser = (String) request.getSession().getAttribute("sessionUserName");
+            UserContent responseUserContent = new UserContent(responseUser, reply, getCurrentDate());
+            MySQLmanager mySQLmanager = new MySQLmanager();
+            mySQLmanager.addResponseForContent(""+id,responseUser,reply,getCurrentDate());
+            model.addAttribute("response", responseUserContent);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            logger.error(e.getMessage(), e);
+        }
         return "jsonView";
     }
 
     @RequestMapping("/json/getMyHistory")
-    public String getMyHistory(Model model, HttpServletRequest request) throws SQLException, ClassNotFoundException {
-        String currentUser = (String) request.getSession().getAttribute("sessionUserName");
-        MySQLmanager mySQLmanager = new MySQLmanager();
-        Map<String,UserContent> userContents = mySQLmanager.getUserContent(currentUser);
-        model.addAllAttributes(userContents);
+    public String getMyHistory(Model model, HttpServletRequest request){
+        try {
+            String currentUser = (String) request.getSession().getAttribute("sessionUserName");
+            MySQLmanager mySQLmanager = new MySQLmanager();
+            Map<String,UserContent> userContents = null;
+            userContents = mySQLmanager.getUserContent(currentUser);
+            model.addAllAttributes(userContents);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            logger.error(e.getMessage(), e);
+        }
         return "jsonView";
     }
 
     @RequestMapping("/getBackPassword")
     public String getBackPassword(@RequestParam("userName") String userName,
-                                  @RequestParam("emailAddress") String emailAddress) throws MessagingException, SQLException, ClassNotFoundException {
-        MySQLmanager mySQLmanager = new MySQLmanager();
-        if (mySQLmanager.isEmailCorrect(userName, emailAddress)) {
-            String password = mySQLmanager.getUserPassword(userName);
-            HostMail.sendMail(emailAddress, password);
-            return "checkUser/mailSend";
+                                  @RequestParam("emailAddress") String emailAddress) throws MessagingException{
+        try {
+            MySQLmanager mySQLmanager = new MySQLmanager();
+            if (mySQLmanager.isEmailCorrect(userName, emailAddress)) {
+                String password = mySQLmanager.getUserPassword(userName);
+                HostMail.sendMail(emailAddress, password);
+                return "checkUser/mailSend";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error(e.getMessage(), e);
         }
         return "checkUser/invalidUser";
     }
 
     @RequestMapping("/json/changeFace")
-    public String changeFace(@RequestParam("src") String src, Model model, HttpServletRequest request) throws SQLException, ClassNotFoundException {
-        String currentUser = (String) request.getSession().getAttribute("sessionUserName");
-        MySQLmanager mySQLmanager = new MySQLmanager();
-        mySQLmanager.updateUserFaceUrl(currentUser, src);
-        model.addAttribute("src", mySQLmanager.getUserFaceUrl(currentUser));
+    public String changeFace(@RequestParam("src") String src, Model model, HttpServletRequest request){
+        try {
+            String currentUser = (String) request.getSession().getAttribute("sessionUserName");
+            MySQLmanager mySQLmanager = new MySQLmanager();
+            mySQLmanager.updateUserFaceUrl(currentUser, src);
+            model.addAttribute("src", mySQLmanager.getUserFaceUrl(currentUser));
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error(e.getMessage(), e);
+        }
         return "jsonView";
     }
 

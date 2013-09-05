@@ -53,6 +53,9 @@ public final class firstSight_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <link href=\"");
       out.print(request.getContextPath());
       out.write("/resources/css/bootstrap.css\" rel=\"stylesheet\">\n");
+      out.write("    <link href=\"");
+      out.print(request.getContextPath());
+      out.write("/resources/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
       out.write("    <script type=\"text/javascript\" src=\"/resources/js/jQuery.js\"></script>\n");
       out.write("    <script type=\"text/javascript\" src=\"/resources/js/bootstrap.js\"></script>\n");
       out.write("    <script type=\"text/javascript\" src=\"/resources/js/bootstrap.min.js\"></script>\n");
@@ -113,7 +116,21 @@ public final class firstSight_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"loginLink-login\"><a href=\"/login\">登录</a></div>\n");
       out.write("        <div class=\"loginLink-login\"><a href=\"/register\">注册</a></div>\n");
       out.write("    </div>\n");
+      out.write("\n");
       out.write("</div>\n");
+      out.write("\n");
+      out.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/resources/css/bootstrap-wysihtml5-0.0.2.css\">\n");
+      out.write("<script src=\"/resources/js/bootstrap-wysihtml5-0.0.2.js\"></script>\n");
+      out.write("<script src=\"/resources/js/wysihtml5-0.3.0_rc2.js\"></script>\n");
+      out.write("\n");
+      out.write("<textarea id=\"some-textarea\" placeholder=\"Enter text ...\"></textarea>\n");
+      out.write("<script type=\"text/javascript\">\n");
+      out.write("    $(function(){\n");
+      out.write("        $('#some-textarea').wysihtml5();\n");
+      out.write("    })\n");
+      out.write("</script>\n");
+      out.write("\n");
+      out.write("\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {

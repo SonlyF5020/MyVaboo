@@ -6,6 +6,7 @@
     <title></title>
     <link href="<%=request.getContextPath()%>/resources/css/myStyle.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/resources/css/bootstrap.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/resources/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="/resources/js/jQuery.js"></script>
     <script type="text/javascript" src="/resources/js/bootstrap.js"></script>
     <script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
@@ -66,6 +67,20 @@
         <div class="loginLink-login"><a href="/login">登录</a></div>
         <div class="loginLink-login"><a href="/register">注册</a></div>
     </div>
+
 </div>
+
+<link rel="stylesheet" type="text/css" href="/resources/css/bootstrap-wysihtml5-0.0.2.css">
+<script src="/resources/js/bootstrap-wysihtml5-0.0.2.js"></script>
+<script src="/resources/js/wysihtml5-0.3.0_rc2.js"></script>
+
+<textarea id="some-textarea" placeholder="Enter text ..."></textarea>
+<script type="text/javascript">
+    $(function(){
+        $('#some-textarea').wysihtml5();
+    })
+</script>
+
+
 </body>
 </html>

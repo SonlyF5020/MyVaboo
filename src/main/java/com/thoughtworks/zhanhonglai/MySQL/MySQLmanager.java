@@ -19,7 +19,7 @@ public class MySQLmanager {
     public void createUser(String userName, String password, String faceUrl, String email) throws ClassNotFoundException, SQLException {
         connectWrite();
         String values = buildValues(userName, password, faceUrl, email);
-        String initSQL = "INSERT INTO CoreBase.UserInfo(username,password,faceurl,email) " +
+        String initSQL = "INSERT INTO UserInfo(username,password,faceurl,email) " +
                 "values(" + values + ")";
         statement.execute(initSQL);
         connection.close();
@@ -27,7 +27,7 @@ public class MySQLmanager {
 
     public boolean isUserNameExisted(String userName) throws SQLException, ClassNotFoundException {
         connectRead();
-        String querySQL = "SELECT username FROM CoreBase.UserInfo WHERE username="+format(userName);
+        String querySQL = "SELECT username FROM UserInfo WHERE username="+format(userName);
         resultSet = statement.executeQuery(querySQL);
         while (resultSet.next()){
             if (resultSet.getString(1)!=null){
@@ -40,11 +40,11 @@ public class MySQLmanager {
     }
 
     private void connectRead() throws ClassNotFoundException, SQLException {
-        connectLocal();
+        connectSinaRead();
     }
 
     private void connectWrite() throws ClassNotFoundException, SQLException {
-        connectLocal();
+        connectSinaWrite();
     }
 
     private void connectLocal() throws ClassNotFoundException, SQLException {
@@ -75,7 +75,7 @@ public class MySQLmanager {
 
     public boolean isPasswordCorrect(String userName, String password) throws SQLException, ClassNotFoundException {
         connectRead();
-        String querySQL = "SELECT username FROM CoreBase.UserInfo WHERE username="+format(userName)+" AND password="+format(code(password));
+        String querySQL = "SELECT username FROM UserInfo WHERE username="+format(userName)+" AND password="+format(code(password));
         resultSet = statement.executeQuery(querySQL);
         while (resultSet.next()){
             if (resultSet.getString(1)!=null){
@@ -89,7 +89,7 @@ public class MySQLmanager {
 
     public String getUserFaceUrl(String userName) throws SQLException, ClassNotFoundException {
         connectRead();
-        String querySQL = "SELECT faceurl FROM CoreBase.UserInfo WHERE username="+format(userName);
+        String querySQL = "SELECT faceurl FROM UserInfo WHERE username="+format(userName);
         resultSet = statement.executeQuery(querySQL);
         String userFaceUrl = "";
         while (resultSet.next()){
@@ -103,7 +103,7 @@ public class MySQLmanager {
 
     public boolean isEmailCorrect(String userName, String email) throws SQLException, ClassNotFoundException {
         connectRead();
-        String querySQL = "SELECT email FROM CoreBase.UserInfo WHERE username="+format(userName)+" AND email="+format(email);
+        String querySQL = "SELECT email FROM UserInfo WHERE username="+format(userName)+" AND email="+format(email);
         resultSet = statement.executeQuery(querySQL);
         while (resultSet.next()){
             if (resultSet.getString(1)!=null){
@@ -117,7 +117,7 @@ public class MySQLmanager {
 
     public String getUserPassword(String userName) throws SQLException, ClassNotFoundException {
         connectRead();
-        String querySQL = "SELECT password FROM CoreBase.UserInfo WHERE username="+format(userName);
+        String querySQL = "SELECT password FROM UserInfo WHERE username="+format(userName);
         resultSet = statement.executeQuery(querySQL);
         String password = "";
         while (resultSet.next()){
@@ -131,7 +131,7 @@ public class MySQLmanager {
 
     public void updateUserFaceUrl(String userName, String faceurl) throws SQLException, ClassNotFoundException {
         connectWrite();
-        String initSQL = "UPDATE CoreBase.UserInfo SET faceurl ="+format(faceurl)+" WHERE username="+format(userName);
+        String initSQL = "UPDATE UserInfo SET faceurl ="+format(faceurl)+" WHERE username="+format(userName);
         statement.execute(initSQL);
         connection.close();
     }
@@ -139,7 +139,7 @@ public class MySQLmanager {
     public void addContent(String userName, String content, String date) throws SQLException, ClassNotFoundException {
         connectWrite();
         String values = format(userName)+","+format(content)+","+format(date);
-        String initSQL = "INSERT INTO CoreBase.MainContent(username,content,constructdate) " +
+        String initSQL = "INSERT INTO MainContent(username,content,constructdate) " +
                 "values(" + values + ")";
         statement.execute(initSQL);
         connection.close();
@@ -150,7 +150,7 @@ public class MySQLmanager {
         Map<String,UserContent> resultMap = new HashMap<String, UserContent>();
 
         // Construct Initial User Content Without Reply.
-        String queryKEYs = "SELECT id,username,content,constructdate FROM CoreBase.MainContent";
+        String queryKEYs = "SELECT id,username,content,constructdate FROM MainContent";
         resultSet = statement.executeQuery(queryKEYs);
         while (resultSet.next()){
             String id = resultSet.getString(1);
@@ -164,7 +164,7 @@ public class MySQLmanager {
         // Add Response Content
         for (String mainContentKey : resultMap.keySet()){
             Map<String,UserContent> responseMap = new HashMap<String, UserContent>();
-            String queryReply = "SELECT id,responser,replycontent,responsedate FROM CoreBase.Reply WHERE contentid="+format(mainContentKey);
+            String queryReply = "SELECT id,responser,replycontent,responsedate FROM Reply WHERE contentid="+format(mainContentKey);
             resultSet = statement.executeQuery(queryReply);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
@@ -182,9 +182,9 @@ public class MySQLmanager {
 
     public void deleteContent(String id) throws SQLException, ClassNotFoundException {
         connectWrite();
-        String deleteContent = "DELETE FROM CoreBase.MainContent WHERE id="+id;
+        String deleteContent = "DELETE FROM MainContent WHERE id="+id;
         statement.execute(deleteContent);
-        String deleteResponse = "DELETE FROM CoreBase.Reply WHERE contentid="+id;
+        String deleteResponse = "DELETE FROM Reply WHERE contentid="+id;
         statement.execute(deleteResponse);
         connection.close();
     }
@@ -192,7 +192,7 @@ public class MySQLmanager {
     public void addResponseForContent(String contentid, String responser, String replycontent, String date) throws SQLException, ClassNotFoundException {
         connectWrite();
         String values = format(responser)+","+contentid+","+format(date)+","+format(replycontent);
-        String addSQL = "INSERT INTO CoreBase.Reply(responser,contentid,responsedate,replycontent) " +
+        String addSQL = "INSERT INTO Reply(responser,contentid,responsedate,replycontent) " +
                 "values(" +values+ ")";
         statement.execute(addSQL);
         connection.close();
@@ -203,7 +203,7 @@ public class MySQLmanager {
         Map<String,UserContent> resultMap = new HashMap<String, UserContent>();
 
         // Construct Initial User Content Without Reply.
-        String queryKEYs = "SELECT id,username,content,constructdate FROM CoreBase.MainContent WHERE username="+format(username);
+        String queryKEYs = "SELECT id,username,content,constructdate FROM MainContent WHERE username="+format(username);
         resultSet = statement.executeQuery(queryKEYs);
         while (resultSet.next()){
             String id = resultSet.getString(1);
@@ -217,7 +217,7 @@ public class MySQLmanager {
         // Add Response Content
         for (String mainContentKey : resultMap.keySet()){
             Map<String,UserContent> responseMap = new HashMap<String, UserContent>();
-            String queryReply = "SELECT id,responser,replycontent,responsedate FROM CoreBase.Reply WHERE contentid="+format(mainContentKey);
+            String queryReply = "SELECT id,responser,replycontent,responsedate FROM Reply WHERE contentid="+format(mainContentKey);
             resultSet = statement.executeQuery(queryReply);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
