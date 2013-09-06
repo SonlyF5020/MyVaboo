@@ -73,11 +73,13 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap-wysihtml5-0.0.2.css">
 <script src="/resources/js/bootstrap-wysihtml5-0.0.2.js"></script>
 <script src="/resources/js/wysihtml5-0.3.0_rc2.js"></script>
+<script src="/resources/js/bootstrap-wysiwyg.js"></script>
 
-<textarea id="some-textarea" placeholder="Enter text ..."></textarea>
+<div id="editor" style="overflow:scroll; max-height:300px"></div>
+
 <script type="text/javascript">
     $(function(){
-        $('#some-textarea').wysihtml5();
+        $('#editor').wysiwyg();
     })
 </script>
 
