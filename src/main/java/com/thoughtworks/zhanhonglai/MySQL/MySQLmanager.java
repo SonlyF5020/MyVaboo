@@ -253,4 +253,13 @@ public class MySQLmanager {
         }
         return ""+sb;
     }
+
+    public void testSQL() throws ClassNotFoundException, SQLException, IllegalAccessException, InstantiationException {
+        Class.forName("com.mysql.jdbc.Driver").newInstance();
+        connection = DriverManager.getConnection("jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_vaboo", "1oxo2zow41", "kwjyh3ijxxi23l0hx5h0200yli3wi2035545zi34");
+        statement = connection.createStatement();
+        String SQL = "INSERT INTO testtable(stupid) values(12)";
+        statement.execute(SQL);
+        connection.close();
+    }
 }
