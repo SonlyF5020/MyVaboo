@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="activation">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/commons-beanutils-1.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/commons-beanutils-bean-collections-1.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/commons-beanutils-core-1.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/commons-codec-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/commons-io-1.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/commons-lang-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/derby.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/ezmorph-1.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/httpclient-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/httpclient-cache-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/httpcore-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/httpmime-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/json-lib-2.4-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/log4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/mysql-connector-java-5.0.8-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sae-1.1.0-all/sae-local-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

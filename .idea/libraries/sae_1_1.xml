@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="sae-1.1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../sae-1.1.0-all" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../sae-1.1.0-all" recursive="false" />
+  </library>
+</component>
