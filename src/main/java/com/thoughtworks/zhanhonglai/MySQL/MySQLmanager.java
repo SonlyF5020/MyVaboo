@@ -55,14 +55,24 @@ public class MySQLmanager {
     }
 
     private void connectSinaRead() throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection("jdbc:mysql://r.rdc.sae.sina.com.cn:3307/app_vaboo", "1oxo2zow41", "kwjyh3ijxxi23l0hx5h0200yli3wi2035545zi34");
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        String accessKey = SaeUserInfo.getAccessKey();
+        String secretKey = SaeUserInfo.getSecretKey();
+        connection = DriverManager.getConnection("jdbc:mysql://r.rdc.sae.sina.com.cn:3307/app_vaboo", accessKey, secretKey);
         statement = connection.createStatement();
     }
 
     private void connectSinaWrite() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection("jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_vaboo", "1oxo2zow41", "kwjyh3ijxxi23l0hx5h0200yli3wi2035545zi34");
+        String accessKey = SaeUserInfo.getAccessKey();
+        String secretKey = SaeUserInfo.getSecretKey();
+        connection = DriverManager.getConnection("jdbc:mysql://r.rdc.sae.sina.com.cn:3307/app_vaboo", accessKey, secretKey);
         statement = connection.createStatement();
     }
 
