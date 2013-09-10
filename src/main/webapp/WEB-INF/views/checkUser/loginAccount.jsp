@@ -15,8 +15,8 @@
 <div class="login">
     <div class="clientForm">
         <form action="/checkUser" method="get">
-            姓名：<input type="text" name="name"><br>
-            密码：<input type="password" name="password"><br>
+            姓名：<input type="text" name="name" required><br>
+            密码：<input type="password" name="password" minlength=2 required><br>
             <a href="/forgetPassword">忘记密码？</a> <br>
             <input type="submit" class="btn" value="登陆"><a href="/register" class="btn">注册</a>
         </form>
@@ -24,6 +24,11 @@
     <div class="bigLogo">
         <img src="/resources/img/zergIcon.png">
     </div>
+    <script src="/resources/js/jQuery.js"></script>
+    <script src="/resources/js/jquery.validate.js"></script>
+    <script>
+        $('form').validate();
+    </script>
 </div>
 </body>
 </html>

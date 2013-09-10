@@ -41,11 +41,11 @@ public class MySQLmanager {
     }
 
     private void connectRead() throws ClassNotFoundException, SQLException {
-        connectSinaRead();
+        connectLocal();
     }
 
     private void connectWrite() throws ClassNotFoundException, SQLException {
-        connectSinaWrite();
+        connectLocal();
     }
 
     private void connectLocal() throws ClassNotFoundException, SQLException {

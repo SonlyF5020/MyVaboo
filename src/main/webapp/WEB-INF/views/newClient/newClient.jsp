@@ -52,11 +52,11 @@
 <body class="allBackground">
 <div class="login">
     <div class="clientForm">
-        <form>
-            姓名：<input type="text" id="inputName"><br>
-            密码：<input type="password" id="password1"><br>
+        <form id="registerForm">
+            姓名：<input type="text" id="inputName" required><br>
+            密码：<input type="password" id="password1" minlength=6 required><br>
             密码：<input type="password" id="password2"><br>
-            邮箱：<input type="text" id="emailAddress">
+            邮箱：<input type="email" id="emailAddress" required>
             <span class="warning"><br>您两次输入的密码不一致！</span><br>
             <input type="button" class="btn" id="confirmShow" value="确定"><a href="/logout" class="btn">返回</a>
         </form>
@@ -68,13 +68,16 @@
             <input type="text" name="emailAddress">
             <input type="submit" id="confirmHidden">
         </form>
-
     </div>
     <div class="bigLogo">
         <img src="/resources/img/zergIcon.png">
         <a class="btn">选择头像</a>
     </div>
     <jsp:include page="/WEB-INF/views/modal/facesLightbox.jsp"></jsp:include>
+    <script src="/resources/js/jquery.validate.js"></script>
+    <script>
+        $('#registerForm').validate();
+    </script>
 </div>
 </body>
 </html>
