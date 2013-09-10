@@ -275,10 +275,9 @@ public class MySQLmanager {
         Class.forName("com.mysql.jdbc.Driver").newInstance();
         String accessKey = SaeUserInfo.getAccessKey();
         String secretKey = SaeUserInfo.getSecretKey();
-        connection = DriverManager.getConnection("jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_myvaboo", accessKey, secretKey);
+        connection = DriverManager.getConnection("jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_myvaboo?autoReconnect=true", accessKey, secretKey);
         statement = connection.createStatement();
         String SQL = "INSERT INTO testtable(testnumber) values(12)";
         statement.execute(SQL);
-        connection.close();
     }
 }
