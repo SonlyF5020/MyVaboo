@@ -41,11 +41,11 @@ public class MySQLmanager {
     }
 
     private void connectRead() throws ClassNotFoundException, SQLException {
-        connectLocal();
+        connectSinaRead();
     }
 
     private void connectWrite() throws ClassNotFoundException, SQLException {
-        connectLocal();
+        connectSinaWrite();
     }
 
     private void connectLocal() throws ClassNotFoundException, SQLException {
@@ -55,24 +55,30 @@ public class MySQLmanager {
     }
 
     private void connectSinaRead() throws ClassNotFoundException, SQLException {
+        String URL="jdbc:mysql://r.rdc.sae.sina.com.cn:3307/app_myvaboo";
+        String Username=SaeUserInfo.getAccessKey();
+        String Password=SaeUserInfo.getSecretKey();
+        String Driver="com.mysql.jdbc.Driver";
         try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-        } catch (InstantiationException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            Class.forName(Driver).newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        String accessKey = SaeUserInfo.getAccessKey();
-        String secretKey = SaeUserInfo.getSecretKey();
-        connection = DriverManager.getConnection("jdbc:mysql://r.rdc.sae.sina.com.cn:3307/app_vaboo", accessKey, secretKey);
+        connection=DriverManager.getConnection(URL,Username,Password);
         statement = connection.createStatement();
     }
 
     private void connectSinaWrite() throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
-        String accessKey = SaeUserInfo.getAccessKey();
-        String secretKey = SaeUserInfo.getSecretKey();
-        connection = DriverManager.getConnection("jdbc:mysql://r.rdc.sae.sina.com.cn:3307/app_vaboo", accessKey, secretKey);
+        String URL="jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_myvaboo";
+        String Username=SaeUserInfo.getAccessKey();
+        String Password=SaeUserInfo.getSecretKey();
+        String Driver="com.mysql.jdbc.Driver";
+        try {
+            Class.forName(Driver).newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        connection=DriverManager.getConnection(URL,Username,Password);
         statement = connection.createStatement();
     }
 
@@ -269,10 +275,9 @@ public class MySQLmanager {
         Class.forName("com.mysql.jdbc.Driver").newInstance();
         String accessKey = SaeUserInfo.getAccessKey();
         String secretKey = SaeUserInfo.getSecretKey();
-        String appname = SaeUserInfo.getAppName();
-        connection = DriverManager.getConnection("jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_"+appname, accessKey, secretKey);
+        connection = DriverManager.getConnection("jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_myvaboo", accessKey, secretKey);
         statement = connection.createStatement();
-        String SQL = "INSERT INTO testtable(stupid) values(12)";
+        String SQL = "INSERT INTO testtable(testnumber) values(12)";
         statement.execute(SQL);
         connection.close();
     }
