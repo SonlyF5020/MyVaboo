@@ -102,7 +102,7 @@
     float: left;
 }
 
-.weiboContent .mouseOver {
+.weiboContent:hover {
     background: yellow;
     margin-left: 10px;
     margin-right: 10px;
@@ -303,7 +303,7 @@ header {
     cursor: pointer;
 }
 
-.navigator .mouseOver {
+.navigator:hover {
     background: yellow;
     padding: 8px;
 }
