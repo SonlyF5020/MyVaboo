@@ -116,23 +116,7 @@ public final class firstSight_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"loginLink-login\"><a href=\"/login\">登录</a></div>\n");
       out.write("        <div class=\"loginLink-login\"><a href=\"/register\">注册</a></div>\n");
       out.write("    </div>\n");
-      out.write("\n");
       out.write("</div>\n");
-      out.write("\n");
-      out.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/resources/css/bootstrap-wysihtml5-0.0.2.css\">\n");
-      out.write("<script src=\"/resources/js/bootstrap-wysihtml5-0.0.2.js\"></script>\n");
-      out.write("<script src=\"/resources/js/wysihtml5-0.3.0_rc2.js\"></script>\n");
-      out.write("<script src=\"/resources/js/bootstrap-wysiwyg.js\"></script>\n");
-      out.write("\n");
-      out.write("<div id=\"editor\" style=\"overflow:scroll; max-height:300px\"></div>\n");
-      out.write("\n");
-      out.write("<script type=\"text/javascript\">\n");
-      out.write("    $(function(){\n");
-      out.write("        $('#editor').wysiwyg();\n");
-      out.write("    })\n");
-      out.write("</script>\n");
-      out.write("\n");
-      out.write("\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {

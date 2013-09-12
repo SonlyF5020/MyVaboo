@@ -68,6 +68,16 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <script type=\"text/javascript\" src=\"/resources/js/bootstrap.js\"></script>\n");
       out.write("    <script type=\"text/javascript\" src=\"/resources/js/bootstrap.min.js\"></script>\n");
       out.write("    <script type=\"text/javascript\" src=\"/resources/js/home.js\"></script>\n");
+      out.write("    <link rel=\"stylesheet\" href=\"/resources/SCEeditor/minified/themes/modern.min.css\" type=\"text/css\" media=\"all\">\n");
+      out.write("    <script src=\"/resources/SCEeditor/minified/jquery.sceditor.xhtml.min.js\"></script>\n");
+      out.write("    <script>\n");
+      out.write("        $(document).ready(function(){\n");
+      out.write("            $('.editContent textarea').sceditor({\n");
+      out.write("                plugins: \"xhtml\",\n");
+      out.write("                style: \"/resources/SCEeditor/minified/jquery.sceditor.default.min.css\"\n");
+      out.write("            });\n");
+      out.write("        });\n");
+      out.write("    </script>\n");
       out.write("</head>\n");
       out.write("\n");
       out.write("<body class=\"allBackground\">\n");
