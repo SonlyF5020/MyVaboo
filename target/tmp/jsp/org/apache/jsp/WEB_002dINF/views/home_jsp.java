@@ -74,7 +74,8 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        $(document).ready(function(){\n");
       out.write("            $('.editContent textarea').sceditor({\n");
       out.write("                plugins: \"xhtml\",\n");
-      out.write("                style: \"/resources/SCEeditor/minified/jquery.sceditor.default.min.css\"\n");
+      out.write("                style: \"/resources/SCEeditor/minified/jquery.sceditor.default.min.css\",\n");
+      out.write("                emoticonsRoot:\"/resources/SCEeditor/\"\n");
       out.write("            });\n");
       out.write("        });\n");
       out.write("    </script>\n");

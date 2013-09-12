@@ -17,7 +17,8 @@
         $(document).ready(function(){
             $('.editContent textarea').sceditor({
                 plugins: "xhtml",
-                style: "/resources/SCEeditor/minified/jquery.sceditor.default.min.css"
+                style: "/resources/SCEeditor/minified/jquery.sceditor.default.min.css",
+                emoticonsRoot:"/resources/SCEeditor/"
             });
         });
     </script>
