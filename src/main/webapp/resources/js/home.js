@@ -12,8 +12,11 @@ var MouseOutHandler = function () {
 
 var submitHandler = function () {
     $('#confirm').bind("click", function () {
-        $('#newContent').val($('#weibo').val());
-        $('#weibo').val("");
+        var content = $('#weibo').sceditor('instance').val();
+        $('#newContent').val(content);
+//        $('#newContent').val($('#weibo').val());
+//        $('#weibo').val("");
+        $('#weibo').sceditor('instance').val("");
         $('#contentSubmit').click();
     });
 }
