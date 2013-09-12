@@ -64,9 +64,12 @@ public final class validUser_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        });\n");
       out.write("        function run(){\n");
       out.write("            p+=5;\n");
-      out.write("            $(\"div[class=bar]\").css(\"width\",p+\"%\");\n");
+      out.write("            $(\"div[class=bar]\").css(\"width\",\"\"+p+\"%\");\n");
       out.write("            if(p<100){\n");
-      out.write("                setTimeout(\"run()\",20);\n");
+      out.write("                setInterval(\"document.location.href='/home'\",1000);\n");
+      out.write("                setTimeout(function(){\n");
+      out.write("                    run();\n");
+      out.write("                },20);\n");
       out.write("            }\n");
       out.write("            else{\n");
       out.write("                setTimeout(\"document.location.href='/home'\",1000);\n");
