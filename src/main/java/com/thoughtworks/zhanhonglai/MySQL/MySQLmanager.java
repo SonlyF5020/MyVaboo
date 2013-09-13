@@ -41,11 +41,11 @@ public class MySQLmanager {
     }
 
     private void connectRead() throws ClassNotFoundException, SQLException {
-        connectLocal();
+        connectSinaRead();
     }
 
     private void connectWrite() throws ClassNotFoundException, SQLException {
-        connectLocal();
+        connectSinaWrite();
     }
 
     private void connectLocal() throws ClassNotFoundException, SQLException {
@@ -55,7 +55,7 @@ public class MySQLmanager {
     }
 
     private void connectSinaRead() throws ClassNotFoundException, SQLException {
-        String URL="jdbc:mysql://r.rdc.sae.sina.com.cn:3307/app_myvaboo";
+        String URL="jdbc:mysql://r.rdc.sae.sina.com.cn:3307/app_myvaboo?autoReconnect=true";
         String Username=SaeUserInfo.getAccessKey();
         String Password=SaeUserInfo.getSecretKey();
         String Driver="com.mysql.jdbc.Driver";
@@ -69,7 +69,7 @@ public class MySQLmanager {
     }
 
     private void connectSinaWrite() throws ClassNotFoundException, SQLException {
-        String URL="jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_myvaboo";
+        String URL="jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_myvaboo?autoReconnect=true";
         String Username=SaeUserInfo.getAccessKey();
         String Password=SaeUserInfo.getSecretKey();
         String Driver="com.mysql.jdbc.Driver";

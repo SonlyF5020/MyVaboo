@@ -67,22 +67,6 @@
         <div class="loginLink-login"><a href="/login">登录</a></div>
         <div class="loginLink-login"><a href="/register">注册</a></div>
     </div>
-
 </div>
-
-<link rel="stylesheet" type="text/css" href="/resources/css/bootstrap-wysihtml5-0.0.2.css">
-<script src="/resources/js/bootstrap-wysihtml5-0.0.2.js"></script>
-<script src="/resources/js/wysihtml5-0.3.0_rc2.js"></script>
-<script src="/resources/js/bootstrap-wysiwyg.js"></script>
-
-<div id="editor" style="overflow:scroll; max-height:300px"></div>
-
-<script type="text/javascript">
-    $(function(){
-        $('#editor').wysiwyg();
-    })
-</script>
-
-
 </body>
 </html>

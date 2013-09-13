@@ -11,6 +11,17 @@
     <script type="text/javascript" src="/resources/js/bootstrap.js"></script>
     <script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/resources/js/home.js"></script>
+    <link rel="stylesheet" href="/resources/SCEeditor/minified/themes/modern.min.css" type="text/css" media="all">
+    <script src="/resources/SCEeditor/minified/jquery.sceditor.xhtml.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.editContent textarea').sceditor({
+                plugins: "xhtml",
+                style: "/resources/SCEeditor/minified/jquery.sceditor.default.min.css",
+                emoticonsRoot:"/resources/SCEeditor/"
+            });
+        });
+    </script>
 </head>
 
 <body class="allBackground">

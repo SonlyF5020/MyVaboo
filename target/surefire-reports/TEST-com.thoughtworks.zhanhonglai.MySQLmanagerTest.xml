@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.019" errors="0" skipped="10" tests="11" name="com.thoughtworks.zhanhonglai.MySQLmanagerTest">
+<testsuite failures="0" time="0.015" errors="0" skipped="10" tests="11" name="com.thoughtworks.zhanhonglai.MySQLmanagerTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib"/>
@@ -21,15 +21,15 @@
     <property name="basedir" value="/Users/twer/Downloads/java/MyWeibo"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="surefire.real.class.path" value="/Users/twer/Downloads/java/MyWeibo/target/surefire/surefirebooter2693432520084780028.jar"/>
+    <property name="surefire.real.class.path" value="/Users/twer/Downloads/java/MyWeibo/target/surefire/surefirebooter397089298581939042.jar"/>
     <property name="java.io.tmpdir" value="/var/folders/gv/m43y5g9x1xdc9f2kc2p0kpz00000gn/T/"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="sun.jnu.encoding" value="US-ASCII"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/twer/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="surefire.test.class.path" value="/Users/twer/Downloads/java/MyWeibo/target/test-classes:/Users/twer/Downloads/java/MyWeibo/target/classes:/Users/twer/.m2/repository/org/springframework/spring-context/3.2.3.RELEASE/spring-context-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-aop/3.2.3.RELEASE/spring-aop-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-beans/3.2.3.RELEASE/spring-beans-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-expression/3.2.3.RELEASE/spring-expression-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-core/3.2.0.RELEASE/spring-core-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/twer/.m2/repository/org/springframework/spring-web/3.2.0.RELEASE/spring-web-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/twer/.m2/repository/org/springframework/spring-webmvc/3.2.3.RELEASE/spring-webmvc-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.5/jackson-mapper-asl-1.9.5.jar:/Users/twer/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.5/jackson-core-asl-1.9.5.jar:/Users/twer/.m2/repository/cglib/cglib-nodep/2.2/cglib-nodep-2.2.jar:/Users/twer/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar:/Users/twer/.m2/repository/org/slf4j/jcl-over-slf4j/1.6.1/jcl-over-slf4j-1.6.1.jar:/Users/twer/.m2/repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar:/Users/twer/.m2/repository/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar:/Users/twer/.m2/repository/log4j/log4j/1.2.9/log4j-1.2.9.jar:/Users/twer/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/twer/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/Users/twer/.m2/repository/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar:/Users/twer/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar:/Users/twer/.m2/repository/org/aspectj/aspectjweaver/1.6.6/aspectjweaver-1.6.6.jar:/Users/twer/.m2/repository/junit/junit/4.7/junit-4.7.jar:/Users/twer/.m2/repository/org/springframework/spring-context-support/3.2.0.RELEASE/spring-context-support-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/eclipse/jetty/orbit/javax.mail.glassfish/1.4.1.v201005082020/javax.mail.glassfish-1.4.1.v201005082020.jar:/Users/twer/.m2/repository/org/eclipse/jetty/orbit/javax.activation/1.1.0.v201105071233/javax.activation-1.1.0.v201105071233.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/twer/Downloads/java/MyWeibo/target/test-classes:/Users/twer/Downloads/java/MyWeibo/target/classes:/Users/twer/.m2/repository/org/springframework/spring-context/3.2.3.RELEASE/spring-context-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-aop/3.2.3.RELEASE/spring-aop-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-beans/3.2.3.RELEASE/spring-beans-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-expression/3.2.3.RELEASE/spring-expression-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-core/3.2.0.RELEASE/spring-core-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/twer/.m2/repository/org/springframework/spring-web/3.2.0.RELEASE/spring-web-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/twer/.m2/repository/org/springframework/spring-webmvc/3.2.3.RELEASE/spring-webmvc-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.5/jackson-mapper-asl-1.9.5.jar:/Users/twer/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.5/jackson-core-asl-1.9.5.jar:/Users/twer/.m2/repository/cglib/cglib-nodep/2.2/cglib-nodep-2.2.jar:/Users/twer/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar:/Users/twer/.m2/repository/org/slf4j/jcl-over-slf4j/1.6.1/jcl-over-slf4j-1.6.1.jar:/Users/twer/.m2/repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar:/Users/twer/.m2/repository/mysql/mysql-connector-java/5.1.18/mysql-connector-java-5.1.18.jar:/Users/twer/.m2/repository/log4j/log4j/1.2.9/log4j-1.2.9.jar:/Users/twer/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/twer/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/Users/twer/.m2/repository/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar:/Users/twer/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar:/Users/twer/.m2/repository/org/aspectj/aspectjweaver/1.6.6/aspectjweaver-1.6.6.jar:/Users/twer/.m2/repository/junit/junit/4.7/junit-4.7.jar:/Users/twer/.m2/repository/org/springframework/spring-context-support/3.2.0.RELEASE/spring-context-support-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/eclipse/jetty/orbit/javax.mail.glassfish/1.4.1.v201005082020/javax.mail.glassfish-1.4.1.v201005082020.jar:/Users/twer/.m2/repository/org/eclipse/jetty/orbit/javax.activation/1.1.0.v201105071233/javax.activation-1.1.0.v201105071233.jar:"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="51.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -38,13 +38,13 @@
     <property name="user.timezone" value=""/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
     <property name="java.specification.version" value="1.7"/>
-    <property name="file.encoding" value="US-ASCII"/>
+    <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="twer"/>
-    <property name="java.class.path" value="/Users/twer/Downloads/java/MyWeibo/target/test-classes:/Users/twer/Downloads/java/MyWeibo/target/classes:/Users/twer/.m2/repository/org/springframework/spring-context/3.2.3.RELEASE/spring-context-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-aop/3.2.3.RELEASE/spring-aop-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-beans/3.2.3.RELEASE/spring-beans-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-expression/3.2.3.RELEASE/spring-expression-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-core/3.2.0.RELEASE/spring-core-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/twer/.m2/repository/org/springframework/spring-web/3.2.0.RELEASE/spring-web-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/twer/.m2/repository/org/springframework/spring-webmvc/3.2.3.RELEASE/spring-webmvc-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.5/jackson-mapper-asl-1.9.5.jar:/Users/twer/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.5/jackson-core-asl-1.9.5.jar:/Users/twer/.m2/repository/cglib/cglib-nodep/2.2/cglib-nodep-2.2.jar:/Users/twer/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar:/Users/twer/.m2/repository/org/slf4j/jcl-over-slf4j/1.6.1/jcl-over-slf4j-1.6.1.jar:/Users/twer/.m2/repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar:/Users/twer/.m2/repository/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar:/Users/twer/.m2/repository/log4j/log4j/1.2.9/log4j-1.2.9.jar:/Users/twer/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/twer/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/Users/twer/.m2/repository/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar:/Users/twer/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar:/Users/twer/.m2/repository/org/aspectj/aspectjweaver/1.6.6/aspectjweaver-1.6.6.jar:/Users/twer/.m2/repository/junit/junit/4.7/junit-4.7.jar:/Users/twer/.m2/repository/org/springframework/spring-context-support/3.2.0.RELEASE/spring-context-support-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/eclipse/jetty/orbit/javax.mail.glassfish/1.4.1.v201005082020/javax.mail.glassfish-1.4.1.v201005082020.jar:/Users/twer/.m2/repository/org/eclipse/jetty/orbit/javax.activation/1.1.0.v201105071233/javax.activation-1.1.0.v201105071233.jar:"/>
+    <property name="java.class.path" value="/Users/twer/Downloads/java/MyWeibo/target/test-classes:/Users/twer/Downloads/java/MyWeibo/target/classes:/Users/twer/.m2/repository/org/springframework/spring-context/3.2.3.RELEASE/spring-context-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-aop/3.2.3.RELEASE/spring-aop-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-beans/3.2.3.RELEASE/spring-beans-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-expression/3.2.3.RELEASE/spring-expression-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-core/3.2.0.RELEASE/spring-core-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/twer/.m2/repository/org/springframework/spring-web/3.2.0.RELEASE/spring-web-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/twer/.m2/repository/org/springframework/spring-webmvc/3.2.3.RELEASE/spring-webmvc-3.2.3.RELEASE.jar:/Users/twer/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.5/jackson-mapper-asl-1.9.5.jar:/Users/twer/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.5/jackson-core-asl-1.9.5.jar:/Users/twer/.m2/repository/cglib/cglib-nodep/2.2/cglib-nodep-2.2.jar:/Users/twer/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar:/Users/twer/.m2/repository/org/slf4j/jcl-over-slf4j/1.6.1/jcl-over-slf4j-1.6.1.jar:/Users/twer/.m2/repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar:/Users/twer/.m2/repository/mysql/mysql-connector-java/5.1.18/mysql-connector-java-5.1.18.jar:/Users/twer/.m2/repository/log4j/log4j/1.2.9/log4j-1.2.9.jar:/Users/twer/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/twer/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/Users/twer/.m2/repository/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar:/Users/twer/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar:/Users/twer/.m2/repository/org/aspectj/aspectjweaver/1.6.6/aspectjweaver-1.6.6.jar:/Users/twer/.m2/repository/junit/junit/4.7/junit-4.7.jar:/Users/twer/.m2/repository/org/springframework/spring-context-support/3.2.0.RELEASE/spring-context-support-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/eclipse/jetty/orbit/javax.mail.glassfish/1.4.1.v201005082020/javax.mail.glassfish-1.4.1.v201005082020.jar:/Users/twer/.m2/repository/org/eclipse/jetty/orbit/javax.activation/1.1.0.v201105071233/javax.activation-1.1.0.v201105071233.jar:"/>
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="/Users/twer/Downloads/java/MyWeibo/target/surefire/surefirebooter2693432520084780028.jar /Users/twer/Downloads/java/MyWeibo/target/surefire/surefire8840529878706661752tmp /Users/twer/Downloads/java/MyWeibo/target/surefire/surefire6583644863856260943tmp"/>
+    <property name="sun.java.command" value="/Users/twer/Downloads/java/MyWeibo/target/surefire/surefirebooter397089298581939042.jar /Users/twer/Downloads/java/MyWeibo/target/surefire/surefire5242163882773500452tmp /Users/twer/Downloads/java/MyWeibo/target/surefire/surefire9080768675803768805tmp"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -60,35 +60,35 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.037" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldJudgeWhetherUserNameExistedOrNot">
+  <testcase time="0.033" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="test">
     <skipped/>
   </testcase>
-  <testcase time="0.037" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldJudgeWhetherUserPasswordIsCorrect">
+  <testcase time="0.033" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldJudgeWhetherUserNameExistedOrNot">
     <skipped/>
   </testcase>
-  <testcase time="0.038" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetRightFaceUrl">
+  <testcase time="0.033" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldJudgeWhetherUserPasswordIsCorrect">
     <skipped/>
   </testcase>
-  <testcase time="0.038" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldJudgeWhereEmailIsCorrectOrNot">
+  <testcase time="0.033" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetRightFaceUrl">
     <skipped/>
   </testcase>
-  <testcase time="0.038" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetRightPassword">
+  <testcase time="0.033" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldJudgeWhereEmailIsCorrectOrNot">
     <skipped/>
   </testcase>
-  <testcase time="0.038" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetRightFaceUrlAfterUpdate">
+  <testcase time="0.034" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetRightPassword">
     <skipped/>
   </testcase>
-  <testcase time="0.039" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldInsertDateInMainContentTable">
+  <testcase time="0.034" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetRightFaceUrlAfterUpdate">
     <skipped/>
   </testcase>
-  <testcase time="0.039" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetAllContentCorrectly">
+  <testcase time="0.034" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldInsertDateInMainContentTable">
     <skipped/>
   </testcase>
-  <testcase time="0.039" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="souldDeleteOneContent">
+  <testcase time="0.034" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetAllContentCorrectly">
     <skipped/>
   </testcase>
-  <testcase time="0.002" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldCode"/>
-  <testcase time="0.003" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="test">
+  <testcase time="0.034" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="souldDeleteOneContent">
     <skipped/>
   </testcase>
+  <testcase time="0.001" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldCode"/>
 </testsuite>

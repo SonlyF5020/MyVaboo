@@ -20,7 +20,9 @@
             p+=5;
             $("div[class=bar]").css("width",p+"%");
             if(p<100){
-                setTimeout("run()",20);
+                setTimeout(function(){
+                   run();
+                },20);
             }
             else{
                 setTimeout("document.location.href='/logout'",1500);
