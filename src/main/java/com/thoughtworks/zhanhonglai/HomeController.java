@@ -17,7 +17,6 @@ import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 import java.util.Map;
 
 @SessionAttributes("sessionUserName")
@@ -31,12 +30,16 @@ public class HomeController {
     }
 
     @RequestMapping("/checkUser")
-    public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request) throws SQLException, ClassNotFoundException {
+    public String checkUser(@RequestParam("name") String name, @RequestParam("password") String password, HttpServletRequest request) {
         HttpSession session = request.getSession();
-        if (passwordIsCorrect(name, password)) {
-            session.setAttribute("sessionUserName", name);
-            return "checkUser/validUser";
-        } else return "checkUser/invalidUser";
+        try {
+            if (passwordIsCorrect(name, password)) {
+                session.setAttribute("sessionUserName", name);
+                return "checkUser/validUser";
+            } else return "checkUser/invalidUser";
+        } catch (Exception e) {
+            return "checkUser/invalidUser";
+        }
     }
 
     private boolean passwordIsCorrect(String name, String password) throws SQLException, ClassNotFoundException {
@@ -48,16 +51,18 @@ public class HomeController {
     @RequestMapping("/login")
     public String login(HttpServletRequest request) {
         MySQLmanager mySQLmanager = new MySQLmanager();
-        if (!request.getSession().isNew()) {
-            String userName = (String) request.getSession().getAttribute("sessionUserName");
-            try {
-                if (mySQLmanager.isUserNameExisted(userName)) {
+        try {
+            if (!request.getSession().isNew()) {
+                String userName = (String) request.getSession().getAttribute("sessionUserName");
+                Boolean usernameExisted = mySQLmanager.isUserNameExisted(userName);
+                if (usernameExisted) {
                     return "checkUser/validUser";
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
-                logger.error(e.getMessage(), e);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error(e.getMessage(), e);
+            return "checkUser/loginAccount";
         }
         return "checkUser/loginAccount";
     }
@@ -99,7 +104,7 @@ public class HomeController {
     }
 
     @RequestMapping("/submitContent")
-    private String submitContent(@RequestParam("newContent") String newContent, HttpServletRequest request) throws InterruptedException, UnsupportedEncodingException{
+    private String submitContent(@RequestParam("newContent") String newContent, HttpServletRequest request) throws InterruptedException, UnsupportedEncodingException {
         HttpSession session = request.getSession();
         if (!session.isNew()) {
             String userName = (String) session.getAttribute("sessionUserName");
@@ -121,7 +126,7 @@ public class HomeController {
     }
 
     @RequestMapping("/json/getAllHistory")
-    public String getUserHistory(Model model){
+    public String getUserHistory(Model model) {
         try {
             MySQLmanager mySQLmanager = new MySQLmanager();
             model.addAllAttributes(mySQLmanager.getAllContents());
@@ -161,7 +166,7 @@ public class HomeController {
     }
 
     @RequestMapping("/delete")
-    public String deleteContent(@RequestParam("deleteIndex") String deleteIndex){
+    public String deleteContent(@RequestParam("deleteIndex") String deleteIndex) {
         try {
             MySQLmanager mySQLmanager = new MySQLmanager();
             mySQLmanager.deleteContent(deleteIndex);
@@ -173,15 +178,14 @@ public class HomeController {
     }
 
     @RequestMapping("/addReply")
-    public String addReply(@RequestParam("reply") String reply, @RequestParam("id") String id, HttpServletRequest request, Model model){
+    public String addReply(@RequestParam("reply") String reply, @RequestParam("id") String id, HttpServletRequest request, Model model) {
         try {
             String responseUser = (String) request.getSession().getAttribute("sessionUserName");
             UserContent responseUserContent = new UserContent(responseUser, reply, getCurrentDate());
             MySQLmanager mySQLmanager = new MySQLmanager();
-            mySQLmanager.addResponseForContent(""+id,responseUser,reply,getCurrentDate());
+            mySQLmanager.addResponseForContent("" + id, responseUser, reply, getCurrentDate());
             model.addAttribute("response", responseUserContent);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             logger.error(e.getMessage(), e);
         }
@@ -189,15 +193,14 @@ public class HomeController {
     }
 
     @RequestMapping("/json/getMyHistory")
-    public String getMyHistory(Model model, HttpServletRequest request){
+    public String getMyHistory(Model model, HttpServletRequest request) {
         try {
             String currentUser = (String) request.getSession().getAttribute("sessionUserName");
             MySQLmanager mySQLmanager = new MySQLmanager();
-            Map<String,UserContent> userContents = null;
+            Map<String, UserContent> userContents = null;
             userContents = mySQLmanager.getUserContent(currentUser);
             model.addAllAttributes(userContents);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             logger.error(e.getMessage(), e);
         }
@@ -206,7 +209,7 @@ public class HomeController {
 
     @RequestMapping("/getBackPassword")
     public String getBackPassword(@RequestParam("userName") String userName,
-                                  @RequestParam("emailAddress") String emailAddress) throws MessagingException{
+                                  @RequestParam("emailAddress") String emailAddress) throws MessagingException {
         try {
             MySQLmanager mySQLmanager = new MySQLmanager();
             if (mySQLmanager.isEmailCorrect(userName, emailAddress)) {
@@ -222,7 +225,7 @@ public class HomeController {
     }
 
     @RequestMapping("/json/changeFace")
-    public String changeFace(@RequestParam("src") String src, Model model, HttpServletRequest request){
+    public String changeFace(@RequestParam("src") String src, Model model, HttpServletRequest request) {
         try {
             String currentUser = (String) request.getSession().getAttribute("sessionUserName");
             MySQLmanager mySQLmanager = new MySQLmanager();
