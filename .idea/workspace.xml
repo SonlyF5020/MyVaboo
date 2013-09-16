@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2743f347-cc08-4ddc-99df-f33c1680f671" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/invalidUser.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/invalidUser.jsp" />
-    </list>
+    <list default="true" id="2743f347-cc08-4ddc-99df-f33c1680f671" name="Default" comment="" />
     <ignored path="MyWeibo.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378627564521" ignored="false" />
@@ -225,7 +223,7 @@
       <file leaf-file-name="invalidUser.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/invalidUser.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="42" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.79238755">
+            <state line="29" column="34" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.5588235">
               <folding />
             </state>
           </provider>
@@ -1468,7 +1466,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/invalidUser.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="42" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.79238755">
+        <state line="29" column="34" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.5588235">
           <folding />
         </state>
       </provider>
