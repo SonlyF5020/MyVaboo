@@ -80,6 +80,7 @@ public final class successCreate_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("    <div class=\"progress progress-striped active\">\n");
       out.write("        <div class=\"bar\" style=\"width: 0%;\"></div>\n");
       out.write("    </div>\n");
+      out.write("    <img src=\"/resources/img/loading.gif\">\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");

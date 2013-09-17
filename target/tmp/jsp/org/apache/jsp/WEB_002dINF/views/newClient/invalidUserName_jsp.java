@@ -1,10 +1,10 @@
-package org.apache.jsp.WEB_002dINF.views.checkUser;
+package org.apache.jsp.WEB_002dINF.views.newClient;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class invalidUser_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class invalidUserName_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -54,32 +54,30 @@ public final class invalidUser_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<script type=\"text/javascript\" src=\"/resources/js/jQuery.js\"></script>\n");
       out.write("<script type=\"text/javascript\" src=\"/resources/js/bootstrap.js\"></script>\n");
       out.write("\n");
-      out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
       out.write("    <title>invalidUser</title>\n");
       out.write("    <script>\n");
-      out.write("        var p=0;\n");
-      out.write("        $(function(){\n");
+      out.write("        var p = 0;\n");
+      out.write("        $(function () {\n");
       out.write("            run();\n");
       out.write("        });\n");
-      out.write("        function run(){\n");
-      out.write("            p+=5;\n");
-      out.write("            $(\"div[class=bar]\").css(\"width\",p+\"%\");\n");
-      out.write("            if(p<100){\n");
-      out.write("                setTimeout(function(){\n");
-      out.write("                   run();\n");
-      out.write("                },20);\n");
+      out.write("        function run() {\n");
+      out.write("            p += 5;\n");
+      out.write("            $(\"div[class=bar]\").css(\"width\", p + \"%\");\n");
+      out.write("            if (p < 100) {\n");
+      out.write("                setTimeout(\"run()\", 20);\n");
       out.write("            }\n");
-      out.write("            else{\n");
-      out.write("                setTimeout(\"document.location.href='/logout'\",1500);\n");
+      out.write("            else {\n");
+      out.write("                setTimeout(\"document.location.href='/register'\", 1500);\n");
       out.write("            }\n");
       out.write("        }\n");
       out.write("    </script>\n");
       out.write("</head>\n");
       out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"redBorder\">\n");
-      out.write("    <h1>你输入的账号信息有误！</h1>\n");
+      out.write("    <h1>此账号已被占用！</h1>\n");
+      out.write("\n");
       out.write("    <div class=\"progress progress-striped active\">\n");
       out.write("        <div class=\"bar\" style=\"width: 0%;\"></div>\n");
       out.write("    </div>\n");
