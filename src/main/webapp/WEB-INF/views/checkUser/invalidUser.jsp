@@ -33,9 +33,6 @@
 <body class="allBackground">
 <div class="redBorder">
     <h1>你输入的账号信息有误！</h1>
-    <div class="progress progress-striped active">
-        <div class="bar" style="width: 0%;"></div>
-    </div>
     <img src="/resources/img/loading.gif">
 </div>
 </body>

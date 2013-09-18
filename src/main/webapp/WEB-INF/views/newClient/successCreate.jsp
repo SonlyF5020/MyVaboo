@@ -29,10 +29,6 @@
 <body class="allBackground">
 <div class="greenBorder">
     <h1>账号申请成功！</h1>
-
-    <div class="progress progress-striped active">
-        <div class="bar" style="width: 0%;"></div>
-    </div>
     <img src="/resources/img/loading.gif">
 </div>
 </body>

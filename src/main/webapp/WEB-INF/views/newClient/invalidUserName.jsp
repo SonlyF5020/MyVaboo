@@ -31,9 +31,6 @@
 <div class="redBorder">
     <h1>此账号已被占用！</h1>
 
-    <div class="progress progress-striped active">
-        <div class="bar" style="width: 0%;"></div>
-    </div>
     <img src="/resources/img/loading.gif">
 </div>
 </body>
