@@ -13,25 +13,14 @@
     <script>
         var p = 0;
         $(function () {
-            run();
+            setTimeout("document.location.href='/register'", 3000);
         });
-        function run() {
-            p += 5;
-            $("div[class=bar]").css("width", p + "%");
-            if (p < 100) {
-                setTimeout("run()", 20);
-            }
-            else {
-                setTimeout("document.location.href='/register'", 1500);
-            }
-        }
     </script>
 </head>
 <body class="allBackground">
 <div class="redBorder">
     <h1>此账号已被占用！</h1>
-
-    <img src="/resources/img/loading.gif">
+    <img src="/resources/img/circleLoading.gif" style="height: 80px;width: 80px;margin-left: 250px">
 </div>
 </body>
 </html>

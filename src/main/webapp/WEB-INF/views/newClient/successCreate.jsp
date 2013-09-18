@@ -12,24 +12,14 @@
     <script>
         var p = 0;
         $(function () {
-            run();
+            setTimeout("document.location.href='/home'", 3000);
         });
-        function run() {
-            p += 5;
-            $("div[class=bar]").css("width", p + "%");
-            if (p < 100) {
-                setTimeout("run()", 20);
-            }
-            else {
-                setTimeout("document.location.href='/home'", 1000);
-            }
-        }
     </script>
 </head>
 <body class="allBackground">
 <div class="greenBorder">
     <h1>账号申请成功！</h1>
-    <img src="/resources/img/loading.gif">
+    <img src="/resources/img/circleLoading.gif" style="height: 80px;width: 80px;margin-left: 250px">
 </div>
 </body>
 </html>
