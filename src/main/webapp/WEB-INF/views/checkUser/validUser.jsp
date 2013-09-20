@@ -20,10 +20,7 @@
 <body class="allBackground">
 <div class="greenBorder">
     <h1>欢迎回来！. . .</h1>
-    <div class="progress progress-striped active">
-        <div class="bar" style="width: 0%;"></div>
-    </div>
-    <img src="/resources/img/circleLoading.gif" style="height: 80px;width: 80px;margin-left: 250px">
+    <img src="/resources/img/circleLoading.gif" style="height: 80px;width: 80px;display:block;margin: auto">
 </div>
 </body>
 </html>

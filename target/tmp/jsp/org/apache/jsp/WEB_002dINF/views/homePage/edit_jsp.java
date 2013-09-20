@@ -51,6 +51,7 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </div>\n");
       out.write("    <div class=\"rightArea\">\n");
       out.write("        <button id=\"confirm\" class=\"btn\">提交</button>\n");
+      out.write("        <img src=\"/resources/img/circleLoading.gif\" style=\"height: 80px;width: 80px;display:block;margin: auto\">\n");
       out.write("    </div>\n");
       out.write("</div>\n");
       out.write("\n");

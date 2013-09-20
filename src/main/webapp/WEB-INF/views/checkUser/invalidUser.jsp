@@ -21,7 +21,7 @@
 <body class="allBackground">
 <div class="redBorder">
     <h1>你输入的账号信息有误！</h1>
-    <img src="/resources/img/circleLoading.gif" style="height: 80px;width: 80px;margin-left: 250px">
+    <img src="/resources/img/circleLoading.gif" style="height: 80px;width: 80px;display:block;margin: auto">
 </div>
 </body>
 </html>

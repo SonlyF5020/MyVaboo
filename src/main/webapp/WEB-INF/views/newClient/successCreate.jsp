@@ -19,7 +19,7 @@
 <body class="allBackground">
 <div class="greenBorder">
     <h1>账号申请成功！</h1>
-    <img src="/resources/img/circleLoading.gif" style="height: 80px;width: 80px;margin-left: 250px">
+    <img src="/resources/img/circleLoading.gif" style="height: 80px;width: 80px;display:block;margin: auto">
 </div>
 </body>
 </html>

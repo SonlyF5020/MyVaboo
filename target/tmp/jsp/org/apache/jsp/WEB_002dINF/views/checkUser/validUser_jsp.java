@@ -67,10 +67,7 @@ public final class validUser_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"greenBorder\">\n");
       out.write("    <h1>欢迎回来！. . .</h1>\n");
-      out.write("    <div class=\"progress progress-striped active\">\n");
-      out.write("        <div class=\"bar\" style=\"width: 0%;\"></div>\n");
-      out.write("    </div>\n");
-      out.write("    <img src=\"/resources/img/circleLoading.gif\" style=\"height: 80px;width: 80px;margin-left: 250px\">\n");
+      out.write("    <img src=\"/resources/img/circleLoading.gif\" style=\"height: 80px;width: 80px;display:block;margin: auto\">\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");

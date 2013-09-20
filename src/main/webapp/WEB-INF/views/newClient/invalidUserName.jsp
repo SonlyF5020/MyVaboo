@@ -20,7 +20,7 @@
 <body class="allBackground">
 <div class="redBorder">
     <h1>此账号已被占用！</h1>
-    <img src="/resources/img/circleLoading.gif" style="height: 80px;width: 80px;margin-left: 250px">
+    <img src="/resources/img/circleLoading.gif" style="height: 80px;width: 80px;display:block;margin: auto">
 </div>
 </body>
 </html>
