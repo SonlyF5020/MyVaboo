@@ -67,7 +67,7 @@ public final class invalidUserName_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("<body class=\"allBackground\">\n");
       out.write("<div class=\"redBorder\">\n");
       out.write("    <h1>此账号已被占用！</h1>\n");
-      out.write("    <img src=\"/resources/img/circleLoading.gif\" style=\"height: 80px;width: 80px;margin-left: 250px\">\n");
+      out.write("    <img src=\"/resources/img/circleLoading.gif\" style=\"height: 80px;width: 80px;display:block;margin: auto\">\n");
       out.write("</div>\n");
       out.write("</body>\n");
       out.write("</html>");

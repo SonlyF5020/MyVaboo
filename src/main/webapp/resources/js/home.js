@@ -12,13 +12,13 @@ var MouseOutHandler = function () {
 
 var submitHandler = function () {
     $('#confirm').bind("click", function () {
+        $('.editContent .rightArea img').show();
         var content = $('#weibo').sceditor('instance').val();
         $('#newContent').val(content);
-//        $('#newContent').val($('#weibo').val());
-//        $('#weibo').val("");
         $('#weibo').sceditor('instance').val("");
         $('#contentSubmit').click();
     });
+    $('.editContent .rightArea img').hide();
 }
 var mouseOverHandler = function () {
     $('#weiboContent').on('mouseover', '.oneContent', function () {
@@ -30,6 +30,7 @@ var mouseOverHandler = function () {
     });
 }
 $(function () {
+    $('.editContent .rightArea img').hide();
 
     $('.navigator').on('mouseover','div',function(){
         $(this).addClass('mouseOver');
@@ -41,6 +42,7 @@ $(function () {
 
 
     $('.navigator').on('click','div',function(){
+        $('.editContent .rightArea img').show();
         $('.navigator div').removeClass('mouseDone');
         $(this).addClass('mouseDone');
         $('#weiboContent').html("");
@@ -66,12 +68,14 @@ $(function () {
     });
 
     $('#editModal').on('click', '#editSure', function () {
+        $('.editContent .rightArea img').show();
         $('#editModal').modal('hide');
         editContent.content = $('#reply').val();
         $('#reply').val("");
         $.getJSON("/addReply?reply="+editContent.content+"&id="+editContent.contentID,function(newResponseContent){
             var response = newResponseContent["response"];
             renderResponse(currentResponseDiv,response);
+            $('.editContent .rightArea img').hide();
         })
     });
 
@@ -139,6 +143,7 @@ var getHistory = function(user){
                 }
             }
             $('#weiboContent').prepend(chart);
+            $('.editContent .rightArea img').hide();
         }
     });
 }
