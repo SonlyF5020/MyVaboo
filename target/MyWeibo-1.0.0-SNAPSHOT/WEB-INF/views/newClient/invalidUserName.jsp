@@ -13,27 +13,14 @@
     <script>
         var p = 0;
         $(function () {
-            run();
+            setTimeout("document.location.href='/register'", 3000);
         });
-        function run() {
-            p += 5;
-            $("div[class=bar]").css("width", p + "%");
-            if (p < 100) {
-                setTimeout("run()", 20);
-            }
-            else {
-                setTimeout("document.location.href='/register'", 1500);
-            }
-        }
     </script>
 </head>
 <body class="allBackground">
 <div class="redBorder">
     <h1>此账号已被占用！</h1>
-
-    <div class="progress progress-striped active">
-        <div class="bar" style="width: 0%;"></div>
-    </div>
+    <img src="/resources/img/circleLoading.gif" style="height: 80px;width: 80px;display:block;margin: auto">
 </div>
 </body>
 </html>
