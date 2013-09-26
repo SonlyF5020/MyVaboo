@@ -9,6 +9,7 @@ import java.sql.SQLException;
 
 @Controller
 public class FirstSightController {
+    private MySQLmanager testManager;
     @RequestMapping("/firstSight")
     public String accessFirstSight(){
          return "firstSight";
@@ -16,7 +17,6 @@ public class FirstSightController {
 
     @RequestMapping("/testSQL")
     public String accessTest(Model model){
-        MySQLmanager testManager = new MySQLmanager();
         try {
             testManager.testSQL();
         } catch (Exception e) {

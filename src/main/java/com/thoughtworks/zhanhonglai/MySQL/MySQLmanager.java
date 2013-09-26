@@ -1,6 +1,5 @@
 package com.thoughtworks.zhanhonglai.MySQL;
 
-import com.sina.sae.util.SaeUserInfo;
 import com.thoughtworks.zhanhonglai.data.UserContent;
 
 import java.security.MessageDigest;
@@ -21,12 +20,17 @@ public class MySQLmanager {
     private String writeURL;
     private String userName;
     private String passWord;
+    private String driver;
 
-    public MySQLmanager(String readURL, String writeURL, String userName, String passWord) {
+    public MySQLmanager() {
+    }
+
+    public MySQLmanager(String readURL, String writeURL, String userName, String passWord,String driver) {
         this.readURL = readURL;
         this.writeURL = writeURL;
         this.userName = userName;
         this.passWord = passWord;
+        this.driver = driver;
     }
 
     public void createUser(String userName, String password, String faceUrl, String email) throws ClassNotFoundException, SQLException {
@@ -53,44 +57,22 @@ public class MySQLmanager {
     }
 
     private void connectRead() throws ClassNotFoundException, SQLException {
-        connectSinaRead();
+        try{
+            Class.forName(driver).newInstance();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        connection = DriverManager.getConnection(readURL,userName,passWord);
+        statement = connection.createStatement();
     }
 
     private void connectWrite() throws ClassNotFoundException, SQLException {
-        connectSinaWrite();
-    }
-
-    private void connectLocal() throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection("jdbc:mysql://localhost/CoreBase", "root", "");
-        statement = connection.createStatement();
-    }
-
-    private void connectSinaRead() throws ClassNotFoundException, SQLException {
-        String URL="jdbc:mysql://r.rdc.sae.sina.com.cn:3307/app_myvaboo?autoReconnect=true";
-        String Username=SaeUserInfo.getAccessKey();
-        String Password=SaeUserInfo.getSecretKey();
-        String Driver="com.mysql.jdbc.Driver";
-        try {
-            Class.forName(Driver).newInstance();
-        } catch (Exception e) {
+        try{
+            Class.forName(driver).newInstance();
+        }catch (Exception e){
             e.printStackTrace();
         }
-        connection=DriverManager.getConnection(URL,Username,Password);
-        statement = connection.createStatement();
-    }
-
-    private void connectSinaWrite() throws ClassNotFoundException, SQLException {
-        String URL="jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_myvaboo?autoReconnect=true";
-        String Username=SaeUserInfo.getAccessKey();
-        String Password=SaeUserInfo.getSecretKey();
-        String Driver="com.mysql.jdbc.Driver";
-        try {
-            Class.forName(Driver).newInstance();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        connection=DriverManager.getConnection(URL,Username,Password);
+        connection = DriverManager.getConnection(writeURL,userName,passWord);
         statement = connection.createStatement();
     }
 
@@ -284,10 +266,12 @@ public class MySQLmanager {
     }
 
     public void testSQL() throws ClassNotFoundException, SQLException, IllegalAccessException, InstantiationException {
-        Class.forName("com.mysql.jdbc.Driver").newInstance();
-        String accessKey = SaeUserInfo.getAccessKey();
-        String secretKey = SaeUserInfo.getSecretKey();
-        connection = DriverManager.getConnection("jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_myvaboo?autoReconnect=true", accessKey, secretKey);
+        try{
+            Class.forName(driver).newInstance();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        connection = DriverManager.getConnection(writeURL,userName,passWord);
         statement = connection.createStatement();
         String SQL = "INSERT INTO testtable(testnumber) values(12)";
         statement.execute(SQL);

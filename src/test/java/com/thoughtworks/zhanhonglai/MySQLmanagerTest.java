@@ -160,7 +160,7 @@ public class MySQLmanagerTest {
             System.out.println("exception");
         }
     }
-
+    @Ignore
     @Test
     public void shouldCode() throws Exception {
         String afterCode = MySQLmanager.code("a");

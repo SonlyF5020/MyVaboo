@@ -24,6 +24,12 @@ import java.util.Map;
 public class HomeController {
     private final Logger logger = Logger.getLogger(this.getClass());
 
+    public void setMySQLmanager(MySQLmanager mySQLmanager) {
+        this.mySQLmanager = mySQLmanager;
+    }
+
+    private MySQLmanager mySQLmanager;
+
     @RequestMapping("/home")
     public String accessHome() {
         return "home";
@@ -43,14 +49,12 @@ public class HomeController {
     }
 
     private boolean passwordIsCorrect(String name, String password) throws SQLException, ClassNotFoundException {
-        MySQLmanager mySQLmanager = new MySQLmanager();
         mySQLmanager.isPasswordCorrect(name, password);
         return mySQLmanager.isPasswordCorrect(name, password);
     }
 
     @RequestMapping("/login")
     public String login(HttpServletRequest request) {
-        MySQLmanager mySQLmanager = new MySQLmanager();
         try {
             if (!request.getSession().isNew()) {
                 String userName = (String) request.getSession().getAttribute("sessionUserName");
@@ -91,7 +95,6 @@ public class HomeController {
                                @RequestParam("emailAddress") String emailAddress,
                                HttpServletRequest request) throws SQLException, ClassNotFoundException {
 
-        MySQLmanager mySQLmanager = new MySQLmanager();
         if (mySQLmanager.isUserNameExisted(name)) {
             return "newClient/invalidUserName";
         } else {
@@ -108,7 +111,6 @@ public class HomeController {
         HttpSession session = request.getSession();
         if (!session.isNew()) {
             String userName = (String) session.getAttribute("sessionUserName");
-            MySQLmanager mySQLmanager = new MySQLmanager();
             try {
                 mySQLmanager.addContent(userName, newContent, getCurrentDate());
             } catch (Exception e) {
@@ -128,7 +130,6 @@ public class HomeController {
     @RequestMapping("/json/getAllHistory")
     public String getUserHistory(Model model) {
         try {
-            MySQLmanager mySQLmanager = new MySQLmanager();
             model.addAllAttributes(mySQLmanager.getAllContents());
         } catch (Exception e) {
             e.printStackTrace();
@@ -148,7 +149,6 @@ public class HomeController {
 
             model.addAttribute("userName", userName);
 
-            MySQLmanager mySQLmanager = new MySQLmanager();
             mySQLmanager.getUserFaceUrl(userName);
             String userUrl = mySQLmanager.getUserFaceUrl(userName);
 
@@ -168,7 +168,6 @@ public class HomeController {
     @RequestMapping("/delete")
     public String deleteContent(@RequestParam("deleteIndex") String deleteIndex) {
         try {
-            MySQLmanager mySQLmanager = new MySQLmanager();
             mySQLmanager.deleteContent(deleteIndex);
         } catch (Exception e) {
             e.printStackTrace();
@@ -182,7 +181,6 @@ public class HomeController {
         try {
             String responseUser = (String) request.getSession().getAttribute("sessionUserName");
             UserContent responseUserContent = new UserContent(responseUser, reply, getCurrentDate());
-            MySQLmanager mySQLmanager = new MySQLmanager();
             mySQLmanager.addResponseForContent("" + id, responseUser, reply, getCurrentDate());
             model.addAttribute("response", responseUserContent);
         } catch (Exception e) {
@@ -196,7 +194,6 @@ public class HomeController {
     public String getMyHistory(Model model, HttpServletRequest request) {
         try {
             String currentUser = (String) request.getSession().getAttribute("sessionUserName");
-            MySQLmanager mySQLmanager = new MySQLmanager();
             Map<String, UserContent> userContents = null;
             userContents = mySQLmanager.getUserContent(currentUser);
             model.addAllAttributes(userContents);
@@ -211,7 +208,6 @@ public class HomeController {
     public String getBackPassword(@RequestParam("userName") String userName,
                                   @RequestParam("emailAddress") String emailAddress) throws MessagingException {
         try {
-            MySQLmanager mySQLmanager = new MySQLmanager();
             if (mySQLmanager.isEmailCorrect(userName, emailAddress)) {
                 String password = mySQLmanager.getUserPassword(userName);
                 HostMail.sendMail(emailAddress, password);
@@ -228,7 +224,6 @@ public class HomeController {
     public String changeFace(@RequestParam("src") String src, Model model, HttpServletRequest request) {
         try {
             String currentUser = (String) request.getSession().getAttribute("sessionUserName");
-            MySQLmanager mySQLmanager = new MySQLmanager();
             mySQLmanager.updateUserFaceUrl(currentUser, src);
             model.addAttribute("src", mySQLmanager.getUserFaceUrl(currentUser));
         } catch (Exception e) {

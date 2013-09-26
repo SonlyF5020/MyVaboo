@@ -21,6 +21,11 @@
         <constructor-arg index="1" value="${DATABASE_WRITE_URL}"/>
         <constructor-arg index="2" value="${USERNAME}"/>
         <constructor-arg index="3" value="${PASSWORD}"/>
+        <constructor-arg index="4" value="${DRIVER}"/>
+    </bean>
+
+    <bean id="homeController" class="com.thoughtworks.zhanhonglai.HomeController">
+        <property name="mySQLmanager" ref="mySQLmanagerConfig"/>
     </bean>
 
 </beans>
