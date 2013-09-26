@@ -17,6 +17,18 @@ public class MySQLmanager {
     private java.sql.Statement statement = null;
     private ResultSet resultSet = null;
 
+    private String readURL;
+    private String writeURL;
+    private String userName;
+    private String passWord;
+
+    public MySQLmanager(String readURL, String writeURL, String userName, String passWord) {
+        this.readURL = readURL;
+        this.writeURL = writeURL;
+        this.userName = userName;
+        this.passWord = passWord;
+    }
+
     public void createUser(String userName, String password, String faceUrl, String email) throws ClassNotFoundException, SQLException {
         connectWrite();
         String values = buildValues(userName, password, faceUrl, email);
