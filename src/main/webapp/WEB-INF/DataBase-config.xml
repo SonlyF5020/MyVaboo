@@ -10,7 +10,7 @@
         <property name="ignoreResourceNotFound" value="true" />
         <property name="locations">
             <list>
-                <value>classpath:localConfig.properties</value>
+                <value>classpath:sinaConfig.properties</value>
             </list>
         </property>
         <property name="order" value="0"/>

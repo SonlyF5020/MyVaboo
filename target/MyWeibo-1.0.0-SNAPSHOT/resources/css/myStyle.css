@@ -1,0 +1,361 @@
+.centerText h1 {
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    float: left;
+    font-size: 60px;
+}
+
+.miniLogo{
+    float: left;
+    overflow: hidden;
+}
+
+.miniLogo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+    border: 3 solid #000000;
+    float: left;
+    cursor: pointer;
+}
+
+.title {
+    background-image: url("/resources/img/retina_wood.png");
+}
+
+.body {
+    width: 1000px;
+    background-image: url("/resources/img/retina_wood.png");
+    margin: 20px auto auto;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+
+.editContent .leftArea .weibo {
+    width: 85%;
+    min-height: 300px;
+}
+
+.weiboContent {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    background-color: yellowgreen;
+    border-radius: 10px;
+    min-height: 5px;
+}
+
+.oneContent {
+    min-height: 80px;
+    margin: 15px;
+    box-shadow: 3px 3px 3px #888888;
+    background-color: white;
+    text-align: left;
+    font-size: 18px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    line-height: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.oneContent .deleteButton {
+    background-image: url("/resources/img/deleteIcon.png");
+    position: absolute;
+    /*margin-left: 745px;*/
+    /*margin-top: -100px;*/
+    left: 730px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    cursor: pointer;
+}
+
+.oneContent .writeButton {
+    background-image: url("/resources/img/write1.png");
+    position: absolute;
+    /*margin-left: 700px;*/
+    /*margin-top: -105px;*/
+    top: -5px;
+    left: 680px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    cursor: pointer;
+}
+
+.editContent {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.editContent .leftArea {
+    width: 85%;
+    float: left;
+    text-align: right;
+    overflow: hidden;
+}
+
+.editContent .rightArea {
+    text-align: left;
+    width: 15%;
+    float: left;
+}
+
+.weiboContent .mouseOver {
+    background: yellow;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.default {
+    width: 100%;
+    min-height: 80px;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+}
+
+.redButton {
+    background: red;
+}
+
+.login {
+    width: 500px;
+    background: #ffffff;
+    margin: 200px auto auto;
+    padding-top: 30px;
+    padding-left: 30px;
+    border-radius: 6px;
+    border: solid yellowgreen;
+    overflow: hidden;
+}
+
+.redBorder {
+    border: solid red;
+    width: 40%;
+    background: #ffffff;
+    margin: 200px auto auto;
+    padding: 50px 50px 30px;
+    border-radius: 6px;
+}
+
+.clientForm {
+    width: 60%;
+    float: left;
+}
+
+.bigLogo{
+    width: 160px;
+    height: 140px;
+    float: left;
+}
+
+.bigLogo a{
+    margin-left: 40px;
+}
+
+.bigLogo img {
+    margin-top: -20px;
+    margin-left: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    border: 5 solid #000000;
+}
+
+.head {
+    padding-top: 50px;
+    width: 26%;
+    overflow: hidden;
+    padding-left: 380px;
+}
+
+.clientInfo {
+    width: 100px;
+    float: right;
+    margin-top: -50px;
+    padding-right: 20px;
+}
+.clientInfo a{
+    padding-right: 5px;
+}
+
+.header {
+    overflow: hidden;
+}
+
+.greenBorder {
+    border: solid yellowgreen;
+    width: 40%;
+    background: #ffffff;
+    margin: 200px auto auto;
+    padding: 50px 50px 30px;
+    border-radius: 6px;
+}
+
+.allBackground {
+    background: url("/resources/img/allBackground.gif") repeat;
+}
+
+.hiddenForm {
+    display: none;
+}
+
+.warning {
+    color: red;
+    display: none;
+}
+
+.leftArea .reply {
+    padding-top: 10px;
+    margin-top: 10px;
+    width: 400px;
+    min-height: 100px;
+}
+
+.welcome {
+    width: 850px;
+    min-height: 400px;
+    float: left;
+    margin: 30px auto auto 100px;
+}
+
+.item img {
+    width: 100%;
+    margin: auto;
+}
+
+.listCustomer li {
+    color: #ffffff;
+    list-style-type: none;
+}
+
+.loginLink {
+    width: 200px;
+    float: left;
+    margin-top: 200px;
+}
+
+.loginLink .loginLink-login {
+    margin-left: 100px;
+    margin-bottom: 30px;
+    background-color: gray;
+    border-radius: 50px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 28;
+    box-shadow: 2px 2px 2px #999999;
+}
+
+.loginLink .loginLink-login a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.firstSight-body {
+    overflow: hidden;
+    width: 1200px;
+    height: 700px;
+    border-radius: 10px;
+    margin: 20px auto;
+    background: #333;
+    box-shadow: 10px 10px 10px #888888;
+}
+
+header {
+    background: dimgrey;
+    min-height: 30px;
+    margin: auto;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+
+.oneContent .responseArea {
+    background: gainsboro;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #DDD;
+    margin-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.default .navigator {
+    margin-left: 140px;
+    font-size: 20px;
+    text-align: left;
+    width: 300px;
+    float: left;
+}
+
+.default .navigator div {
+    display: inline-block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-right: 10px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.navigator .mouseOver {
+    background: yellow;
+    padding: 8px;
+}
+
+.navigator .mouseDone {
+    background: yellowgreen;
+    padding: 14px;
+}
+
+.searchCustomise {
+    margin-left: 627px;
+    width: 330px;
+    position: absolute;
+    margin-left: 663px;
+    margin-top: -70px;
+}
+
+.searchCustomise .search-input{
+    margin: 0px;
+    height: 28px;
+    border-radius: 14px;
+    padding-left: 14px;
+}
+
+.searchCustomise div{
+    float:left;
+}
+
+.searchCustomise button{
+    float: left;
+    height: 28px;
+    border-radius: 14px;
+    width: 28px;
+    padding: 0px;
+    background: #ffffff;
+}
+
+.searchCustomise button img{
+    height: 18px;
+    width: 18px;
+}
+
+#facesContainer .oneFace img{
+    width: 100px;
+    height: 100px;
+    float:left;
+}
