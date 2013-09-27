@@ -80,7 +80,7 @@ public class HomeController {
     @RequestMapping("/")
     public String loginAccount(HttpServletRequest request) {
         request.getSession().invalidate();
-        return "firstSight";
+        return "samplePage";
     }
 
     @RequestMapping("/forgetPassword")
