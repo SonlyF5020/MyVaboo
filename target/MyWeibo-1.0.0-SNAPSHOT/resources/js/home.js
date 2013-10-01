@@ -2,13 +2,6 @@ var deleteContent = "";
 var editContent = {};
 var currentResponseDiv = null;
 
-var MouseOutHandler = function () {
-    $('#weiboContent').on('mouseout', '.oneContent', function () {
-        $('.oneContent.mouseOver').removeClass('mouseOver');
-        $('.deleteButton').hide();
-        $('.writeButton').hide();
-    });
-}
 
 var submitHandler = function () {
     $('#confirm').bind("click", function () {
@@ -20,28 +13,32 @@ var submitHandler = function () {
     });
     $('.editContent .rightArea img').hide();
 }
-var mouseOverHandler = function () {
-    $('#weiboContent').on('mouseover', '.oneContent', function () {
+var mouseHandler = function () {
+    $('#weiboContent').on('mouseover', '.oneContent',function () {
         $(this).addClass('mouseOver');
         if ($('span', this).html() === $('#currentUserName').html()) {
             $('.deleteButton', this).show();
         }
         $('.writeButton', this).show();
-    });
+    }).on('mouseout', '.oneContent', function () {
+            $('.oneContent.mouseOver').removeClass('mouseOver');
+            $('.deleteButton').hide();
+            $('.writeButton').hide();
+        });
 }
 $(function () {
     $('.editContent .rightArea img').hide();
 
-    $('.navigator').on('mouseover','div',function(){
+    $('.navigator').on('mouseover', 'div', function () {
         $(this).addClass('mouseOver');
     });
 
-    $('.navigator').on('mouseout','div',function(){
+    $('.navigator').on('mouseout', 'div', function () {
         $(this).removeClass('mouseOver');
     });
 
 
-    $('.navigator').on('click','div',function(){
+    $('.navigator').on('click', 'div', function () {
         $('.editContent .rightArea img').show();
         $('.navigator div').removeClass('mouseDone');
         $(this).addClass('mouseDone');
@@ -72,31 +69,32 @@ $(function () {
         $('#editModal').modal('hide');
         editContent.content = $('#reply').val();
         $('#reply').val("");
-        $.getJSON("/addReply?reply="+editContent.content+"&id="+editContent.contentID,function(newResponseContent){
+        $.getJSON("/addReply?reply=" + editContent.content + "&id=" + editContent.contentID, function (newResponseContent) {
             var response = newResponseContent["response"];
-            renderResponse(currentResponseDiv,response);
+            renderResponse(currentResponseDiv, response);
             $('.editContent .rightArea img').hide();
         })
     });
 
-    $('.miniLogo').bind("click",function(){
+    $('.miniLogo').bind("click", function () {
         $('#faceChosen').modal();
     });
 
     var index = 1;
-    while(index<21){
-        var faceUrl = '/resources/img/Face-Icons/Males/'+index+'.png';
-        var newFace = $("<img>").attr("src",faceUrl);
+    while (index < 21) {
+        var faceUrl = '/resources/img/Face-Icons/Males/' + index + '.png';
+        var newFace = $("<img>").attr("src", faceUrl);
         var faceDiv = $("<div class='oneFace'><div>").append(newFace);
         $('#facesContainer').append(faceDiv);
         index++;
-    };
+    }
+    ;
 
-    $('#faceChosen').on("click","div.oneFace",function(){
-        var src = $('img',this).attr("src");
+    $('#faceChosen').on("click", "div.oneFace", function () {
+        var src = $('img', this).attr("src");
         $('#faceChosen').modal('hide');
-        $.getJSON("/json/changeFace?src="+src,function(allData){
-            $('.miniLogo img').attr("src",allData["src"]);
+        $.getJSON("/json/changeFace?src=" + src, function (allData) {
+            $('.miniLogo img').attr("src", allData["src"]);
         });
     })
 
@@ -104,12 +102,11 @@ $(function () {
 //    getAllHistory();
     initialUserInfo();
     submitHandler();
-    mouseOverHandler();
-    MouseOutHandler();
+    mouseHandler();
 });
 
-var renderResponse = function(content,response){
-    var newResponserSpan = $('<span></span>').html("-"+response["userName"]);
+var renderResponse = function (content, response) {
+    var newResponserSpan = $('<span></span>').html("-" + response["userName"]);
     var newResponseDate = $('<p></p>').html(response["date"]).append(newResponserSpan);
     var newResponseDiv = $('<div></div>').addClass('responseArea').html(response["content"]).append(newResponseDate);
     content.append(newResponseDiv);
@@ -118,12 +115,12 @@ var renderResponse = function(content,response){
 var initialUserInfo = function () {
     $.getJSON("/json/currentUserInfo", function (allData) {
         $('#currentUserName').html(allData["userName"]);
-        $('.header .miniLogo img').attr("src",allData["userFaceUrl"]);
+        $('.header .miniLogo img').attr("src", allData["userFaceUrl"]);
     });
 }
 
-var getHistory = function(user){
-    $.getJSON("/json/get"+user+"History", function (allData) {
+var getHistory = function (user) {
+    $.getJSON("/json/get" + user + "History", function (allData) {
         var index;
         for (index in allData) {
             var deleteButton = $('<div></div>').addClass('deleteButton');
@@ -136,10 +133,10 @@ var getHistory = function(user){
                 .append(deleteButton).append(writeButton);
             var responses = allData[index]["responses"];
             var responseIndex;
-            for(responseIndex in responses){
+            for (responseIndex in responses) {
                 var response = responses[responseIndex];
-                if(typeof (response!=="undefined")){
-                    renderResponse(chart,response);
+                if (typeof (response !== "undefined")) {
+                    renderResponse(chart, response);
                 }
             }
             $('#weiboContent').prepend(chart);
