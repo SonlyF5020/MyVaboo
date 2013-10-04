@@ -8,6 +8,6 @@
     <title></title>
 </head>
 <body>
-    <a href="/" class="btn">返回</a>
+    <a href="/" class="btn" style="margin: 200px auto auto;">返回</a>
 </body>
 </html>
