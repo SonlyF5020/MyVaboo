@@ -28,7 +28,7 @@ public class HomeController {
         this.mySQLmanager = mySQLmanager;
     }
 
-    private MySQLmanager mySQLmanager;
+    protected MySQLmanager mySQLmanager;
 
     @RequestMapping("/home")
     public String accessHome() {
