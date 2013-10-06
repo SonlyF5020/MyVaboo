@@ -276,4 +276,8 @@ public class MySQLmanager {
         String SQL = "INSERT INTO testtable(testnumber) values(12)";
         statement.execute(SQL);
     }
+
+    public Map search(String content) {
+        return null;  //To change body of created methods use File | Settings | File Templates.
+    }
 }
