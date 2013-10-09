@@ -32,6 +32,7 @@ public class HomeController {
 
     @RequestMapping("/home")
     public String accessHome() {
+        logger.info("user access home");
         return "home";
     }
 
@@ -80,6 +81,7 @@ public class HomeController {
     @RequestMapping("/")
     public String loginAccount(HttpServletRequest request) {
         request.getSession().invalidate();
+        logger.info("user start visit firstSight page now");
         return "firstSight";
     }
 
@@ -237,4 +239,5 @@ public class HomeController {
     public String changePassword() {
         return "register";
     }
+
 }

@@ -6,7 +6,7 @@
 
     <bean id="dataBaseFileConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location">
-                <value>classpath:${environment}Config.properties</value>
+                <value>classpath:localConfig.properties</value>
         </property>
     </bean>
 

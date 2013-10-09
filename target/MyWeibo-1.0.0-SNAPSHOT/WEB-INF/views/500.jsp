@@ -5,7 +5,6 @@
     <title>500</title>
 </head>
 <body>
-    <h1>500</h1>
-
+    <a href="/" class="btn" style="margin: 200px auto auto;">返回</a>
 </body>
 </html>

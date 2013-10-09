@@ -31,14 +31,9 @@ $(function () {
 
     $('.navigator').on('mouseover', 'div', function () {
         $(this).addClass('mouseOver');
-    });
-
-    $('.navigator').on('mouseout', 'div', function () {
+    }).on('mouseout', 'div', function () {
         $(this).removeClass('mouseOver');
-    });
-
-
-    $('.navigator').on('click', 'div', function () {
+    }).on('click', 'div', function () {
         $('.editContent .rightArea img').show();
         $('.navigator div').removeClass('mouseDone');
         $(this).addClass('mouseDone');
@@ -50,9 +45,7 @@ $(function () {
     $('#weiboContent').on('click', '.deleteButton', function () {
         $('#deleteModal').modal('show');
         deleteContent = $(this).parent().attr("id");
-    });
-
-    $('#weiboContent').on('click', '.writeButton', function () {
+    }).on('click', '.writeButton', function () {
         $('#ownerName').html($('span', $(this).parent()).html());
         editContent.contentID = $(this).parent().attr("id");
         currentResponseDiv = $(this).parent();
@@ -75,6 +68,34 @@ $(function () {
             $('.editContent .rightArea img').hide();
         })
     });
+
+    $('#searchBtn').bind("click",function(){
+        $('.editContent .rightArea img').show();
+        $('#weiboContent').html("");
+        $.getJSON("/json/search?content="+$('#searchContent').val(), function (allData) {
+            var index;
+            for (index in allData) {
+                var deleteButton = $('<div></div>').addClass('deleteButton');
+                var writeButton = $('<div></div>').addClass('writeButton');
+
+                var contentUser = $('<span></span>').html(allData[index]["userName"]);
+                var contentDate = $('<p></p>').html(allData[index]["date"]).append(contentUser);
+                var chart = $('<div></div>').attr('id', index).attr('class', 'oneContent')
+                    .html(allData[index]["content"]).append(contentDate)
+                    .append(deleteButton).append(writeButton);
+                var responses = allData[index]["responses"];
+                var responseIndex;
+                for (responseIndex in responses) {
+                    var response = responses[responseIndex];
+                    if (typeof (response !== "undefined")) {
+                        renderResponse(chart, response);
+                    }
+                }
+                $('#weiboContent').prepend(chart);
+                $('.editContent .rightArea img').hide();
+            }
+        });
+    })
 
     $('.miniLogo').bind("click", function () {
         $('#faceChosen').modal();

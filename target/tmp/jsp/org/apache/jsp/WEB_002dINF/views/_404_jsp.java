@@ -53,7 +53,7 @@ public final class _404_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <title></title>\n");
       out.write("</head>\n");
       out.write("<body>\n");
-      out.write("    <a href=\"/\" class=\"btn\">返回</a>\n");
+      out.write("    <a href=\"/\" class=\"btn\" style=\"margin: 200px auto auto;\">返回</a>\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {
