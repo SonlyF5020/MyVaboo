@@ -281,7 +281,7 @@ public class MySQLmanager {
         Map<String, UserContent> resultMap = new HashMap<String, UserContent>();
 
         // Construct Initial User Content Without Reply.
-        String queryKEYs = "SELECT id,username,content,constructdate FROM MainContent WHERE username=" + format(username);
+        String queryKEYs = "SELECT id,username,content,constructdate FROM MainContent WHERE username LIKE '%"+searchContent+"%' OR content LIKE '%"+searchContent+"%'";
         resultSet = statement.executeQuery(queryKEYs);
         while (resultSet.next()) {
             String id = resultSet.getString(1);

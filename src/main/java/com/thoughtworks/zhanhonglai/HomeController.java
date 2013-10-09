@@ -22,7 +22,7 @@ import java.util.Map;
 @SessionAttributes("sessionUserName")
 @Controller
 public class HomeController {
-    private final Logger logger = Logger.getLogger(this.getClass());
+    protected final Logger logger = Logger.getLogger(this.getClass());
 
     public void setMySQLmanager(MySQLmanager mySQLmanager) {
         this.mySQLmanager = mySQLmanager;

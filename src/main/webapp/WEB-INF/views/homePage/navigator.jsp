@@ -6,9 +6,9 @@
     <div divName="All">大家的</div>
     <div divName="My">我自己的</div>
 </div>
-<form class="navbar-form navbar-left searchCustomise" role="search" action="/search">
+<form class="navbar-form navbar-left searchCustomise">
     <div class="form-group">
-        <input type="text" class="form-control search-input" placeholder="Search" name="content">
+        <input id="searchContent" type="text" class="form-control search-input" placeholder="Search" name="content">
     </div>
-    <button type="submit" class="btn btn-default" ><img src="/resources/img/searchIcon.png"></button>
+    <button class="btn btn-default" id="searchBtn"><img src="/resources/img/searchIcon.png"></button>
 </form>

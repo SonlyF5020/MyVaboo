@@ -69,6 +69,34 @@ $(function () {
         })
     });
 
+    $('#searchBtn').bind("click",function(){
+        $('.editContent .rightArea img').show();
+        $('#weiboContent').html("");
+        $.getJSON("/json/search?content="+$('#searchContent').val(), function (allData) {
+            var index;
+            for (index in allData) {
+                var deleteButton = $('<div></div>').addClass('deleteButton');
+                var writeButton = $('<div></div>').addClass('writeButton');
+
+                var contentUser = $('<span></span>').html(allData[index]["userName"]);
+                var contentDate = $('<p></p>').html(allData[index]["date"]).append(contentUser);
+                var chart = $('<div></div>').attr('id', index).attr('class', 'oneContent')
+                    .html(allData[index]["content"]).append(contentDate)
+                    .append(deleteButton).append(writeButton);
+                var responses = allData[index]["responses"];
+                var responseIndex;
+                for (responseIndex in responses) {
+                    var response = responses[responseIndex];
+                    if (typeof (response !== "undefined")) {
+                        renderResponse(chart, response);
+                    }
+                }
+                $('#weiboContent').prepend(chart);
+                $('.editContent .rightArea img').hide();
+            }
+        });
+    })
+
     $('.miniLogo').bind("click", function () {
         $('#faceChosen').modal();
     });

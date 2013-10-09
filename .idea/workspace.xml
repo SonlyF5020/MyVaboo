@@ -2,20 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2743f347-cc08-4ddc-99df-f33c1680f671" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/SearchController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/home.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp" />
     </list>
     <ignored path="MyWeibo.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1380205028558" ignored="false" />
     <file path="$PROJECT_DIR$/../HelloWorld100Times/pom.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1373949057886" ignored="false" />
     <file path="/home.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378954536313" ignored="false" />
-    <file path="/HomeController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381022344066" ignored="false" />
+    <file path="/HomeController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381278176709" ignored="false" />
     <file path="/MyWeibo-servlet.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1380185930498" ignored="false" />
     <file path="/a.dummy" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1380267458554" ignored="false" />
     <file path="/web.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378256393944" ignored="false" />
     <file path="/myStyle.css" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1379981563720" ignored="false" />
-    <file path="/Dummy.txt" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381191497551" ignored="false" />
+    <file path="/Dummy.txt" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381277912095" ignored="false" />
     <file path="/checkAccount.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374311819392" ignored="false" />
     <file path="/invalidUser.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1379638251966" ignored="false" />
     <file path="/500.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374138949699" ignored="false" />
@@ -43,7 +46,7 @@
     <file path="/UserContent.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377765884470" ignored="false" />
     <file path="$PROJECT_DIR$/../delphes/people/src/main/java/com/thoughtworks/delphes/mvc/JsonController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374663055502" ignored="false" />
     <file path="$PROJECT_DIR$/../delphes/people/src/main/webapp/WEB-INF/delphes-people-servlet.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374663179517" ignored="false" />
-    <file path="/home.js" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1379683227948" ignored="false" />
+    <file path="/home.js" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381278792521" ignored="false" />
     <file path="$PROJECT_DIR$/../postPaidMobile/PrepaidMobile/chromedriver.log" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374819124386" ignored="false" />
     <file path="$PROJECT_DIR$/../postPaidMobile/PrepaidMobile/src/main/resources/dev_mobileshop.properties" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1375255764815" ignored="false" />
     <file path="$PROJECT_DIR$/../postPaidMobile/PrepaidMobile/src/main/resources/test_mobileshop.properties" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1375255764815" ignored="false" />
@@ -71,7 +74,7 @@
     <file path="/404.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1380897622345" ignored="false" />
     <file path="/firstSight.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378463064220" ignored="false" />
     <file path="/FirstSightController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1380185380069" ignored="false" />
-    <file path="/navigator.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381022224614" ignored="false" />
+    <file path="/navigator.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381278772555" ignored="false" />
     <file path="/facesLightbox.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1376826486314" ignored="false" />
     <file path="/UserInfo.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378046869254" ignored="false" />
     <file path="/UserStore.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1376926083672" ignored="false" />
@@ -82,7 +85,7 @@
     <file path="$PROJECT_DIR$/../postPaidMobile/PostpaidMobile/src/main/webapp/res/css/mobshop/checkout.css" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377591580533" ignored="false" />
     <file path="/edit.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1379637845631" ignored="false" />
     <file path="/SessionLisenter.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377596751442" ignored="false" />
-    <file path="/MySQLmanager.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381191606727" ignored="false" />
+    <file path="/MySQLmanager.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381278081938" ignored="false" />
     <file path="/MySQLmanagerTest.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1380185538734" ignored="false" />
     <file path="/HashTest.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378045083485" ignored="false" />
     <file path="/appengine-web.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378204803373" ignored="false" />
@@ -121,7 +124,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -159,6 +161,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -171,16 +174,7 @@
       <file leaf-file-name="HomeController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="13" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="129" column="40" selection-start="4870" selection-end="4889" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -189,7 +183,16 @@
       <file leaf-file-name="navigator.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="95" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
+            <state line="10" column="19" selection-start="405" selection-end="418" vertical-scroll-proportion="-6.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="94" column="58" selection-start="3986" selection-end="3986" vertical-scroll-proportion="0.86175114">
               <folding />
             </state>
           </provider>
@@ -198,27 +201,25 @@
       <file leaf-file-name="SearchController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/SearchController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="43" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContentStore.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/service/ContentStore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
+            <state line="13" column="54" selection-start="470" selection-end="477" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MySQLmanager.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="30" selection-start="1308" selection-end="1308" vertical-scroll-proportion="-1.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MySQLmanager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="283" column="114" selection-start="11617" selection-end="11617" vertical-scroll-proportion="-0.21076234">
+            <state line="309" column="28" selection-start="12971" selection-end="12971" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -285,15 +286,15 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/test.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/GTC.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/home.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/SessionLisenter.java" />
         <option value="$PROJECT_DIR$/runLOCAL.sh" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/404.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/500.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/SearchController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/home.js" />
       </list>
     </option>
   </component>
@@ -472,6 +473,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -757,7 +759,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -776,12 +777,12 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -955,6 +956,12 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
       <setting name="vmparams" value="" />
@@ -963,12 +970,6 @@
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <setting name="launchBrowser" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -1001,6 +1002,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1029,19 +1043,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -1055,6 +1056,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1078,11 +1086,15 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 7.01">
@@ -1111,17 +1123,6 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="false" name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 7.01">
@@ -1328,18 +1329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="58" selection-start="3792" selection-end="3792" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/404.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="70" selection-start="270" selection-end="338" vertical-scroll-proportion="0.0">
@@ -1347,23 +1336,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="13" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/head.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="95" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1403,18 +1378,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/SearchController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="43" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="309" column="28" selection-start="12971" selection-end="12971" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="283" column="114" selection-start="11617" selection-end="11617" vertical-scroll-proportion="-0.21076234">
+        <state line="129" column="40" selection-start="4870" selection-end="4889" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="30" selection-start="1308" selection-end="1308" vertical-scroll-proportion="-1.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="54" selection-start="470" selection-end="477" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="405" selection-end="418" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="58" selection-start="3986" selection-end="3986" vertical-scroll-proportion="0.86175114">
           <folding />
         </state>
       </provider>
