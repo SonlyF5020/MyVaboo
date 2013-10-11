@@ -8,12 +8,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import java.sql.SQLException;
 import java.util.Map;
 
 @Controller
 public class SearchController{
 
-    MySQLmanager mySQLmanager = new MySQLmanager();
+    public MySQLmanager getMySQLmanager() {
+        return mySQLmanager;
+    }
+
+    public void setMySQLmanager(MySQLmanager mySQLmanager) {
+        this.mySQLmanager = mySQLmanager;
+    }
+
+    MySQLmanager mySQLmanager;
     protected final Logger logger = Logger.getLogger(this.getClass());
 
     @RequestMapping("/json/search")
@@ -21,7 +30,11 @@ public class SearchController{
         Map searchResult = null;
         try {
             searchResult = mySQLmanager.search(content);
-        } catch (Exception e) {
+        } catch (SQLException e) {
+            e.printStackTrace();
+            logger.error(e.getMessage(), e);
+        }
+        catch (ClassNotFoundException e) {
             e.printStackTrace();
             logger.error(e.getMessage(), e);
         }

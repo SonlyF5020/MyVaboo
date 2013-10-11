@@ -21,5 +21,8 @@
     <bean id="homeController" class="com.thoughtworks.zhanhonglai.HomeController">
         <property name="mySQLmanager" ref="mySQLmanagerConfig"/>
     </bean>
+    <bean id="searchController" class="com.thoughtworks.zhanhonglai.SearchController">
+        <property name="mySQLmanager" ref="mySQLmanagerConfig"/>
+    </bean>
 
 </beans>

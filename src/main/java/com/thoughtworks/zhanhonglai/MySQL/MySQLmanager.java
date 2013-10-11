@@ -278,6 +278,7 @@ public class MySQLmanager {
     }
 
     public Map search(String searchContent) throws SQLException, ClassNotFoundException{
+        connectRead();
         Map<String, UserContent> resultMap = new HashMap<String, UserContent>();
 
         // Construct Initial User Content Without Reply.
