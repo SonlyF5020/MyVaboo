@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.012" errors="0" skipped="11" tests="11" name="com.thoughtworks.zhanhonglai.MySQLmanagerTest">
+<testsuite failures="0" time="0.011" errors="0" skipped="11" tests="11" name="com.thoughtworks.zhanhonglai.MySQLmanagerTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib"/>
@@ -21,7 +21,7 @@
     <property name="basedir" value="/Users/twer/Downloads/java/MyWeibo"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="surefire.real.class.path" value="/Users/twer/Downloads/java/MyWeibo/target/surefire/surefirebooter1604892535658195291.jar"/>
+    <property name="surefire.real.class.path" value="/Users/twer/Downloads/java/MyWeibo/target/surefire/surefirebooter2656405940045198541.jar"/>
     <property name="java.io.tmpdir" value="/var/folders/gv/m43y5g9x1xdc9f2kc2p0kpz00000gn/T/"/>
     <property name="line.separator" value="
 "/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="/Users/twer/Downloads/java/MyWeibo/target/surefire/surefirebooter1604892535658195291.jar /Users/twer/Downloads/java/MyWeibo/target/surefire/surefire8568592584620781738tmp /Users/twer/Downloads/java/MyWeibo/target/surefire/surefire3858000455727265683tmp"/>
+    <property name="sun.java.command" value="/Users/twer/Downloads/java/MyWeibo/target/surefire/surefirebooter2656405940045198541.jar /Users/twer/Downloads/java/MyWeibo/target/surefire/surefire8826267943229399398tmp /Users/twer/Downloads/java/MyWeibo/target/surefire/surefire6052144601849628598tmp"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -66,10 +66,10 @@
   <testcase time="0.026" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="test">
     <skipped/>
   </testcase>
-  <testcase time="0.027" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldJudgeWhetherUserNameExistedOrNot">
+  <testcase time="0.026" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldJudgeWhetherUserNameExistedOrNot">
     <skipped/>
   </testcase>
-  <testcase time="0.027" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldJudgeWhetherUserPasswordIsCorrect">
+  <testcase time="0.026" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldJudgeWhetherUserPasswordIsCorrect">
     <skipped/>
   </testcase>
   <testcase time="0.027" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetRightFaceUrl">
@@ -81,10 +81,10 @@
   <testcase time="0.027" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetRightPassword">
     <skipped/>
   </testcase>
-  <testcase time="0.028" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetRightFaceUrlAfterUpdate">
+  <testcase time="0.027" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetRightFaceUrlAfterUpdate">
     <skipped/>
   </testcase>
-  <testcase time="0.028" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldInsertDateInMainContentTable">
+  <testcase time="0.027" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldInsertDateInMainContentTable">
     <skipped/>
   </testcase>
   <testcase time="0.028" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldGetAllContentCorrectly">
@@ -93,7 +93,7 @@
   <testcase time="0.028" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="souldDeleteOneContent">
     <skipped/>
   </testcase>
-  <testcase time="0.029" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldCode">
+  <testcase time="0.028" classname="com.thoughtworks.zhanhonglai.MySQLmanagerTest" name="shouldCode">
     <skipped/>
   </testcase>
 </testsuite>

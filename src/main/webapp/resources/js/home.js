@@ -72,7 +72,9 @@ $(function () {
     $('#searchBtn').bind("click",function(){
         $('.editContent .rightArea img').show();
         $('#weiboContent').html("");
-        $.getJSON("/json/search?content="+$('#searchContent').val(), function (allData) {
+        var content = $('#searchContent').val();
+        $.getJSON("/json/search?content="+content, function (allData) {
+            alert(allData);
             var index;
             for (index in allData) {
                 var deleteButton = $('<div></div>').addClass('deleteButton');
