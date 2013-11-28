@@ -14,7 +14,7 @@
 <body class="allBackground">
 <div class="login">
     <div class="clientForm">
-        <form action="/checkUser" method="get">
+        <form action="/checkUser" method="post">
             姓名：<input type="text" name="name" required><br>
             密码：<input type="password" name="password" minlength=2 required><br>
             <a href="/forgetPassword">忘记密码？</a> <br>

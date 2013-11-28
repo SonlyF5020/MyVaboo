@@ -2,24 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2743f347-cc08-4ddc-99df-f33c1680f671" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/home.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/loginAccount.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/loginAccount.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyWeibo.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/pom.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1380205028558" ignored="false" />
+    <file path="/pom.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384916967658" ignored="false" />
     <file path="$PROJECT_DIR$/../HelloWorld100Times/pom.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1373949057886" ignored="false" />
-    <file path="/home.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378954536313" ignored="false" />
-    <file path="/HomeController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381306618281" ignored="false" />
+    <file path="/home.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1383825054808" ignored="false" />
+    <file path="/HomeController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1385624079709" ignored="false" />
     <file path="/MyWeibo-servlet.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1380185930498" ignored="false" />
-    <file path="/a.dummy" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1380267458554" ignored="false" />
-    <file path="/web.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378256393944" ignored="false" />
-    <file path="/myStyle.css" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1379981563720" ignored="false" />
-    <file path="/Dummy.txt" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381537519584" ignored="false" />
+    <file path="/a.dummy" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1385624131406" ignored="false" />
+    <file path="/web.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384913502818" ignored="false" />
+    <file path="/myStyle.css" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384912012391" ignored="false" />
+    <file path="/Dummy.txt" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1385623857933" ignored="false" />
     <file path="/checkAccount.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374311819392" ignored="false" />
     <file path="/invalidUser.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1379638251966" ignored="false" />
-    <file path="/500.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374138949699" ignored="false" />
+    <file path="/500.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384913460912" ignored="false" />
     <file path="/homePage.js" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374191480950" ignored="false" />
     <file path="/Qiu.html" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374191631192" ignored="false" />
     <file path="/newClient.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378782370921" ignored="false" />
@@ -28,7 +28,7 @@
     <file path="/validUser.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378969159893" ignored="false" />
     <file path="/README.md" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378196550468" ignored="false" />
     <file path="/RegisterController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374278819152" ignored="false" />
-    <file path="/loginAccount.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378781985355" ignored="false" />
+    <file path="/loginAccount.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1385624236098" ignored="false" />
     <file path="/serverStore.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1374401627584" ignored="false" />
     <file path="/ServerStore.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377084272523" ignored="false" />
     <file path="/invalidUserName.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1377592921985" ignored="false" />
@@ -69,7 +69,7 @@
     <file path="$PROJECT_DIR$/../postPaidMobile/PostpaidMobile/pom.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1375853911222" ignored="false" />
     <file path="$PROJECT_DIR$/../postPaidMobile/PostpaidMobile/src/main/webapp/WEB-INF/views/postpaid/checkout/handsetOptions.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1375863739271" ignored="false" />
     <file path="/handsetOptions.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1375863714137" ignored="false" />
-    <file path="/404.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1380897622345" ignored="false" />
+    <file path="/404.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384913446307" ignored="false" />
     <file path="/firstSight.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1378463064220" ignored="false" />
     <file path="/FirstSightController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1380185380069" ignored="false" />
     <file path="/navigator.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381537940219" ignored="false" />
@@ -110,6 +110,31 @@
     <file path="/SearchController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381452272029" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/jsp/lib/jsp-impl.jar!/standardSchemas/jspdirectives.xsd" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381278944052" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/jsp/lib/jsp-impl.jar!/standardSchemas/jspxml2.xsd" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381278944052" ignored="false" />
+    <file path="$PROJECT_DIR$/../postPaidMobile/GENSYS/telstra/_composer-project/WebEngagement_EngagementWidgets/testForWarlock.html" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381715033504" ignored="false" />
+    <file path="/testForWarlock.html" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381714053137" ignored="false" />
+    <file path="$PROJECT_DIR$/../postPaidMobile/GENSYS/telstra/_composer-project/WebEngagement_EngagementWidgets/js/telstra/dialog.js" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381715184082" ignored="false" />
+    <file path="/dialog.js" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381715182766" ignored="false" />
+    <file path="$PROJECT_DIR$/../postPaidMobile/GENSYS/telstra/_composer-project/WebEngagement_EngagementWidgets/js/telstra/jquery.wedialog.js" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381715013114" ignored="false" />
+    <file path="/jquery.wedialog.js" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1381714854945" ignored="false" />
+    <file path="/hello.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384916177496" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/main/webapp/WEB-INF/pages/hello.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384916623268" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/main/java/com/springapp/mvc/HelloController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384916591209" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/main/webapp/resources/css/myStyle.css" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384912014161" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/main/webapp/WEB-INF/web.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384917048479" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/main/webapp/WEB-INF/myPay-servlet.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384916332609" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/main/webapp/WEB-INF/pages/400.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384913038125" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/main/webapp/WEB-INF/pages/500.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384913463520" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/test/java/com/springapp/mvc/AppTests.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384913288852" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/main/webapp/WEB-INF/pages/404.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384913450474" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/pom.xml" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384916398093" ignored="false" />
+    <file path="/HelloController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384916585321" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/main/java/com/springapp/mvc/ContentController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384977714237" ignored="false" />
+    <file path="/ContentController.java" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384977713773" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/main/webapp/WEB-INF/pages/content.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384964523636" ignored="false" />
+    <file path="/content.jsp" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384964523636" ignored="false" />
+    <file path="$PROJECT_DIR$/../myPay/src/main/webapp/resources/css/personPage.css" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384964543792" ignored="false" />
+    <file path="/personPage.css" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1384964534637" ignored="false" />
+    <file path="$PROJECT_DIR$/../postPaidMobile/connectHone/trunk/tomcat.8100/logs/ConnectedHome.log" changelist="2743f347-cc08-4ddc-99df-f33c1680f671" time="1385623858385" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +199,70 @@
       <file leaf-file-name="HomeController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="29" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.0">
+            <state line="45" column="47" selection-start="1672" selection-end="1672" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mailSend.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/mailSend.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="firstSight.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/firstSight.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="121" selection-start="0" selection-end="187" vertical-scroll-proportion="31.333334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginAccount.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/loginAccount.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="46" selection-start="606" selection-end="606" vertical-scroll-proportion="0.46391752">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="33" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="21" selection-start="289" selection-end="289" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forgetPassword.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/forgetPassword.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="24" selection-start="873" selection-end="873" vertical-scroll-proportion="-12.5">
               <folding />
             </state>
           </provider>
@@ -183,81 +271,25 @@
       <file leaf-file-name="DataBase-config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/DataBase-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="72" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0">
+            <state line="26" column="0" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/home.js">
+      <file leaf-file-name="MyWeibo-servlet.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/MyWeibo-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="36" selection-start="2796" selection-end="2796" vertical-scroll-proportion="0.36520377">
+            <state line="7" column="23" selection-start="524" selection-end="557" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navigator.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="11" selection-start="470" selection-end="476" vertical-scroll-proportion="-7.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/SearchController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="44" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySQLmanager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="280" column="22" selection-start="11386" selection-end="11386" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HandlerMethodInvoker.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.0.RELEASE/spring-web-3.2.0.RELEASE.jar!/org/springframework/web/bind/annotation/support/HandlerMethodInvoker.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="34" selection-start="1962" selection-end="1962" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DispatcherServlet.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.3.RELEASE/spring-webmvc-3.2.3.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="19" selection-start="7547" selection-end="7547" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrameworkServlet.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.3.RELEASE/spring-webmvc-3.2.3.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="28" selection-start="7868" selection-end="7868" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Statement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/src.zip!/java/sql/Statement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="14" selection-start="2106" selection-end="2106" vertical-scroll-proportion="0.0">
+            <state line="31" column="24" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -281,9 +313,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/GTC.min.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/sample.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/samplePage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/test.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/GTC.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" />
@@ -291,14 +320,24 @@
         <option value="$PROJECT_DIR$/runLOCAL.sh" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/404.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/500.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/SearchController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/DataBase-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/home.js" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/loginAccount.jsp" />
       </list>
     </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="enabledProfiles">
@@ -379,72 +418,14 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="122" />
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="809" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Android</id>
-          </State>
-          <State>
-            <id>Android Lint</id>
-          </State>
-          <State>
-            <id>Class structure</id>
-          </State>
-          <State>
-            <id>Code quality toolsJavaScript</id>
-          </State>
-          <State>
-            <id>Declaration redundancy</id>
-          </State>
-          <State>
-            <id>GeneralJavaScript</id>
-          </State>
-          <State>
-            <id>Google App Engine</id>
-          </State>
-          <State>
-            <id>Google Web Toolkit issues</id>
-          </State>
-          <State>
-            <id>Guice Inspections</id>
-          </State>
-          <State>
-            <id>Java EE issues</id>
-          </State>
-          <State>
-            <id>Java language level migration aids</id>
-          </State>
-          <State>
-            <id>JavaScript</id>
-          </State>
-          <State>
-            <id>Modularization issues</id>
-          </State>
-          <State>
-            <id>Numeric issues</id>
-          </State>
-          <State>
-            <id>Packaging issues</id>
-          </State>
-          <State>
-            <id>Spring Model</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Google App Engine</id>
-          </State>
-        </selected-state>
-      </profile-state>
+      <profile-state />
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -475,8 +456,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -707,6 +686,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWeibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWeibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -737,8 +746,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWeibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWeibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhanhonglai" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="email" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -748,11 +789,12 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="GOOGLE_APP_ENGINE_ACCOUNT_EMAIL" value="sonlyf5020@gmail.com" />
-    <property name="options.lastSelected" value="Errors" />
+    <property name="options.lastSelected" value="KeyPromoterConfiguration" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sae-1.1.0-all/sae-local-1.1.0.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -780,40 +822,7 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.MyWeibo [org.mortbay.jetty:jetty-maven-plugin:8.1.11.v20130520:run]">
-    <configuration default="false" name="MyWeibo [org.mortbay.jetty:jetty-maven-plugin:8.1.11.v20130520:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="org.mortbay.jetty:jetty-maven-plugin:8.1.11.v20130520:run" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map>
-                <entry key="jetty" value="true" />
-                <entry key="telstra-corporate-repository" value="true" />
-              </map>
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Debug" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 7.01">
     <configuration default="false" name="MySQLmanagerTest.test" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -934,6 +943,39 @@
       <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MyWeibo [org.mortbay.jetty:jetty-maven-plugin:8.1.11.v20130520:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="org.mortbay.jetty:jetty-maven-plugin:8.1.11.v20130520:run" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map>
+                <entry key="jetty" value="true" />
+                <entry key="telstra-corporate-repository" value="true" />
+              </map>
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1105,12 +1147,8 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 7.01">
-      <option name="PORT" value="80" />
-      <option name="LOCAL" value="false" />
-      <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/" />
-      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+    <configuration default="false" name="Tomcat 7.01" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.01">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="MyWeibo:war exploded">
           <settings>
@@ -1119,26 +1157,66 @@
         </artifact>
       </deployment>
       <server-settings>
-        <data>
-          <option name="jndiPort" value="8080" />
-          <option name="stagingRemotePath" value="" />
-          <option name="transportStagingTarget">
-            <TransportTarget>
-              <option name="id" value="ae5ebe69-551f-4a57-a6b0-fcac684d0834" />
-            </TransportTarget>
-          </option>
-        </data>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_MyWeibo_2" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="49891" />
+        <option name="DEBUG_PORT" value="57247" />
         <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="false" />
+        <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method>
         <option name="BuildArtifacts" enabled="true">
           <artifact name="MyWeibo:war exploded" />
@@ -1146,12 +1224,12 @@
       </method>
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat" />
-      <item index="1" class="java.lang.String" itemvalue="Maven.MyWeibo [org.mortbay.jetty:jetty-maven-plugin:8.1.11.v20130520:run]" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MySQLmanagerTest.test" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.HashTest.test" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.MySQLmanagerTest.shouldCode" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.TestSQL.shouldPass" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.MySQLmanagerTest.test" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.HashTest.test" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MySQLmanagerTest.shouldCode" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestSQL.shouldPass" />
+      <item index="4" class="java.lang.String" itemvalue="Maven.MyWeibo [org.mortbay.jetty:jetty-maven-plugin:8.1.11.v20130520:run]" />
+      <item index="5" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7.01" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1194,12 +1272,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="809" extended-state="0" />
-    <editor active="true" />
+    <frame x="122" y="22" width="1440" height="809" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2597968" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33236575" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1208,6 +1287,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1220,8 +1300,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280116" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1294,112 +1372,115 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="799" column="50" selection-start="22265" selection-end="22265" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/edit.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap-wysihtml5-0.0.2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/jQuery.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/myStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="534" column="46" selection-start="13485" selection-end="13485" vertical-scroll-proportion="0.0">
+        <state line="23" column="50" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/src.zip!/java/security/MessageDigest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="57" selection-start="5203" selection-end="5203" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/localConfig.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/data/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="19" selection-start="1647" selection-end="1655" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/500.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/email/HostMail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+        <state line="7" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.0">
+        <state line="13" column="33" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/DataBase-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/MyWeibo-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="524" selection-end="557" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="24" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/forgetPassword.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="24" selection-start="873" selection-end="873" vertical-scroll-proportion="-12.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/firstSight.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="1" column="121" selection-start="0" selection-end="187" vertical-scroll-proportion="31.333334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/src.zip!/java/sql/Statement.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="14" selection-start="2106" selection-end="2106" vertical-scroll-proportion="0.0">
+        <state line="6" column="21" selection-start="289" selection-end="289" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.0">
+        <state line="45" column="47" selection-start="1672" selection-end="1672" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/DataBase-config.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/mailSend.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="72" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.0.RELEASE/spring-web-3.2.0.RELEASE.jar!/org/springframework/web/bind/annotation/support/HandlerMethodInvoker.class">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/checkUser/loginAccount.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="34" selection-start="1962" selection-end="1962" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.3.RELEASE/spring-webmvc-3.2.3.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="19" selection-start="7547" selection-end="7547" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.3.RELEASE/spring-webmvc-3.2.3.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="28" selection-start="7868" selection-end="7868" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/MySQL/MySQLmanager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="280" column="22" selection-start="11386" selection-end="11386" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/zhanhonglai/SearchController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="44" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homePage/navigator.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="11" selection-start="470" selection-end="476" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="36" selection-start="2796" selection-end="2796" vertical-scroll-proportion="0.36520377">
+        <state line="16" column="46" selection-start="606" selection-end="606" vertical-scroll-proportion="0.46391752">
           <folding />
         </state>
       </provider>
@@ -1463,7 +1544,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
